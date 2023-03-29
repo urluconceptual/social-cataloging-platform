@@ -11,7 +11,7 @@
 4. Edition  
 5. Review  
 6. Connection  
-7. Reading Challenge  
+7. ReadingChallenge  
 8. BookClub  
 9. Message 
 ### Functionalities:  

@@ -10,6 +10,7 @@ import ro.project.service.impl.UserServiceImpl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -168,8 +169,6 @@ public class Menu {
             }
         } while (true);
 
-        System.out.println(userService.getByUsername(username));
-
         System.out.println("Successfully logged in!");
     }
 
@@ -197,6 +196,76 @@ public class Menu {
         System.out.println("""
                                    You logged out! Type anything to restart the application or
                                    type "exit" if you want to close the application.""");
+    }
+
+    public static void addSomeUsers() {
+        userService.addUsers(List.of(
+                Reader.builder()
+                      .id(UUID.randomUUID())
+                      .creationDate(LocalDate.now())
+                      .username("reader1")
+                      .password("reader1")
+                      .firstName("John")
+                      .lastName("Doe")
+                      .birthDate(LocalDate.of(2000, 1, 1))
+                      .bio("i am a reader")
+                      .type(UserType.READER)
+                      .build(),
+                Reader.builder()
+                      .id(UUID.randomUUID())
+                      .creationDate(LocalDate.now())
+                      .username("reader2")
+                      .password("reader2")
+                      .firstName("Stanley")
+                      .lastName("Kubrik")
+                      .birthDate(LocalDate.of(2002, 1, 1))
+                      .bio("i am a reader")
+                      .type(UserType.READER)
+                      .build(),
+                Author.builder()
+                      .id(UUID.randomUUID())
+                      .creationDate(LocalDate.now())
+                      .username("author1")
+                      .password("author1")
+                      .firstName("Stephen")
+                      .lastName("King")
+                      .birthDate(LocalDate.of(1970, 1, 1))
+                      .bio("i am an author")
+                      .type(UserType.AUTHOR)
+                      .build(),
+                Author.builder()
+                      .id(UUID.randomUUID())
+                      .creationDate(LocalDate.now())
+                      .username("author2")
+                      .password("author2")
+                      .firstName("Mircea")
+                      .lastName("Cartarescu")
+                      .birthDate(LocalDate.of(1981, 1, 1))
+                      .bio("i am an author")
+                      .type(UserType.AUTHOR)
+                      .build(),
+                Librarian.builder()
+                      .id(UUID.randomUUID())
+                      .creationDate(LocalDate.now())
+                      .username("librarian")
+                      .password("librarian")
+                      .firstName("Jane")
+                      .lastName("Doe")
+                      .birthDate(LocalDate.of(1981, 1, 1))
+                      .bio("i am a librarian")
+                      .type(UserType.LIBRARIAN)
+                      .build()));
+    }
+
+    public static void populate() {
+        addSomeUsers();
+//        addSomeConnections();
+//        addSomeShelves();
+//        addSomeBooks();
+//        addSomeEditions();
+//        addSomeReviews();
+//        addSomeBookClubs();
+//        addSomeMessages();
     }
 
     public static void start() {

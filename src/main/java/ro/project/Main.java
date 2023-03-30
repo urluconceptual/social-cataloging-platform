@@ -12,6 +12,8 @@ public class Main {
 
         Menu.getInstance();
 
+        Menu.populate();
+
         do {
             Menu.start();
         } while (!"exit".equals(scanner.next()));

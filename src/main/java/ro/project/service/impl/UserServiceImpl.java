@@ -3,10 +3,7 @@ package ro.project.service.impl;
 import ro.project.model.abstracts.User;
 import ro.project.service.UserService;
 
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public class UserServiceImpl implements UserService {
     private static final Set<User> users = new HashSet<>();
@@ -29,6 +26,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void addUser(User user) {
         users.add(user);
+    }
+
+    @Override
+    public void addUsers(List<User> userList) {
+        users.addAll(userList);
     }
 
     @Override

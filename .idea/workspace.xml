@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dba5289b82b7523b6f049a319864c34fa231462" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/d/4dba5289b82b7523b6f049a319864c34fa231462" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/Menu$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +95,7 @@
       <workItem from="1677587722795" duration="58000" />
       <workItem from="1680118181072" duration="4579000" />
       <workItem from="1680163858449" duration="15181000" />
-      <workItem from="1680190879394" duration="8515000" />
+      <workItem from="1680190879394" duration="11794000" />
     </task>
     <servers />
   </component>
@@ -120,16 +130,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java</url>
-          <line>215</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity$AbstractEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity$AbstractEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +87,7 @@
       <workItem from="1677524407039" duration="209000" />
       <workItem from="1677587722795" duration="58000" />
       <workItem from="1680118181072" duration="4579000" />
-      <workItem from="1680163858449" duration="13535000" />
+      <workItem from="1680163858449" duration="15031000" />
     </task>
     <servers />
   </component>

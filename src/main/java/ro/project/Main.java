@@ -10,5 +10,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Menu.getInstance();
+
+        do {
+            Menu.start();
+        } while (!"exit".equals(scanner.next()));
     }
 }

@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.UUID;
 
 public class Author extends User {
-    private List<UUID> writtenBooks;
-    private List<UUID> followers;
-    private List<String> influences;
+    private List<UUID> bookIdList;
+    private List<UUID> followerIdList;
+    private List<String> influencesList;
     private double averageRating;
 
 }

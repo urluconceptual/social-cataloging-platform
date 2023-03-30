@@ -12,10 +12,10 @@ public class Reader extends User {
     private List<UUID> readList;
     private List<Shelf> shelves;
     private ReadingChallenge openReadingChallange;
-    private List<ReadingChallenge> closedReadingChallenges;
-    private List<UUID> reviews;
-    private List<UUID> joinedBookClubs;
-    private List<UUID> connections;
+    private List<ReadingChallenge> closedReadingChallengesList;
+    private List<UUID> reviewIdList;
+    private List<UUID> joinedBookClubIdList;
+    private List<UUID> connectionIdList;
 
     private double averageRating;
 }

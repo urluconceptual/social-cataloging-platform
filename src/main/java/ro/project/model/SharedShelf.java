@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class SharedShelf extends Shelf {
-    private List<UUID> owners;
+    private List<UUID> ownerIdList;
     private String name;
-    private Map<UUID,UUID> bookList;
+    private Map<UUID,UUID> editorBookMap;
 }

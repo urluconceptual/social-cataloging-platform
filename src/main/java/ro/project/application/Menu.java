@@ -138,7 +138,7 @@ public class Menu {
                                    Account created!
                                    Your accout information:
                                    """);
-        System.out.println(userService.getByUsername(username));
+        System.out.println(userService.getByUsername(username).get());
     }
 
     private static void login() {
@@ -207,7 +207,7 @@ public class Menu {
                                    """);
         intro();
 
-//        switch (userService.getCurrentUser().getType()) {
+//        switch (userService.getCurrentUser().get().getType()) {
 //            case AUTHOR -> authorMenu();
 //            case LIBRARIAN -> librarianMenu();
 //            case READER -> readerMenu();

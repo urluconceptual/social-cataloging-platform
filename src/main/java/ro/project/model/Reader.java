@@ -13,29 +13,29 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @EqualsAndHashCode
+@ToString(callSuper = true)
 public class Reader extends User {
-    private final PersonalShelf wantToReadList = PersonalShelf.builder()
+    @ToString.Exclude private final PersonalShelf wantToReadList = PersonalShelf.builder()
                                                               .owner(this.getId())
                                                               .name("want-to-read")
                                                               .bookList(new ArrayList<>())
                                                               .build();
-    private final PersonalShelf currentlyReadingList = PersonalShelf.builder()
+    @ToString.Exclude private final PersonalShelf currentlyReadingList = PersonalShelf.builder()
                                                                     .owner(this.getId())
                                                                     .name("currently-reading")
                                                                     .bookList(new ArrayList<>())
                                                                     .build();
-    private final PersonalShelf readList = PersonalShelf.builder()
+    @ToString.Exclude private final PersonalShelf readList = PersonalShelf.builder()
                                                         .owner(this.getId())
                                                         .name("read")
                                                         .bookList(new ArrayList<>())
                                                         .build();
-    private List<Shelf> shelves;
-    private ReadingChallenge openReadingChallenge;
-    private List<ReadingChallenge> closedReadingChallengesList;
-    private List<UUID> reviewIdList;
-    private List<UUID> joinedBookClubIdList;
-    private List<UUID> connectionIdList;
-    private double averageRating;
+    @ToString.Exclude private List<Shelf> shelves;
+    @ToString.Exclude private ReadingChallenge openReadingChallenge;
+    @ToString.Exclude private List<ReadingChallenge> closedReadingChallengesList;
+    @ToString.Exclude private List<UUID> reviewIdList;
+    @ToString.Exclude private List<UUID> joinedBookClubIdList;
+    @ToString.Exclude private List<UUID> connectionIdList;
+    @ToString.Exclude private double averageRating;
 }

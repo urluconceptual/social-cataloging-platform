@@ -15,8 +15,8 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(callSuper = true)
 public class Librarian extends User {
-    private List<UUID> curatedBookClubIds;
-    private List<Shelf> curatedRecommendationsList;
+    @ToString.Exclude private List<UUID> curatedBookClubIds;
+    @ToString.Exclude private List<Shelf> curatedRecommendationsList;
 }

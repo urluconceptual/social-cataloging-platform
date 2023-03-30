@@ -14,10 +14,10 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(callSuper = true)
 public class Author extends User {
-    private List<UUID> bookIdList;
-    private List<UUID> followerIdList;
-    private List<String> influencesList;
-    private double averageRating;
+    @ToString.Exclude private List<UUID> bookIdList;
+    @ToString.Exclude private List<UUID> followerIdList;
+    @ToString.Exclude private List<String> influencesList;
+    @ToString.Exclude private double averageRating;
 }

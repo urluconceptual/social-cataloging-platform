@@ -15,4 +15,6 @@ public interface UserService {
     void editUserById(UUID id, User newUser);
 
     void removeUserById(UUID id);
+    void setCurrentUser(String username);
+    Optional<User> getCurrentUser();
 }

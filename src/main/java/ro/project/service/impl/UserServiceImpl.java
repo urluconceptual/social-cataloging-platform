@@ -9,7 +9,8 @@ import java.util.Set;
 import java.util.UUID;
 
 public class UserServiceImpl implements UserService {
-    private static Set<User> users = new HashSet<>();
+    private static final Set<User> users = new HashSet<>();
+    private static Optional<User> currentUser;
 
     @Override
     public Optional<User> getById(UUID id) {
@@ -43,5 +44,18 @@ public class UserServiceImpl implements UserService {
         if (getById(id).isPresent()) {
             users.remove(getById(id));
         }
+    }
+
+    @Override
+    public void setCurrentUser(String username) {
+        if (!username.isEmpty())
+            currentUser = getByUsername(username);
+        else
+            currentUser = Optional.empty();
+    }
+
+    @Override
+    public Optional<User> getCurrentUser() {
+        return currentUser;
     }
 }

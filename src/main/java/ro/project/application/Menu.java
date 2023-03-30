@@ -3,6 +3,7 @@ package ro.project.application;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
+import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.service.UserService;
 import ro.project.service.impl.UserServiceImpl;
@@ -25,10 +26,7 @@ public class Menu {
     }
 
     private static void invalidMessage(String invalidItem) {
-        StringBuilder message = new StringBuilder("""
-                                                          Try again! """);
-        message.append(invalidItem);
-        System.out.println(message);
+        System.out.println("Try again! " + invalidItem);
     }
 
     private static void register() {
@@ -134,6 +132,8 @@ public class Menu {
             default -> null;
         });
 
+        userService.setCurrentUser(username);
+
         System.out.println("""
                                    Account created!
                                    Your accout information:
@@ -168,6 +168,8 @@ public class Menu {
             }
         } while (true);
 
+        System.out.println(userService.getByUsername(username));
+
         System.out.println("Successfully logged in!");
     }
 
@@ -175,17 +177,26 @@ public class Menu {
         System.out.println("""
                                    1 -> Register
                                    2 -> Login
+                                   3 -> Exit
                                                                       
                                    Choose option: """);
-        int option = scanner.nextInt();
+        String option = scanner.next();
         switch (option) {
-            case 1 -> register();
-            case 2 -> login();
+            case "1" -> register();
+            case "2" -> login();
+            case "3" -> System.exit(0);
             default -> {
                 invalidMessage("Invalid option.");
                 intro();
             }
         }
+    }
+
+    private static void logout() {
+        userService.setCurrentUser("");
+        System.out.println("""
+                                   You logged out! Type anything to restart the application or
+                                   type "exit" if you want to close the application.""");
     }
 
     public static void start() {
@@ -195,5 +206,13 @@ public class Menu {
                                    into your account.
                                    """);
         intro();
+
+//        switch (userService.getCurrentUser().getType()) {
+//            case AUTHOR -> authorMenu();
+//            case LIBRARIAN -> librarianMenu();
+//            case READER -> readerMenu();
+//        }
+
+        logout();
     }
 }

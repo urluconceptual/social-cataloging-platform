@@ -9,8 +9,6 @@ Z
 *src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
 [
 +src/main/java/ro/project/model/Edition.java,4\1\41bd1c69c3502e14c42ae6e00f0b1282b90b7637
-^
-.src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
 [
 +src/main/java/ro/project/model/Message.java,0\6\06a0d84659b5f23b00b2209b6ba3dd5f582617fa
 c

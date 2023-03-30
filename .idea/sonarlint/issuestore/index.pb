@@ -7,8 +7,6 @@ _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
 [
 +src/main/java/ro/project/model/Edition.java,4\1\41bd1c69c3502e14c42ae6e00f0b1282b90b7637
-^
-.src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
 a
 1src/main/java/ro/project/model/PersonalShelf.java,6\9\694fd3fbf39f629a7bd718013694e2160e6c1ceb
 c

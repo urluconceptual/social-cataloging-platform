@@ -19,4 +19,5 @@ import java.util.UUID;
 public class Librarian extends User {
     @ToString.Exclude private List<UUID> curatedBookClubIds;
     @ToString.Exclude private List<Shelf> curatedRecommendationsList;
+    @ToString.Exclude private List<UUID> followerIdList;
 }

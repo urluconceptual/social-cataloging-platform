@@ -1,9 +1,8 @@
 package ro.project.model.abstracts;
 
-import ro.project.model.enums.ShelfVisibilityType;
-
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import ro.project.model.enums.ShelfVisibilityType;
 
 @SuperBuilder
 @Getter

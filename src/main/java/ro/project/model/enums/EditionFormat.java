@@ -1,7 +1,5 @@
 package ro.project.model.enums;
 
-import java.util.Arrays;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

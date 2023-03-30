@@ -7,6 +7,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class Librarian extends User {
-        private List<UUID> curatedBookClubIds;
-        private List<Shelf> curatedRecommendationsList;
+    private List<UUID> curatedBookClubIds;
+    private List<Shelf> curatedRecommendationsList;
 }

@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 @AllArgsConstructor
 @Getter
-public enum GenreType {
+public enum BookGenre {
     MYSTERY("Mystery"),
     SCIENCE_FICTION("Science Fiction"),
     ROMANCE("Romance"),
@@ -18,8 +18,8 @@ public enum GenreType {
 
     private final String name;
 
-    public static GenreType getEnumByFieldString(String field) {
-        return Arrays.stream(GenreType.values())
+    public static BookGenre getEnumByFieldString(String field) {
+        return Arrays.stream(BookGenre.values())
                      .filter(enumElement -> enumElement.name.equals(field))
                      .findAny()
                      .orElse(OTHER);

@@ -18,7 +18,6 @@ import java.util.Objects;
 public abstract class User extends AbstractEntity {
     private String username;
     private String password;
-    private String email;
     private String firstName;
     private String lastName;
     private LocalDate birthDate;

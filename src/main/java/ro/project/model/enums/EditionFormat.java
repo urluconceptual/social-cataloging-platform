@@ -14,7 +14,7 @@ public enum EditionFormat {
     AUDIOBOOK("audiobook"),
     OTHER("other");
 
-    private String format;
+    public final String format;
 
     public EditionFormat getEnumByFieldString(String format) {
         return Arrays.stream(EditionFormat.values())

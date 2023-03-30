@@ -1,3 +1,25 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+l
+<src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
+d
+4src/main/java/ro/project/model/ReadingChallenge.java,2\0\208da94237a1dc26c5d59d8e89d9208636a3eab3
+_
+/src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
+Z
+*src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
+X
+(src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
+[
++src/main/java/ro/project/model/Edition.java,4\1\41bd1c69c3502e14c42ae6e00f0b1282b90b7637
+^
+.src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
+[
++src/main/java/ro/project/model/Message.java,0\6\06a0d84659b5f23b00b2209b6ba3dd5f582617fa
+\
+,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
+c
+3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
+a
+1src/main/java/ro/project/model/PersonalShelf.java,6\9\694fd3fbf39f629a7bd718013694e2160e6c1ceb

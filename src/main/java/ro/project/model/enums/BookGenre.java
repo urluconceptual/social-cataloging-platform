@@ -16,7 +16,7 @@ public enum BookGenre {
     NON_FICTION("Non Fiction"),
     OTHER("Other");
 
-    private final String name;
+    public final String name;
 
     public static BookGenre getEnumByFieldString(String field) {
         return Arrays.stream(BookGenre.values())

@@ -1,0 +1,10 @@
+
+M
+java:S2160
+"+Override the "equals" method in this class.(–Á§àùÿÿÿÿ8Ù¿²‘ó0
+Q
+java:S1068"/Remove this unused "librarianId" private field.(æ÷óêøÿÿÿÿ8Ú¿²‘ó0
+K
+java:S1068".Remove this unused "userIdList" private field.(äŸ±Š8Ú¿²‘ó0
+P
+java:S1068".Remove this unused "messageMap" private field.(°‰ùûÿÿÿÿ8Ú¿²‘ó0

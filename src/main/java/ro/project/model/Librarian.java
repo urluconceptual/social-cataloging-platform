@@ -20,6 +20,6 @@ public class Librarian extends User {
     private List<UUID> curatedBookClubIds = new ArrayList<>();
     @ToString.Exclude
     @Builder.Default
-    private Shelf curatedRecommendationsList = new PersonalShelf();
+    private PersonalShelf curatedRecommendationsList = new PersonalShelf();
 
 }

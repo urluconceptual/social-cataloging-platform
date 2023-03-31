@@ -1,11 +1,14 @@
 package ro.project.application;
 
 import ro.project.model.Author;
+import ro.project.model.Connection;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
 import ro.project.model.enums.UserType;
+import ro.project.service.ConnectionService;
 import ro.project.service.ReaderService;
 import ro.project.service.UserService;
+import ro.project.service.impl.ConnectionServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
 
 import javax.print.DocFlavor;
@@ -20,6 +23,7 @@ public class GeneralMenu {
     private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderMenu readerMenu = ReaderMenu.getInstance();
+    private static ConnectionService connectionService = new ConnectionServiceImpl();
 
     private GeneralMenu() {
     }
@@ -287,9 +291,45 @@ public class GeneralMenu {
                          .build()));
     }
 
+    private static void addSomeConnections() {
+        connectionService.addConnections(List.of(
+                Connection.builder()
+                          .follower(userService.getByUsername("reader1").get().getId())
+                          .followed(userService.getByUsername("reader2").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader2").get().getId())
+                          .followed(userService.getByUsername("reader1").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader2").get().getId())
+                          .followed(userService.getByUsername("reader3").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader1").get().getId())
+                          .followed(userService.getByUsername("author1").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader2").get().getId())
+                          .followed(userService.getByUsername("author1").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader3").get().getId())
+                          .followed(userService.getByUsername("author1").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader3").get().getId())
+                          .followed(userService.getByUsername("librarian1").get().getId())
+                          .build(),
+                Connection.builder()
+                          .follower(userService.getByUsername("reader3").get().getId())
+                          .followed(userService.getByUsername("librarian2").get().getId())
+                          .build()));
+    }
+
     public static void populate() {
         addSomeUsers();
-//        addSomeConnections();
+        addSomeConnections();
 //        addSomeShelves();
 //        addSomeBooks();
 //        addSomeEditions();

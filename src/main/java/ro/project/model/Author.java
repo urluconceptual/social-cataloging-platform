@@ -2,11 +2,11 @@ package ro.project.model;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @SuperBuilder
 @Getter
@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Author extends User {
     @ToString.Exclude
     @Builder.Default
-    private List<UUID> bookIdList = new ArrayList<>();
+    private PersonalShelf bookIdList = new PersonalShelf();
     @ToString.Exclude
     @Builder.Default
     private List<String> influencesList = new ArrayList<>();

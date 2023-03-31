@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ShelfService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15572043502caba0c295566d1386c43d342abd75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/3562dbe8f324f26588f537f1d637d72d0a9f28be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/dab5ae9f8b7e6c86799f63ad7ec83d108e72f080" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/5/15572043502caba0c295566d1386c43d342abd75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/5/3562dbe8f324f26588f537f1d637d72d0a9f28be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/a/dab5ae9f8b7e6c86799f63ad7ec83d108e72f080" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/BookClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/BookClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Edition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Edition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/PersonalShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/PersonalShelf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/ReadingChallenge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/ReadingChallenge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/SharedShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/SharedShelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/Shelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/Shelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfVisibilityType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -90,7 +101,7 @@
       <workItem from="1680163858449" duration="15181000" />
       <workItem from="1680190879394" duration="12974000" />
       <workItem from="1680247855150" duration="170000" />
-      <workItem from="1680248176614" duration="17509000" />
+      <workItem from="1680248176614" duration="23639000" />
     </task>
     <servers />
   </component>

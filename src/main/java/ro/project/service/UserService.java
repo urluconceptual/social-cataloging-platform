@@ -1,6 +1,5 @@
 package ro.project.service;
 
-import ro.project.model.Author;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 

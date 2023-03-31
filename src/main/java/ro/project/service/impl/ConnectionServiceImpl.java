@@ -43,6 +43,11 @@ public class ConnectionServiceImpl implements ConnectionService {
     }
 
     @Override
+    public void addConnections(List<Connection> connectionList) {
+        connections.addAll(connectionList);
+    }
+
+    @Override
     public void editById(UUID id, Connection newConnection) {
         if (getById(id).isPresent()) {
             connections.remove(getById(id));

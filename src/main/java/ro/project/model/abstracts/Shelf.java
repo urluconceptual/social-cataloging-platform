@@ -2,7 +2,7 @@ package ro.project.model.abstracts;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import ro.project.model.enums.ShelfVisibilityType;
+import ro.project.model.enums.ShelfType;
 
 @SuperBuilder
 @Getter
@@ -12,5 +12,5 @@ import ro.project.model.enums.ShelfVisibilityType;
 @EqualsAndHashCode
 public abstract class Shelf extends AbstractEntity {
     private String name;
-    private ShelfVisibilityType visibilityType;
+    private ShelfType type;
 }

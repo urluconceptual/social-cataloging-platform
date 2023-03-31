@@ -207,7 +207,7 @@ public class GeneralMenu {
     }
 
     public static void addSomeUsers() {
-        userService.addUsers(List.of(
+        userService.addUser(
                 Reader.builder()
                       .username("reader1")
                       .password("reader1")
@@ -216,7 +216,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2000, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
+                      .build() );
+        userService.addUser(
                 Reader.builder()
                       .username("reader2")
                       .password("reader2")
@@ -225,7 +226,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2002, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
+                      .build());
+        userService.addUser(
                 Reader.builder()
                       .username("reader3")
                       .password("reader3")
@@ -234,7 +236,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(1973, 4, 6))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
+                      .build());
+        userService.addUsers(List.of(
                 Author.builder()
                       .username("author1")
                       .password("author1")

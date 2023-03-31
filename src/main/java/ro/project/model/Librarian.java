@@ -2,7 +2,6 @@ package ro.project.model;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 
 import java.util.ArrayList;

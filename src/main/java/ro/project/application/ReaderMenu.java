@@ -250,6 +250,7 @@ public class ReaderMenu {
     }
 
     public void start() {
+        shelfService = new ShelfServiceImpl();
         System.out.println("""
                                    
                                    1 -> My shelves

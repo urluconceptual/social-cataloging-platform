@@ -5,28 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ShelfService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15572043502caba0c295566d1386c43d342abd75" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/3562dbe8f324f26588f537f1d637d72d0a9f28be" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/dab5ae9f8b7e6c86799f63ad7ec83d108e72f080" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/5/15572043502caba0c295566d1386c43d342abd75" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/5/3562dbe8f324f26588f537f1d637d72d0a9f28be" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/a/dab5ae9f8b7e6c86799f63ad7ec83d108e72f080" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/Shelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/Shelf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfVisibilityType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Edition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Edition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/ShelfVisibilityType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ConnectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ConnectionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ReaderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ReaderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +116,8 @@
       <workItem from="1680163858449" duration="15181000" />
       <workItem from="1680190879394" duration="12974000" />
       <workItem from="1680247855150" duration="170000" />
-      <workItem from="1680248176614" duration="23639000" />
+      <workItem from="1680248176614" duration="26083000" />
+      <workItem from="1680281504899" duration="659000" />
     </task>
     <servers />
   </component>
@@ -142,13 +158,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/ConnectionServiceImpl.java</url>
-          <line>69</line>
+          <line>74</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/ConnectionServiceImpl.java</url>
           <line>32</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java</url>
+          <line>297</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java</url>
+          <line>294</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

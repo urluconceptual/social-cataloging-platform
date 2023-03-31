@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
     private static final Set<User> users = new HashSet<>();
-    private static Optional<User> currentUser;
+    private static Optional<User> currentUser = Optional.empty();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();

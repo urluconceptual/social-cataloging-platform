@@ -13,7 +13,6 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
 @ToString(callSuper = true)
 public class Reader extends User {
     @ToString.Exclude
@@ -36,7 +35,7 @@ public class Reader extends User {
                                               .name("read")
                                               .bookList(new ArrayList<>())
                                               .build();
-        shelves.addAll(List.of(wantToReadList, currentlyReadingList, readList));
+        shelves = List.of(wantToReadList, currentlyReadingList, readList);
     }
     @ToString.Exclude
     @Builder.Default

@@ -1,9 +1,6 @@
 package ro.project.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
@@ -18,6 +15,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString(callSuper = true)
 public class Librarian extends User {
-    @ToString.Exclude private List<UUID> curatedBookClubIds = new ArrayList<>();
-    @ToString.Exclude private Shelf curatedRecommendationsList;
+    @ToString.Exclude
+    @Builder.Default
+    private List<UUID> curatedBookClubIds = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private Shelf curatedRecommendationsList = new PersonalShelf();
+
 }

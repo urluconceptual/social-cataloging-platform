@@ -1,5 +1,6 @@
 package ro.project.model;
 
+import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.AbstractEntity;
 import ro.project.model.enums.BookGenre;
 
@@ -9,15 +10,25 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import lombok.*;
+
+@SuperBuilder
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
 public class Book extends AbstractEntity {
     private String author;
-    private Optional<UUID> authorId;
+    @Builder.Default
+    private Optional<UUID> authorId = Optional.empty();
     private String title;
     private BookGenre genre;
     private LocalDate publicationDate;
     private String description;
     private Integer numberOfPages;
     private Double rating;
+    @Builder.Default
     private List<Review> reviewList = new ArrayList<>();
+    @Builder.Default
     private List<Edition> editionList = new ArrayList<>();
 }

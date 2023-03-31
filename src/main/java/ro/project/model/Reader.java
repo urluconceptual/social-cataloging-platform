@@ -16,25 +16,43 @@ import java.util.UUID;
 @EqualsAndHashCode
 @ToString(callSuper = true)
 public class Reader extends User {
-    @ToString.Exclude private final PersonalShelf wantToReadList = PersonalShelf.builder()
+    @ToString.Exclude
+    @Builder.Default
+    private final PersonalShelf wantToReadList = PersonalShelf.builder()
                                                               .owner(this.getId())
                                                               .name("want-to-read")
                                                               .bookList(new ArrayList<>())
                                                               .build();
-    @ToString.Exclude private final PersonalShelf currentlyReadingList = PersonalShelf.builder()
+    @ToString.Exclude
+    @Builder.Default
+    private final PersonalShelf currentlyReadingList = PersonalShelf.builder()
                                                                     .owner(this.getId())
                                                                     .name("currently-reading")
                                                                     .bookList(new ArrayList<>())
                                                                     .build();
-    @ToString.Exclude private final PersonalShelf readList = PersonalShelf.builder()
+    @ToString.Exclude
+    @Builder.Default
+    private final PersonalShelf readList = PersonalShelf.builder()
                                                         .owner(this.getId())
                                                         .name("read")
                                                         .bookList(new ArrayList<>())
                                                         .build();
-    @ToString.Exclude private List<Shelf> shelves = new ArrayList<>();
-    @ToString.Exclude private ReadingChallenge openReadingChallenge;
-    @ToString.Exclude private List<ReadingChallenge> closedReadingChallengesList = new ArrayList<>();
-    @ToString.Exclude private List<UUID> reviewIdList = new ArrayList<>();
-    @ToString.Exclude private List<UUID> joinedBookClubIdList = new ArrayList<>();
-    @ToString.Exclude private double averageRating;
+    @ToString.Exclude
+    @Builder.Default
+    private List<Shelf> shelves = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private ReadingChallenge openReadingChallenge = new ReadingChallenge();
+    @ToString.Exclude
+    @Builder.Default
+    private List<ReadingChallenge> closedReadingChallengesList = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private List<UUID> reviewIdList = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private List<UUID> joinedBookClubIdList = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private double averageRating = 0;
 }

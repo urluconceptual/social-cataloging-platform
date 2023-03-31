@@ -1,9 +1,6 @@
 package ro.project.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.User;
 
@@ -17,7 +14,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString(callSuper = true)
 public class Author extends User {
-    @ToString.Exclude private List<UUID> bookIdList = new ArrayList<>();
-    @ToString.Exclude private List<String> influencesList = new ArrayList<>();
-    @ToString.Exclude private double averageRating;
+    @ToString.Exclude
+    @Builder.Default
+    private List<UUID> bookIdList = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private List<String> influencesList = new ArrayList<>();
+    @ToString.Exclude
+    @Builder.Default
+    private double averageRating = 0;
 }

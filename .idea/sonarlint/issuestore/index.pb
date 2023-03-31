@@ -29,8 +29,6 @@ a
 1src/main/java/ro/project/model/PersonalShelf.java,6\9\694fd3fbf39f629a7bd718013694e2160e6c1ceb
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
-l
-<src/main/java/ro/project/service/impl/ReaderServiceImpl.java,1\1\11084d3ad15d52acd16aff9f23b313631290bad2
 g
 7src/main/java/ro/project/model/enums/EditionFormat.java,d\a\dab5ae9f8b7e6c86799f63ad7ec83d108e72f080
 c

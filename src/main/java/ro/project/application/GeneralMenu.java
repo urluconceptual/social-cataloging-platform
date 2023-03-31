@@ -6,8 +6,10 @@ import ro.project.model.Librarian;
 import ro.project.model.Reader;
 import ro.project.model.enums.UserType;
 import ro.project.service.ConnectionService;
+import ro.project.service.ReaderService;
 import ro.project.service.UserService;
 import ro.project.service.impl.ConnectionServiceImpl;
+import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
 
 import java.time.LocalDate;
@@ -21,6 +23,7 @@ public class GeneralMenu {
     private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderMenu readerMenu = ReaderMenu.getInstance();
+    private static ReaderService readerService = new ReaderServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
 
     private GeneralMenu() {
@@ -123,7 +126,7 @@ public class GeneralMenu {
                                        .bio(bio)
                                        .type(type)
                                        .build();
-            case READER -> Reader.builder()
+            case READER -> readerService.init(Reader.builder()
                                  .id(UUID.randomUUID())
                                  .creationDate(LocalDate.now())
                                  .username(username)
@@ -133,7 +136,7 @@ public class GeneralMenu {
                                  .birthDate(birthDate)
                                  .bio(bio)
                                  .type(type)
-                                 .build();
+                                 .build());
             default -> null;
         });
 
@@ -217,7 +220,7 @@ public class GeneralMenu {
 
     public static void addSomeUsers() {
         userService.addUsers(List.of(
-                Reader.builder()
+                readerService.init(Reader.builder()
                       .username("reader1")
                       .password("reader1")
                       .firstName("John")
@@ -225,8 +228,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2000, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
-                Reader.builder()
+                      .build()),
+                readerService.init(Reader.builder()
                       .username("reader2")
                       .password("reader2")
                       .firstName("Stanley")
@@ -234,8 +237,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2002, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
-                Reader.builder()
+                      .build()),
+                readerService.init(Reader.builder()
                       .username("reader3")
                       .password("reader3")
                       .firstName("John")
@@ -243,7 +246,7 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(1973, 4, 6))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build(),
+                      .build()),
                 Author.builder()
                       .username("author1")
                       .password("author1")

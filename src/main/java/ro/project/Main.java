@@ -1,7 +1,6 @@
 package ro.project;
 
-import ro.project.application.Menu;
-import ro.project.service.UserService;
+import ro.project.application.GeneralMenu;
 
 import java.util.Scanner;
 
@@ -10,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Menu.getInstance();
+        GeneralMenu.getInstance();
 
-        Menu.populate();
+        GeneralMenu.populate();
 
         do {
-            Menu.start();
+            GeneralMenu.start();
         } while (!"exit".equals(scanner.next()));
     }
 }

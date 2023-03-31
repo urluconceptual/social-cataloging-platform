@@ -1,10 +1,12 @@
 package ro.project.service.impl;
 
 import ro.project.model.abstracts.User;
+import ro.project.model.enums.UserType;
 import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
     private static final Set<User> users = new HashSet<>();
@@ -23,6 +25,13 @@ public class UserServiceImpl implements UserService {
         return users.stream()
                     .filter(user -> user.getUsername().equals(username))
                     .findFirst();
+    }
+
+    @Override
+    public Set<User> getByType(UserType type) {
+        return users.stream()
+                .filter(user -> user.getType().equals(type))
+                .collect(Collectors.toSet());
     }
 
     @Override

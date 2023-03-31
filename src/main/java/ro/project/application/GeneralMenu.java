@@ -3,30 +3,32 @@ package ro.project.application;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
-import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
+import ro.project.service.ReaderService;
 import ro.project.service.UserService;
 import ro.project.service.impl.UserServiceImpl;
 
+import javax.print.DocFlavor;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class Menu {
+public class GeneralMenu {
     private static final Scanner scanner = new Scanner(System.in);
-    private static Menu INSTANCE;
+    private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
+    private static ReaderMenu readerMenu = ReaderMenu.getInstance();
 
-    private Menu() {
+    private GeneralMenu() {
     }
 
-    public static Menu getInstance() {
-        return (INSTANCE == null ? new Menu() : INSTANCE);
+    public static GeneralMenu getInstance() {
+        return (INSTANCE == null ? new GeneralMenu() : INSTANCE);
     }
 
-    private static void invalidMessage(String invalidItem) {
+    protected static void invalidMessage(String invalidItem) {
         System.out.println("Try again! " + invalidItem);
     }
 
@@ -169,6 +171,8 @@ public class Menu {
             }
         } while (true);
 
+        userService.setCurrentUser(username);
+
         System.out.println("Successfully logged in!");
     }
 
@@ -178,7 +182,7 @@ public class Menu {
                                    2 -> Login
                                    3 -> Exit
                                                                       
-                                   Choose option: """);
+                                   Choose option:""");
         String option = scanner.next();
         switch (option) {
             case "1" -> register();
@@ -320,11 +324,11 @@ public class Menu {
                                    """);
         intro();
 
-//        switch (userService.getCurrentUser().get().getType()) {
+        switch (userService.getCurrentUser().get().getType()) {
 //            case AUTHOR -> authorMenu();
 //            case LIBRARIAN -> librarianMenu();
-//            case READER -> readerMenu();
-//        }
+            case READER -> readerMenu.start();
+        }
 
         logout();
     }

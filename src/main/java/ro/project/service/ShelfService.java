@@ -8,8 +8,12 @@ import java.util.UUID;
 
 public interface ShelfService {
     Optional<Shelf> getById(UUID id);
+
     void addShelf(Shelf shelf);
+
     void addShelves(List<Shelf> shelfList);
+
     void editShelfById(UUID id, Shelf newShelf);
+
     void removeShelfById(UUID id);
 }

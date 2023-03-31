@@ -1,10 +1,10 @@
 package ro.project.model;
 
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.AbstractEntity;
 
 import java.util.UUID;
-import lombok.*;
-import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 @Getter

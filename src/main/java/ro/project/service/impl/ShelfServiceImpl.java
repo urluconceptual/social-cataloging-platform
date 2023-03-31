@@ -1,6 +1,9 @@
 package ro.project.service.impl;
 
-import ro.project.model.*;
+import ro.project.model.Author;
+import ro.project.model.Librarian;
+import ro.project.model.Reader;
+import ro.project.model.SharedShelf;
 import ro.project.model.abstracts.Shelf;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;
@@ -29,8 +32,8 @@ public class ShelfServiceImpl implements ShelfService {
     @Override
     public Optional<Shelf> getById(UUID id) {
         return shelves.stream()
-                .filter(shelf -> shelf.getId().equals(id))
-                .findFirst();
+                      .filter(shelf -> shelf.getId().equals(id))
+                      .findFirst();
     }
 
     @Override
@@ -39,8 +42,8 @@ public class ShelfServiceImpl implements ShelfService {
         if (shelf instanceof SharedShelf) {
             ((SharedShelf) shelf).getOwnerIdList()
                                  .forEach(user -> ((Reader) userService.getById(user)
-                                                             .get())
-                                                             .getShelves().add(shelf));
+                                                                       .get())
+                                         .getShelves().add(shelf));
         }
     }
 

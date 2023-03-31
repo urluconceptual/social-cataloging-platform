@@ -23,13 +23,17 @@ public interface UserService {
 
     void removeUserById(UUID id);
 
-    void setCurrentUser(String username);
-
     Optional<User> getCurrentUser();
 
+    void setCurrentUser(String username);
+
     void printUserData(User user);
+
     void addConnectionId(User user, UUID connection);
+
     void removeConnectionId(UUID user, UUID connection);
+
     Set<User> getFollowing();
+
     Set<User> getFollowed();
 }

@@ -1,7 +1,6 @@
 package ro.project.service.impl;
 
 import ro.project.model.Connection;
-import ro.project.model.abstracts.User;
 import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
@@ -17,15 +16,15 @@ public class ConnectionServiceImpl implements ConnectionService {
     @Override
     public Optional<Connection> getById(UUID id) {
         return connections.stream()
-                .filter(connection -> connection.getId().equals(id))
-                .findFirst();
+                          .filter(connection -> connection.getId().equals(id))
+                          .findFirst();
     }
 
     @Override
     public Optional<Connection> getByUsers(UUID user1, UUID user2) {
         return connections.stream()
-                .filter(connection -> connection.getFollower().equals(user1) && connection.getFollowed().equals(user2))
-                .findFirst();
+                          .filter(connection -> connection.getFollower().equals(user1) && connection.getFollowed().equals(user2))
+                          .findFirst();
     }
 
     @Override
@@ -44,7 +43,11 @@ public class ConnectionServiceImpl implements ConnectionService {
 
     @Override
     public void addConnections(List<Connection> connectionList) {
-        connections.addAll(connectionList);
+        for(Connection connection : connectionList) {
+            connections.add(connection);
+            userService.addConnectionId(userService.getById(connection.getFollower()).get(), connection.getId());
+            userService.addConnectionId(userService.getById(connection.getFollowed()).get(), connection.getId());
+        }
     }
 
     @Override

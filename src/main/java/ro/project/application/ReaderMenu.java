@@ -31,11 +31,11 @@ public class ReaderMenu {
 
     private static void myConnections() {
         System.out.println("""
-                                   
+                                                                      
                                    1 -> Users you follow
                                    2 -> Users following you
                                    3 -> Go back
-                                   
+                                                                      
                                    Choose option:""");
         String option;
         boolean flag = true;
@@ -69,9 +69,9 @@ public class ReaderMenu {
         do {
             username = scanner.next();
             user = userService.getByUsername(username);
-            if(user.isEmpty())
+            if (user.isEmpty()) {
                 generalMenu.invalidMessage("Invalid username.");
-            else {
+            } else {
                 userService.printUserData(user.get());
                 break;
             }
@@ -80,17 +80,16 @@ public class ReaderMenu {
         if (connectionService.getByUsers(userService.getCurrentUser().get().getId(), user.get().getId()).isPresent()
                 || connectionService.getByUsers(user.get().getId(), userService.getCurrentUser().get().getId()).isPresent()) {
             System.out.println("You follow this user!");
-        }
-        else {
+        } else {
             System.out.println("You don't follow this user!");
         }
 
         System.out.println("""
-                                   
+                                                                      
                                    1 -> Follow user
                                    2 -> Unfollow user
                                    3 -> Go back
-                                   
+                                                                      
                                    Choose option:""");
 
         String option;
@@ -120,12 +119,15 @@ public class ReaderMenu {
         String userType = type.getType() + "s";
         System.out.printf("These are all the registered %s:%n", userType);
         userService.getByType(type)
-                   .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
+                   .stream()
+                   .filter(user -> !user.equals(userService.getCurrentUser().get()))
+                   .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"
+                                                      ));
 
         System.out.println("""
                                    1 -> Choose profile to view
                                    2 -> Go back
-                                   
+                                                                      
                                    Choose option:""");
 
         String option;
@@ -158,7 +160,7 @@ public class ReaderMenu {
         List<UUID> collaborators = new LinkedList<>();
         System.out.println("Choose friends to collaborate:");
         int i = 0;
-        for(; i < friends.size(); i++) {
+        for (; i < friends.size(); i++) {
             System.out.println((i) + " -> " + friends.get(i).getUsername());
         }
         System.out.println("default -> Done");
@@ -167,14 +169,14 @@ public class ReaderMenu {
                                    Choose indexes for all the collaborators you want to add,
                                    or type anything else if you're done.
                                    Format: "1 2 3 ..."
-                                   
+                                                                      
                                    Your answer:""");
 
         String options = scanner.nextLine();
         String[] optionsArray = options.split(" ");
 
-        for(String o : optionsArray) {
-                collaborators.add(friends.get(Integer.parseInt(o)).getId());
+        for (String o : optionsArray) {
+            collaborators.add(friends.get(Integer.parseInt(o)).getId());
         }
 
         shelfService.addShelf(SharedShelf.builder()
@@ -186,12 +188,12 @@ public class ReaderMenu {
 
     private void addShelf() {
         System.out.println("Enter shelf name:");
-        String shelfName = scanner.next();
+        String shelfName = scanner.nextLine();
         System.out.println("""
                                    Type of shelf:
                                    1 -> Personal
                                    2 -> Shared
-                                   
+                                                                      
                                    Choose option:""");
         String option;
         boolean flag = true;
@@ -217,12 +219,12 @@ public class ReaderMenu {
         reader.getShelves()
               .forEach(shelf -> System.out.println(shelf.getName()));
         System.out.println("""
-                                   
+                                                                      
                                    1 -> Add new shelf
                                    2 -> Remove shelf
                                    3 -> See shelf
                                    4 -> Go back
-                                   
+                                                                      
                                    Choose option:""");
         String option;
         boolean flag = true;
@@ -237,7 +239,6 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "3" -> {
-
                     flag = false;
                 }
                 case "4" -> {
@@ -252,14 +253,14 @@ public class ReaderMenu {
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
-                                   
+                                                                      
                                    1 -> My shelves
                                    2 -> My connections
                                    3 -> Show other readers
                                    4 -> Show authors
                                    5 -> Show librarians
                                    6 -> Logout
-                                   
+                                                                      
                                    Choose option:""");
         String options;
 
@@ -292,7 +293,7 @@ public class ReaderMenu {
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }
-        } while(flag);
+        } while (flag);
         start();
     }
 }

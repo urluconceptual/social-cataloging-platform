@@ -43,7 +43,3 @@ c
 3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
 l
 <src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
-p
-@src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
-g
-7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c

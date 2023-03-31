@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public Set<User> getByType(UserType type) {
         return users.stream()
-                .filter(user -> user.getType().equals(type))
-                .collect(Collectors.toSet());
+                    .filter(user -> user.getType().equals(type))
+                    .collect(Collectors.toSet());
     }
 
     @Override
@@ -63,10 +63,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void setCurrentUser(String username) {
-        if (!username.isEmpty())
+        if (!username.isEmpty()) {
             currentUser = getByUsername(username);
-        else
+        } else {
             currentUser = Optional.empty();
+        }
     }
 
     @Override
@@ -96,9 +97,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public Set<User> getFollowing() {
         return connectionService.getFollowing(currentUser.get().getConnectionIdList())
-                .stream()
-                .map(id -> getById(id).get())
-                .collect(Collectors.toSet());
+                                .stream()
+                                .map(id -> getById(id).get())
+                                .collect(Collectors.toSet());
     }
 
     @Override

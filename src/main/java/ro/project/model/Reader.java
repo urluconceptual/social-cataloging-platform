@@ -20,22 +20,22 @@ public class Reader extends User {
     private List<Shelf> shelves = new ArrayList<>();
 
     {
-        PersonalShelf wantToReadList = PersonalShelf.builder()
-                                                    .owner(this.getId())
-                                                    .name("want-to-read")
-                                                    .bookList(new ArrayList<>())
-                                                    .build();
-        PersonalShelf currentlyReadingList = PersonalShelf.builder()
-                                                          .owner(this.getId())
-                                                          .name("currently-reading")
-                                                          .bookList(new ArrayList<>())
-                                                          .build();
-        PersonalShelf readList = PersonalShelf.builder()
-                                              .owner(this.getId())
-                                              .name("read")
-                                              .bookList(new ArrayList<>())
-                                              .build();
-        shelves = List.of(wantToReadList, currentlyReadingList, readList);
+        shelves = List.of(
+                PersonalShelf.builder()
+                             .owner(this.getId())
+                             .name("want-to-read")
+                             .bookList(new ArrayList<>())
+                             .build(),
+                PersonalShelf.builder()
+                             .owner(this.getId())
+                             .name("read")
+                             .bookList(new ArrayList<>())
+                             .build(),
+                PersonalShelf.builder()
+                             .owner(this.getId())
+                             .name("read")
+                             .bookList(new ArrayList<>())
+                             .build());
     }
     @ToString.Exclude
     @Builder.Default

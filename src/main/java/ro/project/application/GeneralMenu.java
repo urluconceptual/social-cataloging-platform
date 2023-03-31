@@ -6,12 +6,10 @@ import ro.project.model.Librarian;
 import ro.project.model.Reader;
 import ro.project.model.enums.UserType;
 import ro.project.service.ConnectionService;
-import ro.project.service.ReaderService;
 import ro.project.service.UserService;
 import ro.project.service.impl.ConnectionServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
 
-import javax.print.DocFlavor;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -206,8 +204,19 @@ public class GeneralMenu {
                                    type "exit" if you want to close the application.""");
     }
 
+    public static void populate() {
+        addSomeUsers();
+        addSomeConnections();
+//        addSomeShelves();
+//        addSomeBooks();
+//        addSomeEditions();
+//        addSomeReviews();
+//        addSomeBookClubs();
+//        addSomeMessages();
+    }
+
     public static void addSomeUsers() {
-        userService.addUser(
+        userService.addUsers(List.of(
                 Reader.builder()
                       .username("reader1")
                       .password("reader1")
@@ -216,8 +225,7 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2000, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build() );
-        userService.addUser(
+                      .build(),
                 Reader.builder()
                       .username("reader2")
                       .password("reader2")
@@ -226,8 +234,7 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2002, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build());
-        userService.addUser(
+                      .build(),
                 Reader.builder()
                       .username("reader3")
                       .password("reader3")
@@ -236,8 +243,7 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(1973, 4, 6))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build());
-        userService.addUsers(List.of(
+                      .build(),
                 Author.builder()
                       .username("author1")
                       .password("author1")
@@ -328,17 +334,6 @@ public class GeneralMenu {
                           .follower(userService.getByUsername("reader3").get().getId())
                           .followed(userService.getByUsername("librarian2").get().getId())
                           .build()));
-    }
-
-    public static void populate() {
-        addSomeUsers();
-        addSomeConnections();
-//        addSomeShelves();
-//        addSomeBooks();
-//        addSomeEditions();
-//        addSomeReviews();
-//        addSomeBookClubs();
-//        addSomeMessages();
     }
 
     public static void start() {

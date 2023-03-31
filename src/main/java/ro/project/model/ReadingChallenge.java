@@ -1,8 +1,8 @@
 package ro.project.model;
 
-import ro.project.model.abstracts.AbstractEntity;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import ro.project.model.abstracts.AbstractEntity;
 
 @SuperBuilder
 @Getter

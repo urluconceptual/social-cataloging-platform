@@ -1,15 +1,11 @@
 package ro.project.model;
 
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.AbstractEntity;
 
 import java.time.LocalDateTime;
 import java.util.*;
-import lombok.*;
-import lombok.experimental.SuperBuilder;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 @SuperBuilder
 @Getter

@@ -43,7 +43,3 @@ _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
 l
 <src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
-p
-@src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
-g
-7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c

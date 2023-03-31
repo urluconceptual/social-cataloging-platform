@@ -1,14 +1,14 @@
 package ro.project.model.abstracts;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.enums.UserType;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @SuperBuilder
 @Getter
@@ -23,6 +23,9 @@ public abstract class User extends AbstractEntity {
     private LocalDate birthDate;
     private String bio;
     private UserType type;
+    @ToString.Exclude
+    @Builder.Default
+    private List<UUID> connectionIdList = new ArrayList<>();
 
     @Override
     public boolean equals(Object o) {

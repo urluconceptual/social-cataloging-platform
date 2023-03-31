@@ -31,11 +31,10 @@ public class Reader extends User {
                                                         .name("read")
                                                         .bookList(new ArrayList<>())
                                                         .build();
-    @ToString.Exclude private List<Shelf> shelves;
+    @ToString.Exclude private List<Shelf> shelves = new ArrayList<>();
     @ToString.Exclude private ReadingChallenge openReadingChallenge;
-    @ToString.Exclude private List<ReadingChallenge> closedReadingChallengesList;
-    @ToString.Exclude private List<UUID> reviewIdList;
-    @ToString.Exclude private List<UUID> joinedBookClubIdList;
-    @ToString.Exclude private List<UUID> connectionIdList;
+    @ToString.Exclude private List<ReadingChallenge> closedReadingChallengesList = new ArrayList<>();
+    @ToString.Exclude private List<UUID> reviewIdList = new ArrayList<>();
+    @ToString.Exclude private List<UUID> joinedBookClubIdList = new ArrayList<>();
     @ToString.Exclude private double averageRating;
 }

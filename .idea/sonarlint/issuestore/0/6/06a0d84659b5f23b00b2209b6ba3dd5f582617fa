@@ -1,12 +1,0 @@
-
-M
-java:S2160"+Override the "equals" method in this class.(æ³˜æþÿÿÿÿ8ª­¹‘ó0
-R
-java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ8«­¹‘ó0
-N
-java:S1068	",Remove this unused "sentTime" private field.(¥’Ñóþÿÿÿÿ8¬­¹‘ó0
-L
-java:S1068
-"*Remove this unused "userId" private field.(ªÀŽýýÿÿÿÿ8¬­¹‘ó0
-E
-java:S1068"(Remove this unused "text" private field.(š²ûÁ8¬­¹‘ó0

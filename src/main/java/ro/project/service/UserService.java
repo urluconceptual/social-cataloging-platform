@@ -1,5 +1,6 @@
 package ro.project.service;
 
+import ro.project.model.Author;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 
@@ -26,4 +27,7 @@ public interface UserService {
     void setCurrentUser(String username);
 
     Optional<User> getCurrentUser();
+
+    void printUserData(User user);
+    void addConnectionId(User user, UUID connection);
 }

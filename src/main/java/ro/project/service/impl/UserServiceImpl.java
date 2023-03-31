@@ -1,9 +1,9 @@
 package ro.project.service.impl;
 
+import ro.project.model.Author;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
-import ro.project.service.ConnectionService;
-import ro.project.service.UserService;
+import ro.project.service.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,6 +12,9 @@ public class UserServiceImpl implements UserService {
     private static final Set<User> users = new HashSet<>();
     private static Optional<User> currentUser;
     private static ConnectionService connectionService = new ConnectionServiceImpl();
+    private static ReaderService readerService = new ReaderServiceImpl();
+    private static AuthorService authorService = new AuthorServiceImpl();
+    private static LibrarianService librarianService = new LibrarianServiceImpl();
 
     @Override
     public Optional<User> getById(UUID id) {
@@ -71,4 +74,18 @@ public class UserServiceImpl implements UserService {
     public Optional<User> getCurrentUser() {
         return currentUser;
     }
+
+    @Override
+    public void printUserData(User user) {
+        System.out.println("username: " + user.getUsername());
+        System.out.println("name: " + user.getFirstName() + " " + user.getLastName());
+        System.out.println("date of birth: " + user.getBirthDate());
+        System.out.println("about: " + user.getBio());
+    }
+
+    @Override
+    public void addConnectionId(User user, UUID connection) {
+        user.getConnectionIdList().add(connection);
+    }
+
 }

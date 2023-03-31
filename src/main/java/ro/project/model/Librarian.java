@@ -18,6 +18,6 @@ import java.util.UUID;
 @ToString(callSuper = true)
 public class Librarian extends User {
     @ToString.Exclude private List<UUID> curatedBookClubIds;
-    @ToString.Exclude private List<Shelf> curatedRecommendationsList;
+    @ToString.Exclude private Shelf curatedRecommendationsList;
     @ToString.Exclude private List<UUID> followerIdList;
 }

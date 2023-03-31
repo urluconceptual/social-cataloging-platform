@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ConnectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ConnectionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +83,9 @@
       <workItem from="1677587722795" duration="58000" />
       <workItem from="1680118181072" duration="4579000" />
       <workItem from="1680163858449" duration="15181000" />
-      <workItem from="1680190879394" duration="12437000" />
+      <workItem from="1680190879394" duration="12974000" />
+      <workItem from="1680247855150" duration="170000" />
+      <workItem from="1680248176614" duration="714000" />
     </task>
     <servers />
   </component>

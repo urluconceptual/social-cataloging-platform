@@ -1,0 +1,23 @@
+
+H
+java:S2160"+Override the "equals" method in this class.(¡÷Âş8µ²”ó0
+G
+java:S1068"*Remove this unused "author" private field.(á™Ï8¶²”ó0
+I
+java:S1068",Remove this unused "authorId" private field.(ê˜¢“8¶²”ó0
+K
+java:S1068")Remove this unused "title" private field.(åõò¹ıÿÿÿÿ8¶²”ó0
+K
+java:S1068")Remove this unused "genre" private field.(£È½ûÿÿÿÿ8¶²”ó0
+P
+java:S1068"3Remove this unused "publicationDate" private field.(­ß™™8¶²”ó0
+Q
+java:S1068"/Remove this unused "description" private field.(ÇÓæâıÿÿÿÿ8·²”ó0
+N
+java:S1068"1Remove this unused "numberOfPages" private field.(¬ÀÆ8·²”ó0
+L
+java:S1068"*Remove this unused "rating" private field.(¨ ­æúÿÿÿÿ8·²”ó0
+P
+java:S1068".Remove this unused "reviewList" private field.(ÿ¿½Èıÿÿÿÿ8ÙØ™ó0
+Q
+java:S1068"/Remove this unused "editionList" private field.(æ’«“üÿÿÿÿ8ö’àó0

@@ -15,3 +15,17 @@ c
 +src/main/java/ro/project/model/Message.java,0\6\06a0d84659b5f23b00b2209b6ba3dd5f582617fa
 Z
 *src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
+m
+=src/main/java/ro/project/model/enums/ShelfVisibilityType.java,3\5\3562dbe8f324f26588f537f1d637d72d0a9f28be
+g
+7src/main/java/ro/project/model/enums/EditionFormat.java,d\a\dab5ae9f8b7e6c86799f63ad7ec83d108e72f080
+c
+3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
+\
+,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
+b
+2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
+X
+(src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
+l
+<src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438

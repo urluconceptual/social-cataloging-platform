@@ -1,6 +1,7 @@
 package ro.project.service.impl;
 
 import ro.project.model.abstracts.User;
+import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
 import java.util.*;
@@ -8,6 +9,7 @@ import java.util.*;
 public class UserServiceImpl implements UserService {
     private static final Set<User> users = new HashSet<>();
     private static Optional<User> currentUser;
+    private static ConnectionService connectionService = new ConnectionServiceImpl();
 
     @Override
     public Optional<User> getById(UUID id) {

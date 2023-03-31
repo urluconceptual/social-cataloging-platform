@@ -14,7 +14,6 @@ import java.util.*;
 public class SharedShelf extends Shelf {
     @Builder.Default
     private List<UUID> ownerIdList = new ArrayList<>();
-    private String name;
     @Builder.Default
     private Map<UUID, UUID> editorBookMap = new HashMap<>();
 }

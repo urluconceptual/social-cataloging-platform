@@ -37,7 +37,7 @@ public class ReaderServiceImpl implements ReaderService {
     @Override
     public Set<User> getFriends() {
         Set<User> friends = userService.getFollowing();
-        friends.addAll(userService.getFollowed());
+        friends.retainAll(userService.getFollowed());
         return friends;
     }
 }

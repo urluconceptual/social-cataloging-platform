@@ -158,25 +158,23 @@ public class ReaderMenu {
     private void addSharedShelf(String shelfName) {
         List<User> friends = readerService.getFriends().stream().toList();
         List<UUID> collaborators = new LinkedList<>();
+        collaborators.add(userService.getCurrentUser().get().getId());
         System.out.println("Choose friends to collaborate:");
         int i = 0;
         for (; i < friends.size(); i++) {
-            System.out.println((i) + " -> " + friends.get(i).getUsername());
+            System.out.println((i + 1) + " -> " + friends.get(i).getUsername());
         }
-        System.out.println("default -> Done");
+        System.out.println("done -> Done");
 
         System.out.println("""
                                    Choose indexes for all the collaborators you want to add,
-                                   or type anything else if you're done.
-                                   Format: "1 2 3 ..."
-                                                                      
-                                   Your answer:""");
+                                   or type "done" if you're done:""");
 
-        String options = scanner.nextLine();
-        String[] optionsArray = options.split(" ");
+        String options = scanner.next();
 
-        for (String o : optionsArray) {
-            collaborators.add(friends.get(Integer.parseInt(o)).getId());
+        while(!options.equals("done")) {
+            collaborators.add(friends.get(Integer.parseInt(options) - 1).getId());
+            options = scanner.next();
         }
 
         shelfService.addShelf(SharedShelf.builder()
@@ -187,8 +185,8 @@ public class ReaderMenu {
     }
 
     private void addShelf() {
-        System.out.println("Enter shelf name:");
-        String shelfName = scanner.nextLine();
+        System.out.println("Enter shelf name (one word):");
+        String shelfName = scanner.next();
         System.out.println("""
                                    Type of shelf:
                                    1 -> Personal

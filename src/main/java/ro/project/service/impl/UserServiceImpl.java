@@ -1,6 +1,5 @@
 package ro.project.service.impl;
 
-import ro.project.model.Author;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
@@ -86,6 +85,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void addConnectionId(User user, UUID connection) {
         user.getConnectionIdList().add(connection);
+    }
+
+    @Override
+    public void removeConnectionId(UUID user, UUID connection) {
+        getById(user).get().getConnectionIdList().remove(connection);
+        currentUser.get().getConnectionIdList().remove(connection);
     }
 
 }

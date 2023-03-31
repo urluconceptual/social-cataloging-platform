@@ -17,8 +17,6 @@ import lombok.experimental.SuperBuilder;
 @ToString
 @Setter
 public class Connection extends AbstractEntity {
-    private UUID userId1;
-    private UUID userId2;
-    private boolean oneFollowsTwo;
-    private boolean twoFollowsOne;
+    private UUID follower;
+    private UUID followed;
 }

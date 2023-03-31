@@ -51,10 +51,19 @@ public class ReaderMenu {
             }
         } while (true);
 
+        if (connectionService.getByUsers(userService.getCurrentUser().get().getId(), user.get().getId()).isPresent()
+                || connectionService.getByUsers(user.get().getId(), userService.getCurrentUser().get().getId()).isPresent()) {
+            System.out.println("You follow this user!");
+        }
+        else {
+            System.out.println("You don't follow this user!");
+        }
+
         System.out.println("""
                                    
                                    1 -> Follow user
-                                   2 -> Go back
+                                   2 -> Unfollow user
+                                   3 -> Go back
                                    
                                    Choose option:""");
 
@@ -64,10 +73,15 @@ public class ReaderMenu {
             switch (option) {
                 case "1" -> {
                     connectionService.addConnection(user.get().getId());
-                    System.out.println("Successfully followed!");
+                    System.out.println("You follow this user!");
                     return;
                 }
                 case "2" -> {
+                    connectionService.unfollowConnection(user.get().getId());
+                    System.out.println("You don't follow this user!");
+                    return;
+                }
+                case "3" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

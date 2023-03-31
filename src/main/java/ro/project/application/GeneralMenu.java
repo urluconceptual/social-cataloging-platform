@@ -205,8 +205,6 @@ public class GeneralMenu {
     public static void addSomeUsers() {
         userService.addUsers(List.of(
                 Reader.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("reader1")
                       .password("reader1")
                       .firstName("John")
@@ -216,8 +214,6 @@ public class GeneralMenu {
                       .type(UserType.READER)
                       .build(),
                 Reader.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("reader2")
                       .password("reader2")
                       .firstName("Stanley")
@@ -227,8 +223,6 @@ public class GeneralMenu {
                       .type(UserType.READER)
                       .build(),
                 Reader.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("reader3")
                       .password("reader3")
                       .firstName("John")
@@ -238,8 +232,6 @@ public class GeneralMenu {
                       .type(UserType.READER)
                       .build(),
                 Author.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("author1")
                       .password("author1")
                       .firstName("Stephen")
@@ -249,8 +241,6 @@ public class GeneralMenu {
                       .type(UserType.AUTHOR)
                       .build(),
                 Author.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("author2")
                       .password("author2")
                       .firstName("Mircea")
@@ -260,8 +250,6 @@ public class GeneralMenu {
                       .type(UserType.AUTHOR)
                       .build(),
                 Author.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("author3")
                       .password("author3")
                       .firstName("Gabriel")
@@ -271,8 +259,6 @@ public class GeneralMenu {
                       .type(UserType.AUTHOR)
                       .build(),
                 Author.builder()
-                      .id(UUID.randomUUID())
-                      .creationDate(LocalDate.now())
                       .username("author4")
                       .password("author4")
                       .firstName("Rhys")
@@ -282,8 +268,6 @@ public class GeneralMenu {
                       .type(UserType.AUTHOR)
                       .build(),
                 Librarian.builder()
-                         .id(UUID.randomUUID())
-                         .creationDate(LocalDate.now())
                          .username("librarian1")
                          .password("librarian1")
                          .firstName("Joe")
@@ -293,8 +277,6 @@ public class GeneralMenu {
                          .type(UserType.LIBRARIAN)
                          .build(),
                 Librarian.builder()
-                         .id(UUID.randomUUID())
-                         .creationDate(LocalDate.now())
                          .username("librarian2")
                          .password("librarian2")
                          .firstName("Jane")

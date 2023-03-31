@@ -1,8 +1,11 @@
 package ro.project.service;
 
 import ro.project.model.Connection;
+import ro.project.model.abstracts.User;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 public interface ConnectionService {
@@ -11,6 +14,9 @@ public interface ConnectionService {
     void addConnection(UUID user);
     void editById(UUID id, Connection newConnection);
     void removeById(UUID id);
-
     void unfollowConnection(UUID user);
+
+    Set<UUID> getFollowing(List<UUID> connectionIdList);
+
+    Set<UUID> getFollowed(List<UUID> connectionIdList);
 }

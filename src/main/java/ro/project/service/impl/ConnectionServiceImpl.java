@@ -1,16 +1,15 @@
 package ro.project.service.impl;
 
 import ro.project.model.Connection;
+import ro.project.model.abstracts.User;
 import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ConnectionServiceImpl implements ConnectionService {
-    List<Connection> connections = new ArrayList<>();
+    private static final List<Connection> connections = new ArrayList<>();
 
     private static UserService userService = new UserServiceImpl();
 
@@ -64,6 +63,24 @@ public class ConnectionServiceImpl implements ConnectionService {
         if (connection.isPresent()) {
             userService.removeConnectionId(user, connection.get().getId());
         }
+    }
+
+    @Override
+    public Set<UUID> getFollowing(List<UUID> connectionIdList) {
+        return connectionIdList.stream()
+                               .map(id -> getById(id).get())
+                               .filter(connection -> connection.getFollower().equals(userService.getCurrentUser().get().getId()))
+                               .map(Connection::getFollowed)
+                               .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<UUID> getFollowed(List<UUID> connectionIdList) {
+        return connectionIdList.stream()
+                               .map(id -> getById(id).get())
+                               .filter(connection -> connection.getFollowed().equals(userService.getCurrentUser().get().getId()))
+                               .map(Connection::getFollower)
+                               .collect(Collectors.toSet());
     }
 
 }

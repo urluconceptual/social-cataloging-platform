@@ -93,4 +93,20 @@ public class UserServiceImpl implements UserService {
         currentUser.get().getConnectionIdList().remove(connection);
     }
 
+    @Override
+    public Set<User> getFollowing() {
+        return connectionService.getFollowing(currentUser.get().getConnectionIdList())
+                .stream()
+                .map(id -> getById(id).get())
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<User> getFollowed() {
+        return connectionService.getFollowed(currentUser.get().getConnectionIdList())
+                                .stream()
+                                .map(id -> getById(id).get())
+                                .collect(Collectors.toSet());
+    }
+
 }

@@ -14,8 +14,10 @@ import java.util.UUID;
 @ToString
 @EqualsAndHashCode
 public abstract class AbstractEntity {
-    private UUID id;
-    private LocalDate creationDate;
+    @Builder.Default
+    private UUID id = UUID.randomUUID();
+    @Builder.Default
+    private LocalDate creationDate = LocalDate.now();
     private LocalDate updateDate;
     private LocalDate deleteDate;
 }

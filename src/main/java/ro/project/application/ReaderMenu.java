@@ -33,7 +33,36 @@ public class ReaderMenu {
     }
 
     private static void myConnections() {
-
+        System.out.println("""
+                                   
+                                   1 -> Users you follow
+                                   2 -> Users following you
+                                   3 -> Go back
+                                   
+                                   Choose option:""");
+        String option;
+        boolean flag = true;
+        do {
+            option = scanner.next();
+            switch (option) {
+                case "1" -> {
+                    System.out.println("You follow:");
+                    userService.getFollowing()
+                               .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
+                    flag = false;
+                }
+                case "2" -> {
+                    System.out.println("Followers:");
+                    userService.getFollowed()
+                               .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
+                    flag = false;
+                }
+                case "3" -> {
+                    return;
+                }
+                default -> generalMenu.invalidMessage("Invalid option.");
+            }
+        } while (flag);
     }
 
     private static void viewProfile() {

@@ -31,4 +31,6 @@ public interface UserService {
     void printUserData(User user);
     void addConnectionId(User user, UUID connection);
     void removeConnectionId(UUID user, UUID connection);
+    Set<User> getFollowing();
+    Set<User> getFollowed();
 }

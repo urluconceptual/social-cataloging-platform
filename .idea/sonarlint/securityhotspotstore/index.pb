@@ -9,8 +9,6 @@ o
 ?src/main/java/ro/project/service/impl/LibrarianServiceImpl.java,6\e\6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16
 \
 ,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
-[
-+src/main/java/ro/project/model/Message.java,0\6\06a0d84659b5f23b00b2209b6ba3dd5f582617fa
 d
 4src/main/java/ro/project/model/ReadingChallenge.java,2\0\208da94237a1dc26c5d59d8e89d9208636a3eab3
 Z
@@ -39,8 +37,6 @@ c
 3src/main/java/ro/project/model/records/Edition.java,0\1\0158b47f843fe6835d2691191f1d04fdce84889f
 X
 (src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
-a
-1src/main/java/ro/project/model/PersonalShelf.java,6\9\694fd3fbf39f629a7bd718013694e2160e6c1ceb
 c
 3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa
 h

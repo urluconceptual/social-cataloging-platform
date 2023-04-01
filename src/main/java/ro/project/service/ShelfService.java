@@ -21,4 +21,5 @@ public interface ShelfService {
     List<UUID> getShelfBooks(UUID id);
 
     void addBookToShelf(UUID shelfId, UUID bookId);
+    void removeBookFromShelf(UUID shelfId, UUID bookId);
 }

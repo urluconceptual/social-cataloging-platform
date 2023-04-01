@@ -230,7 +230,7 @@ public class ReaderMenu {
         List<Book> bookList = bookService.getListOfAllBooks();
         int i = 1;
         for (Book book : bookList) {
-            System.out.println("----" + i + ": ");
+            System.out.println("---- " + i + ": ");
             bookService.printBookData(book.getId());
             i++;
         }
@@ -244,7 +244,14 @@ public class ReaderMenu {
     }
 
     void removeFromShelf(UUID shelfId) {
-        shelfService.getShelfBooks(shelfId);
+        List<UUID> bookList = shelfService.getShelfBooks(shelfId);
+        System.out.println("Enter index of book you want to remove:");
+        int input = scanner.nextInt();
+        while (input > bookList.size()) {
+            generalMenu.invalidMessage("Book index does not exist.");
+            input = scanner.nextInt();
+        }
+        shelfService.removeBookFromShelf(shelfId, bookList.get(input - 1));
     }
 
     public void seeShelf() {
@@ -255,6 +262,7 @@ public class ReaderMenu {
             generalMenu.invalidMessage("Shelf does not exist.");
             i = scanner.nextInt();
         }
+        System.out.println("Books on your shelf: ");
         shelfService.printShelfData(shelves.get(i - 1));
 
         System.out.println("""

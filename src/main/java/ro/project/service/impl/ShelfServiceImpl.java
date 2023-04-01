@@ -110,5 +110,15 @@ public class ShelfServiceImpl implements ShelfService {
         }
     }
 
+    @Override
+    public void removeBookFromShelf(UUID shelfId, UUID bookId) {
+        Shelf shelf = getById(shelfId).get();
+        if (shelf instanceof PersonalShelf personalShelf) {
+            personalShelf.getBookList().remove(bookId);
+        } else {
+            ((SharedShelf) shelf).getEditorBookMap().values().remove(bookId);
+        }
+    }
+
 
 }

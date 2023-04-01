@@ -8,8 +8,10 @@ import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class AuthorMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -57,7 +59,16 @@ public class AuthorMenu {
     }
 
     public void removeBook() {
-
+        Author author = (Author)userService.getCurrentUser().get();
+        List<UUID> bookList = authorService.getWrittenBooks(author);
+        System.out.println("Enter index of book you want to remove: ");
+        int input = scanner.nextInt();
+        while (input > bookList.size()) {
+            generalMenu.invalidMessage("Book index does not exist.");
+            input = scanner.nextInt();
+        }
+        bookService.removeBookById(bookList.get(input - 1));
+        System.out.println("Successfully removed book!");
     }
 
     public void myBooks() {

@@ -4,6 +4,7 @@ import ro.project.model.Author;
 import ro.project.model.Book;
 import ro.project.service.AuthorService;
 import ro.project.service.BookService;
+import ro.project.service.ShelfService;
 import ro.project.service.UserService;
 
 import java.util.*;
@@ -12,6 +13,7 @@ public class BookServiceImpl implements BookService {
     private static Map<UUID, Book> bookMap = new HashMap<>();
     private static AuthorService authorService = new AuthorServiceImpl();
     private static UserService userService = new UserServiceImpl();
+    private static ShelfService shelfService = new ShelfServiceImpl();
 
     @Override
     public void init() {
@@ -50,6 +52,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void removeBookById(UUID id) {
         bookMap.remove(id);
+        shelfService.removeBookFromAllShelves(id);
     }
 
     @Override

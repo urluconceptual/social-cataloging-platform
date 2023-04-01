@@ -126,5 +126,12 @@ public class ShelfServiceImpl implements ShelfService {
         }
     }
 
+    @Override
+    public void removeBookFromAllShelves(UUID bookId) {
+        for(Shelf shelf : shelfMap.values()) {
+            removeBookFromShelf(shelf.getId(), bookId);
+        }
+    }
+
 
 }

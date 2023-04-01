@@ -31,8 +31,6 @@ c
 3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
 c
 3src/main/java/ro/project/model/records/Edition.java,0\1\0158b47f843fe6835d2691191f1d04fdce84889f
-c
-3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 ]

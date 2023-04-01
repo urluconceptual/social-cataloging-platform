@@ -6,6 +6,7 @@ import ro.project.service.AuthorService;
 import ro.project.service.ShelfService;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.UUID;
 
 public class AuthorServiceImpl implements AuthorService {
@@ -35,5 +36,10 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public void addToBookList(Author author, UUID bookId) {
         ((PersonalShelf) shelfService.getById(author.getBookIdList()).get()).getBookList().add(bookId);
+    }
+
+    @Override
+    public List<UUID> getWrittenBooks(Author author) {
+        return shelfService.getShelfBooks(author.getBookIdList());
     }
 }

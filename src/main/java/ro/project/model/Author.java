@@ -19,8 +19,5 @@ public class Author extends User {
     private UUID bookIdList;
     @ToString.Exclude
     @Builder.Default
-    private List<String> influencesList = new ArrayList<>();
-    @ToString.Exclude
-    @Builder.Default
     private double averageRating = 0;
 }

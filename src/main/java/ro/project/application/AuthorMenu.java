@@ -106,7 +106,7 @@ public class AuthorMenu {
 
     }
     private void myFollowers() {
-
+        userService.getFollowed().forEach(user -> System.out.println(user.getUsername()));
     }
 
     public void start() {
@@ -115,9 +115,8 @@ public class AuthorMenu {
                                                                       
                                    1 -> My books
                                    2 -> My followers
-                                   3 -> My influences
-                                   4 -> My average rating
-                                   5 -> Logout
+                                   3 -> My average rating
+                                   4 -> Logout
                                                                       
                                    Choose option:""");
         String options;
@@ -135,14 +134,10 @@ public class AuthorMenu {
                     flag = false;
                 }
                 case "3" -> {
-                    //myInfluences();
-                    flag = false;
-                }
-                case "4" -> {
                     //myAverageRating();
                     flag = false;
                 }
-                case "5" -> {
+                case "4" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

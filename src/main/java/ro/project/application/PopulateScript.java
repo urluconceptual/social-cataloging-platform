@@ -154,7 +154,7 @@ public class PopulateScript {
                           .build(),
                 Connection.builder()
                           .follower(userService.getByUsername("reader3").get().getId())
-                          .followed(userService.getByUsername("author1").get().getId())
+                          .followed(userService.getByUsername("author2").get().getId())
                           .build(),
                 Connection.builder()
                           .follower(userService.getByUsername("reader3").get().getId())

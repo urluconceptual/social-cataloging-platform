@@ -43,7 +43,7 @@ public class ConnectionServiceImpl implements ConnectionService {
 
     @Override
     public void addConnections(List<Connection> connectionList) {
-        for(Connection connection : connectionList) {
+        for (Connection connection : connectionList) {
             connections.add(connection);
             userService.addConnectionId(userService.getById(connection.getFollower()).get(), connection.getId());
             userService.addConnectionId(userService.getById(connection.getFollowed()).get(), connection.getId());

@@ -16,17 +16,19 @@ public class BookServiceImpl implements BookService {
     @Override
     public void init() {
         bookMap.forEach((id, book) -> {
-            if (book.getAuthorId().isPresent())
+            if (book.getAuthorId().isPresent()) {
                 authorService.addToBookList((Author) userService.getById(book.getAuthorId().get()).get(), book.getId());
+            }
         });
     }
 
     @Override
     public Optional<Book> getById(UUID id) {
-        if (bookMap.containsKey(id))
+        if (bookMap.containsKey(id)) {
             return Optional.of(bookMap.get(id));
-        else
+        } else {
             return Optional.empty();
+        }
     }
 
     @Override

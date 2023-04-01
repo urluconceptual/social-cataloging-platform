@@ -2,13 +2,15 @@ package ro.project.service.impl;
 
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
-import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.service.ReaderService;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 public class ReaderServiceImpl implements ReaderService {
     private static UserService userService = new UserServiceImpl();

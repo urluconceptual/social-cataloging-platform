@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public interface BookService {
     void init();
+
     Optional<Book> getById(UUID id);
 
     void addBook(Book book);
@@ -17,6 +18,8 @@ public interface BookService {
     void editBookById(UUID id, Book newBook);
 
     void removeBookById(UUID id);
+
     void printBookData(UUID id);
+
     List<Book> getListOfAllBooks();
 }

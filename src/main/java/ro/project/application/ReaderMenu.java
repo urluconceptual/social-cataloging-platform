@@ -4,7 +4,6 @@ import ro.project.model.Book;
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
 import ro.project.model.SharedShelf;
-import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -175,7 +174,7 @@ public class ReaderMenu {
 
         String options = scanner.next();
 
-        while(!options.equals("done")) {
+        while (!options.equals("done")) {
             collaborators.add(friends.get(Integer.parseInt(options) - 1).getId());
             options = scanner.next();
         }
@@ -216,10 +215,10 @@ public class ReaderMenu {
     }
 
     private void removeShelf() {
-        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
+        List<UUID> shelves = ((Reader) userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to remove:");
         int i = scanner.nextInt();
-        while(i > shelves.size()) {
+        while (i > shelves.size()) {
             generalMenu.invalidMessage("Shelf does not exist.");
             i = scanner.nextInt();
         }
@@ -230,18 +229,18 @@ public class ReaderMenu {
     void addToShelf(UUID shelfId) {
         List<Book> bookList = bookService.getListOfAllBooks();
         int i = 1;
-        for(Book book : bookList) {
+        for (Book book : bookList) {
             System.out.println("----" + i + ": ");
             bookService.printBookData(book.getId());
             i++;
         }
         System.out.println("Enter index of book you want to add:");
         int input = scanner.nextInt();
-        while(input > bookList.size()) {
+        while (input > bookList.size()) {
             generalMenu.invalidMessage("Book index does not exist.");
             input = scanner.nextInt();
         }
-        shelfService.addBookToShelf(shelfId, bookList.get(input-1).getId());
+        shelfService.addBookToShelf(shelfId, bookList.get(input - 1).getId());
     }
 
     void removeFromShelf() {
@@ -249,14 +248,14 @@ public class ReaderMenu {
     }
 
     public void seeShelf() {
-        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
+        List<UUID> shelves = ((Reader) userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to see:");
         int i = scanner.nextInt();
-        while(i > shelves.size()) {
+        while (i > shelves.size()) {
             generalMenu.invalidMessage("Shelf does not exist.");
             i = scanner.nextInt();
         }
-        shelfService.printShelfData(shelves.get(i-1));
+        shelfService.printShelfData(shelves.get(i - 1));
 
         System.out.println("""
                                                                       
@@ -271,7 +270,7 @@ public class ReaderMenu {
             option = scanner.next();
             switch (option) {
                 case "1" -> {
-                    addToShelf(shelves.get(i-1));
+                    addToShelf(shelves.get(i - 1));
                     flag = false;
                 }
                 case "2" -> {

@@ -27,6 +27,7 @@ public class PopulateScript {
     public static PopulateScript getInstance() {
         return (INSTANCE == null ? new PopulateScript() : INSTANCE);
     }
+
     public static void populate() {
         addSomeUsers();
         addSomeConnections();
@@ -120,13 +121,13 @@ public class PopulateScript {
                          .bio("i am a librarian")
                          .type(UserType.LIBRARIAN)
                          .build()));
-        readerService.init((Reader)userService.getByUsername("reader1").get());
-        readerService.init((Reader)userService.getByUsername("reader2").get());
-        readerService.init((Reader)userService.getByUsername("reader3").get());
-        authorService.init((Author)userService.getByUsername("author1").get());
-        authorService.init((Author)userService.getByUsername("author2").get());
-        authorService.init((Author)userService.getByUsername("author3").get());
-        authorService.init((Author)userService.getByUsername("author4").get());
+        readerService.init((Reader) userService.getByUsername("reader1").get());
+        readerService.init((Reader) userService.getByUsername("reader2").get());
+        readerService.init((Reader) userService.getByUsername("reader3").get());
+        authorService.init((Author) userService.getByUsername("author1").get());
+        authorService.init((Author) userService.getByUsername("author2").get());
+        authorService.init((Author) userService.getByUsername("author3").get());
+        authorService.init((Author) userService.getByUsername("author4").get());
     }
 
     private static void addSomeConnections() {
@@ -222,7 +223,7 @@ public class PopulateScript {
                     .author("Gabriel Garcia Marquez")
                     .genre(BookGenre.ROMANCE)
                     .numberOfPages(300)
-                    .build() ));
+                    .build()));
         bookService.init();
     }
 }

@@ -2,15 +2,15 @@ package ro.project.service.impl;
 
 import ro.project.model.Author;
 import ro.project.model.PersonalShelf;
-import ro.project.model.Reader;
 import ro.project.service.AuthorService;
 import ro.project.service.ShelfService;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.UUID;
 
 public class AuthorServiceImpl implements AuthorService {
+
+    private static ShelfService shelfService = new ShelfServiceImpl();
 
     public Author init(Author author) {
         shelfService.addShelf(
@@ -21,7 +21,7 @@ public class AuthorServiceImpl implements AuthorService {
                              .build());
         return author;
     }
-    private static ShelfService shelfService = new ShelfServiceImpl();
+
     @Override
     public void printAuthorData(Author author) {
 
@@ -34,6 +34,6 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public void addToBookList(Author author, UUID bookId) {
-        ((PersonalShelf)shelfService.getById(author.getBookIdList()).get()).getBookList().add(bookId);
+        ((PersonalShelf) shelfService.getById(author.getBookIdList()).get()).getBookList().add(bookId);
     }
 }

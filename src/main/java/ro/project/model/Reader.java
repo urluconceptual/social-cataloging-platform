@@ -2,11 +2,8 @@ package ro.project.model;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
-import ro.project.model.enums.UserType;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

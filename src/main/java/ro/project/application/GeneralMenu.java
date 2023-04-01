@@ -1,15 +1,14 @@
 package ro.project.application;
 
-import ro.project.model.*;
-import ro.project.model.enums.BookGenre;
+import ro.project.model.Author;
+import ro.project.model.Librarian;
+import ro.project.model.Reader;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class GeneralMenu {
@@ -114,27 +113,30 @@ public class GeneralMenu {
                 authorService.init((Author) userService.getByUsername(username).get());
             }
             case LIBRARIAN -> userService.addUser(Librarian.builder()
-                                       .username(username)
-                                       .password(password)
-                                       .firstName(firstName)
-                                       .lastName(lastName)
-                                       .birthDate(birthDate)
-                                       .bio(bio)
-                                       .type(type)
-                                       .build());
-            case READER -> {userService.addUser(Reader.builder()
-                                 .username(username)
-                                 .password(password)
-                                 .firstName(firstName)
-                                 .lastName(lastName)
-                                 .birthDate(birthDate)
-                                 .bio(bio)
-                                 .type(type)
-                                 .build());
-                readerService.init((Reader)userService.getByUsername(username).get());
+                                                           .username(username)
+                                                           .password(password)
+                                                           .firstName(firstName)
+                                                           .lastName(lastName)
+                                                           .birthDate(birthDate)
+                                                           .bio(bio)
+                                                           .type(type)
+                                                           .build());
+            case READER -> {
+                userService.addUser(Reader.builder()
+                                          .username(username)
+                                          .password(password)
+                                          .firstName(firstName)
+                                          .lastName(lastName)
+                                          .birthDate(birthDate)
+                                          .bio(bio)
+                                          .type(type)
+                                          .build());
+                readerService.init((Reader) userService.getByUsername(username).get());
             }
-            default -> {}
-        };
+            default -> {
+            }
+        }
+        ;
 
         userService.setCurrentUser(username);
 
@@ -202,7 +204,6 @@ public class GeneralMenu {
                                    You logged out! Type anything to restart the application or
                                    type "exit" if you want to close the application.""");
     }
-
 
 
     public static void start() {

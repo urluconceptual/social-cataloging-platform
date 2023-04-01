@@ -1,16 +1,13 @@
 package ro.project.application;
 
 import ro.project.model.Author;
-import ro.project.model.PersonalShelf;
-import ro.project.model.Reader;
-import ro.project.model.SharedShelf;
 import ro.project.model.abstracts.User;
-import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
-import java.util.*;
+import java.util.Optional;
+import java.util.Scanner;
 
 public class AuthorMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -56,6 +53,38 @@ public class AuthorMenu {
                     flag = false;
                 }
                 case "3" -> {
+                    return;
+                }
+                default -> generalMenu.invalidMessage("Invalid option.");
+            }
+        } while (flag);
+    }
+
+    private static void showUsers(UserType type) {
+        String userType = type.getType() + "s";
+        System.out.printf("These are all the registered %s:%n", userType);
+        userService.getByType(type)
+                   .stream()
+                   .filter(user -> !user.equals(userService.getCurrentUser().get()))
+                   .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"
+                                                      ));
+
+        System.out.println("""
+                                   1 -> Choose profile to view
+                                   2 -> Go back
+                                                                      
+                                   Choose option:""");
+
+        String option;
+        boolean flag = true;
+        do {
+            option = scanner.next();
+            switch (option) {
+                case "1" -> {
+                    viewProfile();
+                    flag = false;
+                }
+                case "2" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
@@ -114,38 +143,6 @@ public class AuthorMenu {
             }
         } while (true);
 
-    }
-
-    private static void showUsers(UserType type) {
-        String userType = type.getType() + "s";
-        System.out.printf("These are all the registered %s:%n", userType);
-        userService.getByType(type)
-                   .stream()
-                   .filter(user -> !user.equals(userService.getCurrentUser().get()))
-                   .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"
-                                                      ));
-
-        System.out.println("""
-                                   1 -> Choose profile to view
-                                   2 -> Go back
-                                                                      
-                                   Choose option:""");
-
-        String option;
-        boolean flag = true;
-        do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    viewProfile();
-                    flag = false;
-                }
-                case "2" -> {
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
-            }
-        } while (flag);
     }
 
     public void myBooks() {

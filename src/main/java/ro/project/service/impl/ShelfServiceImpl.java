@@ -17,10 +17,11 @@ public class ShelfServiceImpl implements ShelfService {
 
     @Override
     public Optional<Shelf> getById(UUID id) {
-        if (shelfMap.containsKey(id))
+        if (shelfMap.containsKey(id)) {
             return Optional.of(shelfMap.get(id));
-        else
+        } else {
             return Optional.empty();
+        }
     }
 
     @Override
@@ -28,18 +29,19 @@ public class ShelfServiceImpl implements ShelfService {
         shelfMap.put(shelf.getId(), shelf);
         if (shelf instanceof PersonalShelf personalShelf) {
             User owner = userService.getById(personalShelf.getOwner()).get();
-            if (owner instanceof Reader reader)
+            if (owner instanceof Reader reader) {
                 reader.getShelves().add(shelf.getId());
-            else if (owner instanceof Author author)
+            } else if (owner instanceof Author author) {
                 author.setBookIdList(shelf.getId());
-            else if (owner instanceof Librarian librarian)
+            } else if (owner instanceof Librarian librarian) {
                 librarian.setCuratedRecommendationsList(shelf.getId());
+            }
         }
         if (shelf instanceof SharedShelf sharedShelf) {
             sharedShelf.getOwnerIdList()
-                                 .forEach(user -> ((Reader) userService.getById(user)
-                                                                       .get())
-                                         .getShelves().add(shelf.getId()));
+                       .forEach(user -> ((Reader) userService.getById(user)
+                                                             .get())
+                               .getShelves().add(shelf.getId()));
         }
     }
 
@@ -70,20 +72,18 @@ public class ShelfServiceImpl implements ShelfService {
                 bookService.printBookData(bookId);
                 System.out.println();
             });
-        }
-        else {
+        } else {
             SharedShelf sharedShelf = (SharedShelf) getById(id).get();
-            sharedShelf.getEditorBookMap().forEach((user, book) -> System.out.println(book.toString()+" (" +user.toString()+ " )\n"));
+            sharedShelf.getEditorBookMap().forEach((user, book) -> System.out.println(book.toString() + " (" + user.toString() + " )\n"));
         }
     }
 
     @Override
     public void addBookToShelf(UUID shelfId, UUID bookId) {
         Shelf shelf = getById(shelfId).get();
-        if(shelf instanceof PersonalShelf personalShelf) {
+        if (shelf instanceof PersonalShelf personalShelf) {
             personalShelf.getBookList().add(bookId);
-        }
-        else {
+        } else {
             ((SharedShelf) shelf).getEditorBookMap().put(userService.getCurrentUser().get().getId(), bookId);
         }
     }

@@ -6,7 +6,6 @@ import ro.project.model.abstracts.AbstractEntity;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.records.Edition;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

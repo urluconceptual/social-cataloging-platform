@@ -1,0 +1,81 @@
+
+r
+java:S1192="PDefine a constant instead of duplicating this literal "Invalid option." 5 times.(á›¥üÿÿÿÿ8êèëó0
+d
+java:S11921"GDefine a constant instead of duplicating this literal " user)" 3 times.(ÊÒ…¯8êèëó0
+n
+java:S3655œ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(—ƒ†·8éëó0
+m
+java:S3655Q"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŸŠŞ8œéëó0
+s
+java:S3655˜"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8éëó0
+r
+java:S3655R"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ıËÆÆøÿÿÿÿ8éëó0
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë½°8ì’ëó0
+}
+java:S1450"[Remove the "shelfService" field and declare it as a local variable in the relevant methods.(£æù˜üÿÿÿÿ8Ÿñ¡ìó0
+U	java:S106""9Replace this use of System.out or System.err by a logger.(Îñë8£éëó0
+T	java:S106/"9Replace this use of System.out or System.err by a logger.(©åß8¤éëó0
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(ÊÒ…¯8¥éëó0
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(Ä‡Ê—ûÿÿÿÿ8¥éëó0
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(ÊÒ…¯8¥éëó0
+W
+java:S2209="5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8¦éëó0
+Z	java:S106C"9Replace this use of System.out or System.err by a logger.(›œéúÿÿÿÿ8¦éëó0
+W
+java:S2209J"5Change this instance-reference to a static reference.(é†­…ÿÿÿÿÿ8§éëó0
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(ô’ÖØ8¨éëó0
+T	java:S106U"9Replace this use of System.out or System.err by a logger.(†½¿q8¨éëó0
+U	java:S106X"9Replace this use of System.out or System.err by a logger.(Îñë8¨éëó0
+U	java:S106f"9Replace this use of System.out or System.err by a logger.(ô’ÖØ8©éëó0
+T	java:S106k"9Replace this use of System.out or System.err by a logger.(†½¿q8©éëó0
+W
+java:S2209q"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8©éëó0
+U	java:S106y"9Replace this use of System.out or System.err by a logger.(ò©èÅ8ªéëó0
+U	java:S106}"9Replace this use of System.out or System.err by a logger.(¨ë·Ø8«éëó0
+V	java:S106€"9Replace this use of System.out or System.err by a logger.(Îñë8«éëó0
+X
+java:S2209’"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8¬éëó0
+]
+java:S1854˜":Remove this useless assignment to local variable "author".(¸•Íúÿÿÿÿ8´éëó0
+N
+java:S1481˜"+Remove this unused "author" local variable.(¸•Íúÿÿÿÿ8Úæ«ëó0
+V	java:S106š"9Replace this use of System.out or System.err by a logger.(ƒŒ¡§8µéëó0
+V	java:S106"9Replace this use of System.out or System.err by a logger.(Îñë8µéëó0
+?
+java:S6205©"Remove this redundant block.(¶Œ™ıÿÿÿÿ8¯µÊëó0
+:
+java:S6205¬"Remove this redundant block.(ŞŒâÏ8¯µÊëó0
+X
+java:S2209²"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8¶éëó0
+V	java:S106º"9Replace this use of System.out or System.err by a logger.(Îñë8¶éëó0
+:
+java:S6205Í"Remove this redundant block.(ŞŒâÏ8 Ÿ£ìó0
+Y	java:S125Î"<This block of commented-out lines of code should be removed.(Ğ¢¨8¯µÊëó0
+:
+java:S6205Ñ"Remove this redundant block.(„ËôÂ8 Ÿ£ìó0
+Y	java:S125Ò"<This block of commented-out lines of code should be removed.(°ıô÷8¯µÊëó0
+?
+java:S6205Õ"Remove this redundant block.(Øù¥‰úÿÿÿÿ8¡Ÿ£ìó0
+Y	java:S125Ö"<This block of commented-out lines of code should be removed.(™¯¢à8¯µÊëó0
+X
+java:S2209Ü"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8·éëó0
+]
+java:S1128";Remove this unused import 'ro.project.model.PersonalShelf'.(ëùâıÿÿÿÿ8€È£ìó0
+Q
+java:S1128"4Remove this unused import 'ro.project.model.Reader'.(Ë­®½8€È£ìó0
+[
+java:S1128"9Remove this unused import 'ro.project.model.SharedShelf'.(ëÉ¡Şùÿÿÿÿ8€È£ìó0
+Z
+java:S1128"=Remove this unused import 'ro.project.model.enums.ShelfType'.(’¥…„8€È£ìó0
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8¬‡¡ìó0
+V
+java:S1068"4Remove this unused "librarianService" private field.(Öã‰Ùşÿÿÿÿ8Š’ëó0
+R
+java:S1068"0Remove this unused "shelfService" private field.(£æù˜üÿÿÿÿ8²ñ¡ìó0
+T
+java:S1144!"2Remove this unused private "myConnections" method.(ÛŠÆ»ûÿÿÿÿ8—ß§ëó0
+P
+java:S1144w".Remove this unused private "showUsers" method.(çÓÊùüÿÿÿÿ8ûÃªëó0

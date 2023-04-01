@@ -77,5 +77,16 @@ public class ShelfServiceImpl implements ShelfService {
         }
     }
 
+    @Override
+    public void addBookToShelf(UUID shelfId, UUID bookId) {
+        Shelf shelf = getById(shelfId).get();
+        if(shelf instanceof PersonalShelf personalShelf) {
+            personalShelf.getBookList().add(bookId);
+        }
+        else {
+            ((SharedShelf) shelf).getEditorBookMap().put(userService.getCurrentUser().get().getId(), bookId);
+        }
+    }
+
 
 }

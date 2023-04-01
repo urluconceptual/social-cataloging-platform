@@ -227,8 +227,21 @@ public class ReaderMenu {
         System.out.println("Successfully removed shelf!");
     }
 
-    void addToShelf() {
+    void addToShelf(UUID shelfId) {
         List<Book> bookList = bookService.getListOfAllBooks();
+        int i = 1;
+        for(Book book : bookList) {
+            System.out.println("----" + i + ": ");
+            bookService.printBookData(book.getId());
+            i++;
+        }
+        System.out.println("Enter index of book you want to add:");
+        int input = scanner.nextInt();
+        while(input > bookList.size()) {
+            generalMenu.invalidMessage("Book index does not exist.");
+            input = scanner.nextInt();
+        }
+        shelfService.addBookToShelf(shelfId, bookList.get(input-1).getId());
     }
 
     void removeFromShelf() {
@@ -258,7 +271,7 @@ public class ReaderMenu {
             option = scanner.next();
             switch (option) {
                 case "1" -> {
-                    addToShelf();
+                    addToShelf(shelves.get(i-1));
                     flag = false;
                 }
                 case "2" -> {

@@ -1,6 +1,9 @@
 package ro.project.application;
 
-import ro.project.model.*;
+import ro.project.model.Book;
+import ro.project.model.PersonalShelf;
+import ro.project.model.Reader;
+import ro.project.model.SharedShelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -344,7 +347,7 @@ public class ReaderMenu {
         System.out.println("""
                                    0 -> Go back
                                    1 -> Set new reading challenge
-                                   
+                                                                      
                                    Choose option: """);
 
         String options;
@@ -371,7 +374,7 @@ public class ReaderMenu {
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
-                                   
+                                                                      
                                    0 -> Log out                                  
                                    1 -> My shelves
                                    2 -> My connections

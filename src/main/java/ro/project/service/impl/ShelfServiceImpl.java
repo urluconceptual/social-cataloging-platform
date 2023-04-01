@@ -71,7 +71,7 @@ public class ShelfServiceImpl implements ShelfService {
     public void printShelfData(UUID id) {
         if (getById(id).get() instanceof PersonalShelf personalShelf) {
             int i = 1;
-            for(UUID bookId : personalShelf.getBookList()) {
+            for (UUID bookId : personalShelf.getBookList()) {
                 System.out.println("---- " + i + ":");
                 bookService.printBookData(bookId);
                 System.out.println();
@@ -80,7 +80,7 @@ public class ShelfServiceImpl implements ShelfService {
         } else {
             SharedShelf sharedShelf = (SharedShelf) getById(id).get();
             int i = 1;
-            for(Map.Entry<UUID, UUID> entry : sharedShelf.getEditorBookMap().entrySet()) {
+            for (Map.Entry<UUID, UUID> entry : sharedShelf.getEditorBookMap().entrySet()) {
                 System.out.println("---- " + i + ":");
                 System.out.println("Collaborator:");
                 userService.printUserData(entry.getKey());

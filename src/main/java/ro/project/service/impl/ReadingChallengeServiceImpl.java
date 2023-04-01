@@ -15,8 +15,7 @@ public class ReadingChallengeServiceImpl implements ReadingChallengeService {
         Reader currentReader = (Reader) userService.getCurrentUser().get();
         if (currentReader.getReadingChallenge().isEmpty()) {
             System.out.println("You did not set any reading goals yet!");
-        }
-        else {
+        } else {
             ReadingChallenge readingChallenge = currentReader.getReadingChallenge().get();
             System.out.println("YOUR READING CHALLENGE:");
             System.out.println();
@@ -31,8 +30,8 @@ public class ReadingChallengeServiceImpl implements ReadingChallengeService {
     public void setNewChallenge(int n) {
         Reader currentReader = (Reader) userService.getCurrentUser().get();
         currentReader.setReadingChallenge(Optional.of(ReadingChallenge.builder()
-                                                                   .goal(n)
-                                                                   .build()));
+                                                                      .goal(n)
+                                                                      .build()));
     }
 
     @Override
@@ -47,6 +46,6 @@ public class ReadingChallengeServiceImpl implements ReadingChallengeService {
         int goal = currentReader.getReadingChallenge().get().getGoal();
         int done = currentReader.getReadingChallenge().get().getDone() + 1;
         currentReader.getReadingChallenge().get().setDone(done);
-        currentReader.getReadingChallenge().get().setDonePercent(((int)((double)done/goal*10000))/100.0);
+        currentReader.getReadingChallenge().get().setDonePercent(((int) ((double) done / goal * 10000)) / 100.0);
     }
 }

@@ -9,8 +9,6 @@ f
 6src/main/java/ro/project/service/LibrarianService.java,f\5\f5f16272a867740411ae6a1786d4dfadda4c9509
 \
 ,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
-d
-4src/main/java/ro/project/model/ReadingChallenge.java,2\0\208da94237a1dc26c5d59d8e89d9208636a3eab3
 Z
 *src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
 ^

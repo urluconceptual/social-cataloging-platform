@@ -1,9 +1,6 @@
 package ro.project.application;
 
-import ro.project.model.Book;
-import ro.project.model.PersonalShelf;
-import ro.project.model.Reader;
-import ro.project.model.SharedShelf;
+import ro.project.model.*;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -21,6 +18,7 @@ public class ReaderMenu {
     private static LibrarianService librarianService = new LibrarianServiceImpl();
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
+    private static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
 
@@ -252,6 +250,7 @@ public class ReaderMenu {
             input = scanner.nextInt();
         }
         shelfService.removeBookFromShelf(shelfId, bookList.get(input - 1));
+        System.out.println("Successfully removed book from shelf!");
     }
 
     public void seeShelf() {
@@ -333,17 +332,54 @@ public class ReaderMenu {
 
     }
 
+    private void setReadingChallenge() {
+        System.out.println("How many books are you challenging yourself to read?");
+        int n = scanner.nextInt();
+        readingChallengeService.setNewChallenge(n);
+    }
+
+    public void myReadingChallenge() {
+        readingChallengeService.printStatus();
+
+        System.out.println("""
+                                   0 -> Go back
+                                   1 -> Set new reading challenge
+                                   
+                                   Choose option: """);
+
+        String options;
+
+        boolean flag = true;
+        do {
+            options = scanner.next();
+            switch (options) {
+                case "0" -> {
+                    return;
+                }
+                case "1" -> {
+                    setReadingChallenge();
+                    flag = false;
+                }
+                default -> generalMenu.invalidMessage("Invalid option.");
+            }
+        } while (flag);
+
+        System.out.println("Successfully began new reading challenge!");
+        readingChallengeService.printStatus();
+    }
+
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
-                                                                      
+                                   
+                                   0 -> Log out                                  
                                    1 -> My shelves
                                    2 -> My connections
                                    3 -> Show other readers
                                    4 -> Show authors
                                    5 -> Show librarians
-                                   6 -> Logout
-                                                                      
+                                   6 -> My reading challenge
+                                                    
                                    Choose option:""");
         String options;
 
@@ -351,6 +387,9 @@ public class ReaderMenu {
         do {
             options = scanner.next();
             switch (options) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     myShelves();
                     flag = false;
@@ -372,7 +411,8 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "6" -> {
-                    return;
+                    myReadingChallenge();
+                    flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }

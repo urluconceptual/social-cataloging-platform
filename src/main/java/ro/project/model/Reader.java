@@ -6,10 +6,12 @@ import ro.project.model.abstracts.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @SuperBuilder
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
@@ -19,10 +21,7 @@ public class Reader extends User {
     private List<UUID> shelves = new ArrayList<>();
     @ToString.Exclude
     @Builder.Default
-    private ReadingChallenge openReadingChallenge = new ReadingChallenge();
-    @ToString.Exclude
-    @Builder.Default
-    private List<ReadingChallenge> closedReadingChallengesList = new ArrayList<>();
+    private Optional<ReadingChallenge> readingChallenge = Optional.empty();
     @ToString.Exclude
     @Builder.Default
     private List<UUID> reviewIdList = new ArrayList<>();

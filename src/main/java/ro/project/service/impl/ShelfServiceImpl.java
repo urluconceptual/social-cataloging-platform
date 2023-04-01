@@ -4,6 +4,7 @@ import ro.project.model.*;
 import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.service.BookService;
+import ro.project.service.ReadingChallengeService;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;
 
@@ -14,6 +15,7 @@ public class ShelfServiceImpl implements ShelfService {
     public static UserService userService = new UserServiceImpl();
 
     public static BookService bookService = new BookServiceImpl();
+    public static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
 
     @Override
     public Optional<Shelf> getById(UUID id) {
@@ -105,6 +107,10 @@ public class ShelfServiceImpl implements ShelfService {
         Shelf shelf = getById(shelfId).get();
         if (shelf instanceof PersonalShelf personalShelf) {
             personalShelf.getBookList().add(bookId);
+            if ("read".equals(personalShelf.getName()) && readingChallengeService.checkChallenge()) {
+                readingChallengeService.addDone();
+            }
+
         } else {
             ((SharedShelf) shelf).getEditorBookMap().put(userService.getCurrentUser().get().getId(), bookId);
         }

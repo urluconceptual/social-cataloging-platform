@@ -6,6 +6,7 @@ import ro.project.model.abstracts.AbstractEntity;
 
 @SuperBuilder
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -17,6 +18,4 @@ public class ReadingChallenge extends AbstractEntity {
     private Integer done = 0;
     @Builder.Default
     private Double donePercent = 0.0;
-    @Builder.Default
-    private Boolean isClosed = false;
 }

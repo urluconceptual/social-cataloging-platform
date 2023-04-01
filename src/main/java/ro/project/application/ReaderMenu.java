@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.model.Book;
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
 import ro.project.model.SharedShelf;
@@ -19,6 +20,7 @@ public class ReaderMenu {
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
     private static LibrarianService librarianService = new LibrarianServiceImpl();
+    private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
@@ -225,6 +227,14 @@ public class ReaderMenu {
         System.out.println("Successfully removed shelf!");
     }
 
+    void addToShelf() {
+        List<Book> bookList = bookService.getListOfAllBooks();
+    }
+
+    void removeFromShelf() {
+
+    }
+
     public void seeShelf() {
         List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to see:");
@@ -234,6 +244,33 @@ public class ReaderMenu {
             i = scanner.nextInt();
         }
         shelfService.printShelfData(shelves.get(i-1));
+
+        System.out.println("""
+                                                                      
+                                   1 -> Add book to shelf
+                                   2 -> Remove book from shelf
+                                   3 -> Go back
+                                                                      
+                                   Choose option:""");
+        String option;
+        boolean flag = true;
+        do {
+            option = scanner.next();
+            switch (option) {
+                case "1" -> {
+                    addToShelf();
+                    flag = false;
+                }
+                case "2" -> {
+                    removeFromShelf();
+                    flag = false;
+                }
+                case "3" -> {
+                    return;
+                }
+                default -> generalMenu.invalidMessage("Invalid option.");
+            }
+        } while (flag);
     }
 
     public void myShelves() {

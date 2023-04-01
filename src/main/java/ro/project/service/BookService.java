@@ -18,4 +18,5 @@ public interface BookService {
 
     void removeBookById(UUID id);
     void printBookData(UUID id);
+    List<Book> getListOfAllBooks();
 }

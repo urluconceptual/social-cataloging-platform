@@ -58,8 +58,14 @@ public class BookServiceImpl implements BookService {
                         "\nauthor: " + book.getAuthor() +
                         "\ngenre: " + book.getGenre().getName() +
                         "\nnumber of pages: " + book.getNumberOfPages() +
-                        "\nrating: " + book.getRating()
+                        "\nrating: " + book.getRating() +
+                        "\n"
                           );
+    }
+
+    @Override
+    public List<Book> getListOfAllBooks() {
+        return new ArrayList<>(bookMap.values());
     }
 
 }

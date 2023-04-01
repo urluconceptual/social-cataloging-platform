@@ -3,6 +3,7 @@ package ro.project.application;
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
 import ro.project.model.SharedShelf;
+import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -209,13 +210,23 @@ public class ReaderMenu {
                 default -> generalMenu.invalidMessage("Invalid option.");
             }
         } while (flag);
+        System.out.println("Successfully added shelf!");
+    }
+
+    private void removeShelf() {
+        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
+        System.out.println("Enter index of shelf you want to remove:");
+        int i = scanner.nextInt();
+        readerService.removeShelf(shelves.get(i - 1));
+        System.out.println("Successfully removed shelf!");
     }
 
     public void myShelves() {
-        System.out.println("Your current shelves: ");
         Reader reader = (Reader) userService.getCurrentUser().get();
-        reader.getShelves()
-              .forEach(shelf -> System.out.println(shelf.getName()));
+
+        System.out.println("Your current shelves: ");
+
+        readerService.printShelves((Reader) userService.getCurrentUser().get());
         System.out.println("""
                                                                       
                                    1 -> Add new shelf
@@ -234,6 +245,7 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "2" -> {
+                    removeShelf();
                     flag = false;
                 }
                 case "3" -> {

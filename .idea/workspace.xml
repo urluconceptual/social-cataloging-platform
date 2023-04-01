@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/SharedShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/SharedShelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,8 @@
       <workItem from="1680247855150" duration="170000" />
       <workItem from="1680248176614" duration="26083000" />
       <workItem from="1680281504899" duration="1024000" />
-      <workItem from="1680283655387" duration="6448000" />
+      <workItem from="1680283655387" duration="7454000" />
+      <workItem from="1680345578907" duration="2779000" />
     </task>
     <servers />
   </component>
@@ -145,9 +145,9 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java</url>
-          <line>215</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

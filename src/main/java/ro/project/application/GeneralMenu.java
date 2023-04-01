@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class GeneralMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -103,32 +102,8 @@ public class GeneralMenu {
         System.out.println("bio: ");
         String bio = scanner.next();
 
-        userService.addUser(switch (type) {
-            case AUTHOR -> Author.builder()
-                                 .id(UUID.randomUUID())
-                                 .creationDate(LocalDate.now())
-                                 .username(username)
-                                 .password(password)
-                                 .firstName(firstName)
-                                 .lastName(lastName)
-                                 .birthDate(birthDate)
-                                 .bio(bio)
-                                 .type(type)
-                                 .build();
-            case LIBRARIAN -> Librarian.builder()
-                                       .id(UUID.randomUUID())
-                                       .creationDate(LocalDate.now())
-                                       .username(username)
-                                       .password(password)
-                                       .firstName(firstName)
-                                       .lastName(lastName)
-                                       .birthDate(birthDate)
-                                       .bio(bio)
-                                       .type(type)
-                                       .build();
-            case READER -> readerService.init(Reader.builder()
-                                 .id(UUID.randomUUID())
-                                 .creationDate(LocalDate.now())
+        switch (type) {
+            case AUTHOR -> userService.addUser(Author.builder()
                                  .username(username)
                                  .password(password)
                                  .firstName(firstName)
@@ -137,8 +112,28 @@ public class GeneralMenu {
                                  .bio(bio)
                                  .type(type)
                                  .build());
-            default -> null;
-        });
+            case LIBRARIAN -> userService.addUser(Librarian.builder()
+                                       .username(username)
+                                       .password(password)
+                                       .firstName(firstName)
+                                       .lastName(lastName)
+                                       .birthDate(birthDate)
+                                       .bio(bio)
+                                       .type(type)
+                                       .build());
+            case READER -> {userService.addUser(Reader.builder()
+                                 .username(username)
+                                 .password(password)
+                                 .firstName(firstName)
+                                 .lastName(lastName)
+                                 .birthDate(birthDate)
+                                 .bio(bio)
+                                 .type(type)
+                                 .build());
+                readerService.init((Reader)userService.getByUsername(username).get());
+            }
+            default -> {}
+        };
 
         userService.setCurrentUser(username);
 
@@ -210,7 +205,6 @@ public class GeneralMenu {
     public static void populate() {
         addSomeUsers();
         addSomeConnections();
-//        addSomeShelves();
 //        addSomeBooks();
 //        addSomeEditions();
 //        addSomeReviews();
@@ -220,7 +214,7 @@ public class GeneralMenu {
 
     public static void addSomeUsers() {
         userService.addUsers(List.of(
-                readerService.init(Reader.builder()
+                Reader.builder()
                       .username("reader1")
                       .password("reader1")
                       .firstName("John")
@@ -228,8 +222,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2000, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build()),
-                readerService.init(Reader.builder()
+                      .build(),
+                Reader.builder()
                       .username("reader2")
                       .password("reader2")
                       .firstName("Stanley")
@@ -237,8 +231,8 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(2002, 1, 1))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build()),
-                readerService.init(Reader.builder()
+                      .build(),
+                Reader.builder()
                       .username("reader3")
                       .password("reader3")
                       .firstName("John")
@@ -246,7 +240,7 @@ public class GeneralMenu {
                       .birthDate(LocalDate.of(1973, 4, 6))
                       .bio("i am a reader")
                       .type(UserType.READER)
-                      .build()),
+                      .build(),
                 Author.builder()
                       .username("author1")
                       .password("author1")
@@ -301,6 +295,9 @@ public class GeneralMenu {
                          .bio("i am a librarian")
                          .type(UserType.LIBRARIAN)
                          .build()));
+        readerService.init((Reader)userService.getByUsername("reader1").get());
+        readerService.init((Reader)userService.getByUsername("reader2").get());
+        readerService.init((Reader)userService.getByUsername("reader3").get());
     }
 
     private static void addSomeConnections() {

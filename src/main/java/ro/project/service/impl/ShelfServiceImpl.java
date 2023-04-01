@@ -68,25 +68,36 @@ public class ShelfServiceImpl implements ShelfService {
     @Override
     public void printShelfData(UUID id) {
         if (getById(id).get() instanceof PersonalShelf personalShelf) {
-            personalShelf.getBookList().forEach(bookId -> {
+            int i = 1;
+            for(UUID bookId : personalShelf.getBookList()) {
+                System.out.println("---- " + i + ":");
                 bookService.printBookData(bookId);
                 System.out.println();
-            });
+                i++;
+            }
         } else {
             SharedShelf sharedShelf = (SharedShelf) getById(id).get();
-            sharedShelf.getEditorBookMap().forEach((userId, bookId) -> {
+            int i = 1;
+            for(Map.Entry<UUID, UUID> entry : sharedShelf.getEditorBookMap().entrySet()) {
+                System.out.println("---- " + i + ":");
                 System.out.println("Collaborator:");
-                userService.printUserData(userId);
+                userService.printUserData(entry.getKey());
                 System.out.println("Added book:");
-                bookService.printBookData(bookId);
+                bookService.printBookData(entry.getValue());
                 System.out.println();
-            });
+                i++;
+            }
         }
     }
 
     @Override
-    public void getShelfBooks(UUID id) {
-
+    public List<UUID> getShelfBooks(UUID id) {
+        Shelf shelf = getById(id).get();
+        if (shelf instanceof PersonalShelf personalShelf) {
+            return new ArrayList<>(personalShelf.getBookList());
+        } else {
+            return new ArrayList<>(((SharedShelf) shelf).getEditorBookMap().values());
+        }
     }
 
     @Override

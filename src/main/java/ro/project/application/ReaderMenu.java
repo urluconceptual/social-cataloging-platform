@@ -244,7 +244,7 @@ public class ReaderMenu {
     }
 
     void removeFromShelf(UUID shelfId) {
-
+        shelfService.getShelfBooks(shelfId);
     }
 
     public void seeShelf() {

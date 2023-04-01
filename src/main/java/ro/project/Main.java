@@ -11,6 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         GeneralMenu.getInstance();
+
         PopulateScript.getInstance();
 
         PopulateScript.populate();

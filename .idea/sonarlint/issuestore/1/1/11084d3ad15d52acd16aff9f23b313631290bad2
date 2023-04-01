@@ -1,8 +1,0 @@
-
-r
-java:S3655:"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ªÅÑ¾ÿÿÿÿÿ8ã—Àäó0
-m
-java:S36552"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ãá÷İ8ã—Àäó0
-Z	java:S106:"9Replace this use of System.out or System.err by a logger.(ªÅÑ¾ÿÿÿÿÿ8ì—Àäó0
-Z
-java:S1128"=Remove this unused import 'ro.project.model.abstracts.Shelf'.(Úñ´İ8ì—Àäó0

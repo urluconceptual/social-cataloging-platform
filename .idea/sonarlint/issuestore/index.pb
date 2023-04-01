@@ -45,9 +45,5 @@ b
 2src/main/java/ro/project/model/abstracts/User.java,f\0\f09dfbf02d0282028546d09791e7f90636454246
 Z
 *src/main/java/ro/project/model/Reader.java,d\6\d6af499c46f6fa18a9a4ddd2a5935f18b239b440
-c
-3src/main/java/ro/project/service/ReaderService.java,4\9\49ff1485c46916109e523367b564aefbbd4b92f0
-l
-<src/main/java/ro/project/service/impl/ReaderServiceImpl.java,1\1\11084d3ad15d52acd16aff9f23b313631290bad2
 e
 5src/main/java/ro/project/application/GeneralMenu.java,1\2\12572cf7a9f96c549d294d9f1e3c60dec2985430

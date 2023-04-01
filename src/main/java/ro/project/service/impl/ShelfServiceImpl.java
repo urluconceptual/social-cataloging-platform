@@ -43,6 +43,7 @@ public class ShelfServiceImpl implements ShelfService {
     @Override
     public void editShelfById(UUID id, Shelf newShelf) {
         if (getById(id).isPresent()) {
+            shelfMap.remove(id);
             shelfMap.put(id, newShelf);
         }
     }
@@ -51,6 +52,17 @@ public class ShelfServiceImpl implements ShelfService {
     public void removeShelfById(UUID id) {
         if (getById(id).isPresent()) {
             shelfMap.remove(id);
+        }
+    }
+
+    @Override
+    public void printShelfData(UUID id) {
+        if (getById(id).get() instanceof PersonalShelf personalShelf) {
+            personalShelf.getBookList().forEach(System.out::println);
+        }
+        else {
+            SharedShelf sharedShelf = (SharedShelf) getById(id).get();
+            sharedShelf.getEditorBookMap().forEach((user, book) -> System.out.println(book.toString()+" (" +user.toString()+ " )"));
         }
     }
 

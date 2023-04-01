@@ -217,8 +217,23 @@ public class ReaderMenu {
         List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to remove:");
         int i = scanner.nextInt();
+        while(i > shelves.size()) {
+            generalMenu.invalidMessage("Shelf does not exist.");
+            i = scanner.nextInt();
+        }
         readerService.removeShelf(shelves.get(i - 1));
         System.out.println("Successfully removed shelf!");
+    }
+
+    public void seeShelf() {
+        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
+        System.out.println("Enter index of shelf you want to see:");
+        int i = scanner.nextInt();
+        while(i > shelves.size()) {
+            generalMenu.invalidMessage("Shelf does not exist.");
+            i = scanner.nextInt();
+        }
+        shelfService.printShelfData(shelves.get(i-1));
     }
 
     public void myShelves() {
@@ -249,6 +264,7 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "3" -> {
+                    seeShelf();
                     flag = false;
                 }
                 case "4" -> {

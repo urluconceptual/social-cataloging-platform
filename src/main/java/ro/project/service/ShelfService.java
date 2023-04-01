@@ -16,4 +16,5 @@ public interface ShelfService {
     void editShelfById(UUID id, Shelf newShelf);
 
     void removeShelfById(UUID id);
+    void printShelfData(UUID id);
 }

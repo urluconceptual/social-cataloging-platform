@@ -54,7 +54,7 @@ public class ReaderServiceImpl implements ReaderService {
     @Override
     public void printShelves(Reader reader) {
         int i = 1;
-        for(UUID shelfId : reader.getShelves()) {
+        for (UUID shelfId : reader.getShelves()) {
             System.out.println(i + " -> " + shelfService.getById(shelfId).get().getName());
             i++;
         }

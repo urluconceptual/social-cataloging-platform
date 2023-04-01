@@ -1,4 +1,4 @@
-package ro.project.model;
+package ro.project.model.records;
 
 import ro.project.model.enums.EditionFormat;
 

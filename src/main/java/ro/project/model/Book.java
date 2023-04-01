@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.AbstractEntity;
 import ro.project.model.enums.BookGenre;
+import ro.project.model.records.Edition;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,10 +23,9 @@ public class Book extends AbstractEntity {
     private Optional<UUID> authorId = Optional.empty();
     private String title;
     private BookGenre genre;
-    private LocalDate publicationDate;
-    private String description;
     private Integer numberOfPages;
-    private Double rating;
+    @Builder.Default
+    private Double rating = 0.0;
     @Builder.Default
     private List<Review> reviewList = new ArrayList<>();
     @Builder.Default

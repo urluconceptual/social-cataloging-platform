@@ -1,13 +1,13 @@
 package ro.project.application;
 
-import ro.project.model.Author;
-import ro.project.model.Connection;
-import ro.project.model.Librarian;
-import ro.project.model.Reader;
+import ro.project.model.*;
+import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
+import ro.project.service.BookService;
 import ro.project.service.ConnectionService;
 import ro.project.service.ReaderService;
 import ro.project.service.UserService;
+import ro.project.service.impl.BookServiceImpl;
 import ro.project.service.impl.ConnectionServiceImpl;
 import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
@@ -15,6 +15,7 @@ import ro.project.service.impl.UserServiceImpl;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class GeneralMenu {
@@ -23,6 +24,7 @@ public class GeneralMenu {
     private static UserService userService = new UserServiceImpl();
     private static ReaderMenu readerMenu = ReaderMenu.getInstance();
     private static ReaderService readerService = new ReaderServiceImpl();
+    private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
 
     private GeneralMenu() {
@@ -205,7 +207,7 @@ public class GeneralMenu {
     public static void populate() {
         addSomeUsers();
         addSomeConnections();
-//        addSomeBooks();
+        addSomeBooks();
 //        addSomeEditions();
 //        addSomeReviews();
 //        addSomeBookClubs();
@@ -334,6 +336,19 @@ public class GeneralMenu {
                           .follower(userService.getByUsername("reader3").get().getId())
                           .followed(userService.getByUsername("librarian2").get().getId())
                           .build()));
+    }
+
+    private static void addSomeBooks() {
+        bookService.addBooks(List.of(
+                Book.builder()
+                    .title("The Shining")
+                    .authorId(Optional.of(userService.getByUsername("author1").get().getId()))
+                    .author("Stephen King")
+                    .genre(BookGenre.HORROR)
+                    .numberOfPages(500)
+                    .build()
+                                    ));
+        bookService.init();
     }
 
     public static void start() {

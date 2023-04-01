@@ -7,8 +7,6 @@ o
 ?src/main/java/ro/project/service/impl/LibrarianServiceImpl.java,6\e\6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16
 f
 6src/main/java/ro/project/service/LibrarianService.java,f\5\f5f16272a867740411ae6a1786d4dfadda4c9509
-c
-3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa
 \
 ,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
 [
@@ -19,10 +17,6 @@ Z
 *src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
 ^
 .src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
-l
-<src/main/java/ro/project/service/impl/AuthorServiceImpl.java,6\3\63591edac4249f0ea42411492f8dcf3bd7d1afa7
-Z
-*src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 g
 7src/main/java/ro/project/model/enums/EditionFormat.java,d\a\dab5ae9f8b7e6c86799f63ad7ec83d108e72f080
 b
@@ -45,5 +39,3 @@ b
 2src/main/java/ro/project/model/abstracts/User.java,f\0\f09dfbf02d0282028546d09791e7f90636454246
 Z
 *src/main/java/ro/project/model/Reader.java,d\6\d6af499c46f6fa18a9a4ddd2a5935f18b239b440
-e
-5src/main/java/ro/project/application/GeneralMenu.java,1\2\12572cf7a9f96c549d294d9f1e3c60dec2985430

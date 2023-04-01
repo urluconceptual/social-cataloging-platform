@@ -1,17 +1,25 @@
 package ro.project.service.impl;
 
+import ro.project.model.Author;
 import ro.project.model.Book;
-import ro.project.model.PersonalShelf;
-import ro.project.model.Reader;
-import ro.project.model.SharedShelf;
-import ro.project.model.abstracts.Shelf;
-import ro.project.model.abstracts.User;
+import ro.project.service.AuthorService;
 import ro.project.service.BookService;
+import ro.project.service.UserService;
 
 import java.util.*;
 
 public class BookServiceImpl implements BookService {
     private static Map<UUID, Book> bookMap = new HashMap<>();
+    private static AuthorService authorService = new AuthorServiceImpl();
+    private static UserService userService = new UserServiceImpl();
+
+    @Override
+    public void init() {
+        bookMap.forEach((id, book) -> {
+            if (book.getAuthorId().isPresent())
+                authorService.addToBookList((Author) userService.getById(book.getAuthorId().get()).get(), book.getId());
+        });
+    }
 
     @Override
     public Optional<Book> getById(UUID id) {

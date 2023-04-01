@@ -169,7 +169,7 @@ public class PopulateScript {
     private static void addSomeBooks() {
         bookService.addBooks(List.of(
                 Book.builder()
-                    .title("The Shining")
+                    .title("The-Shining")
                     .authorId(Optional.of(userService.getByUsername("author1").get().getId()))
                     .author("Stephen King")
                     .genre(BookGenre.HORROR)
@@ -190,14 +190,14 @@ public class PopulateScript {
                     .numberOfPages(1200)
                     .build(),
                 Book.builder()
-                    .title("In Search of Lost Time")
+                    .title("In-Search-of-Lost-Time")
                     .authorId(Optional.of(userService.getByUsername("author3").get().getId()))
                     .author("Marcel Proust")
                     .genre(BookGenre.OTHER)
                     .numberOfPages(865)
                     .build(),
                 Book.builder()
-                    .title("One Hundred Years of Solitude")
+                    .title("One-Hundred-Years-of-Solitude")
                     .authorId(Optional.of(userService.getByUsername("author3").get().getId()))
                     .author("Gabriel Garcia Marquez")
                     .genre(BookGenre.HORROR)
@@ -211,14 +211,14 @@ public class PopulateScript {
                     .numberOfPages(1000)
                     .build(),
                 Book.builder()
-                    .title("The Life of Rhys Montrose")
+                    .title("The-Life-of-Rhys-Montrose")
                     .authorId(Optional.of(userService.getByUsername("author4").get().getId()))
                     .author("Rhys Montrose")
                     .genre(BookGenre.BIOGRAPHY)
                     .numberOfPages(700)
                     .build(),
                 Book.builder()
-                    .title("Love in the Time of the Cholera")
+                    .title("Love-in-the-Time-of-the-Cholera")
                     .authorId(Optional.of(userService.getByUsername("author3").get().getId()))
                     .author("Gabriel Garcia Marquez")
                     .genre(BookGenre.ROMANCE)

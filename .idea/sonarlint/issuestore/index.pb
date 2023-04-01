@@ -31,13 +31,9 @@ _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
 c
 3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
-X
-(src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 ]
 -src/main/java/ro/project/model/Librarian.java,7\1\71eed1a642ff162bc884326cad6861f515f3ee4b
-h
-8src/main/java/ro/project/application/PopulateScript.java,c\2\c22568e332f4b35bb4c29cc06901ea7c22124866
 c
 3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa

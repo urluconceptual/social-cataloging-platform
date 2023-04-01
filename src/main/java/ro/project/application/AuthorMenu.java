@@ -1,7 +1,9 @@
 package ro.project.application;
 
 import ro.project.model.Author;
+import ro.project.model.Book;
 import ro.project.model.abstracts.User;
+import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
@@ -15,6 +17,7 @@ public class AuthorMenu {
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
+    private static BookService bookService = new BookServiceImpl();
     private static LibrarianService librarianService = new LibrarianServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
@@ -27,121 +30,33 @@ public class AuthorMenu {
         return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
     }
 
-    private static void myConnections() {
-        System.out.println("""
-                                                                      
-                                   1 -> Users you follow
-                                   2 -> Users following you
-                                   3 -> Go back
-                                                                      
-                                   Choose option:""");
-        String option;
-        boolean flag = true;
-        do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    System.out.println("You follow:");
-                    userService.getFollowing()
-                               .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
-                    flag = false;
-                }
-                case "2" -> {
-                    System.out.println("Followers:");
-                    userService.getFollowed()
-                               .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
-                    flag = false;
-                }
-                case "3" -> {
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
-            }
-        } while (flag);
-    }
-
-    private static void showUsers(UserType type) {
-        String userType = type.getType() + "s";
-        System.out.printf("These are all the registered %s:%n", userType);
-        userService.getByType(type)
-                   .stream()
-                   .filter(user -> !user.equals(userService.getCurrentUser().get()))
-                   .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"
-                                                      ));
-
-        System.out.println("""
-                                   1 -> Choose profile to view
-                                   2 -> Go back
-                                                                      
-                                   Choose option:""");
-
-        String option;
-        boolean flag = true;
-        do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    viewProfile();
-                    flag = false;
-                }
-                case "2" -> {
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
-            }
-        } while (flag);
-    }
-
-    private static void viewProfile() {
-        System.out.println("Enter a username from the list to view profile!");
-        String username;
-        Optional<User> user;
-        do {
-            username = scanner.next();
-            user = userService.getByUsername(username);
-            if (user.isEmpty()) {
-                generalMenu.invalidMessage("Invalid username.");
-            } else {
-                userService.printUserData(user.get().getId());
-                break;
-            }
-        } while (true);
-
-        if (connectionService.getByUsers(userService.getCurrentUser().get().getId(), user.get().getId()).isPresent()
-                || connectionService.getByUsers(user.get().getId(), userService.getCurrentUser().get().getId()).isPresent()) {
-            System.out.println("You follow this user!");
-        } else {
-            System.out.println("You don't follow this user!");
+    public void addNewBook() {
+        System.out.println("book title(please use this-format-for-your-title): ");
+        String title = scanner.next();
+        System.out.println("genre: ");
+        for (BookGenre bookGenre : BookGenre.values()) {
+                System.out.println("    " + bookGenre.getName());
         }
 
-        System.out.println("""
-                                                                      
-                                   1 -> Follow user
-                                   2 -> Unfollow user
-                                   3 -> Go back
-                                                                      
-                                   Choose option:""");
+        String inputType = scanner.next();
+        BookGenre genre = BookGenre.getEnumByFieldString(inputType);
 
-        String option;
-        do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    connectionService.addConnection(user.get().getId());
-                    System.out.println("You follow this user!");
-                    return;
-                }
-                case "2" -> {
-                    connectionService.unfollowConnection(user.get().getId());
-                    System.out.println("You don't follow this user!");
-                    return;
-                }
-                case "3" -> {
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
-            }
-        } while (true);
+        System.out.println("number of pages: ");
+        int n = scanner.nextInt();
+
+        Author author = (Author) userService.getCurrentUser().get();
+
+        bookService.addBook(Book.builder()
+                                    .title(title)
+                                    .authorId(Optional.of(author.getId()))
+                                    .author(author.getFirstName() + " " + author.getLastName())
+                                    .genre(genre)
+                                    .numberOfPages(n)
+                                    .build());
+        bookService.init();
+    }
+
+    public void removeBook() {
 
     }
 
@@ -164,9 +79,11 @@ public class AuthorMenu {
             option = scanner.next();
             switch (option) {
                 case "1" -> {
+                    addNewBook();
                     flag = false;
                 }
                 case "2" -> {
+                    removeBook();
                     flag = false;
                 }
                 case "3" -> {

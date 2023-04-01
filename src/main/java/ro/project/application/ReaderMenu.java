@@ -256,7 +256,7 @@ public class ReaderMenu {
         System.out.println("Successfully removed book from shelf!");
     }
 
-    public void seeShelf() {
+    private void seeShelf() {
         List<UUID> shelves = ((Reader) userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to see:");
         int i = scanner.nextInt();
@@ -295,7 +295,7 @@ public class ReaderMenu {
         } while (flag);
     }
 
-    public void myShelves() {
+    private void myShelves() {
         Reader reader = (Reader) userService.getCurrentUser().get();
 
         System.out.println("Your current shelves: ");
@@ -341,7 +341,7 @@ public class ReaderMenu {
         readingChallengeService.setNewChallenge(n);
     }
 
-    public void myReadingChallenge() {
+    private void myReadingChallenge() {
         readingChallengeService.printStatus();
 
         System.out.println("""

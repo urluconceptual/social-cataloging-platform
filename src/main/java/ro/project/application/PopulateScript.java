@@ -38,7 +38,7 @@ public class PopulateScript {
 //        addSomeMessages();
     }
 
-    public static void addSomeUsers() {
+    private static void addSomeUsers() {
         userService.addUsers(List.of(
                 Reader.builder()
                       .username("reader1")

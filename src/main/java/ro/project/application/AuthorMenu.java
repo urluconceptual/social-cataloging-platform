@@ -32,7 +32,7 @@ public class AuthorMenu {
         return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
     }
 
-    public void addNewBook() {
+    private void addNewBook() {
         System.out.println("book title(please use this-format-for-your-title): ");
         String title = scanner.next();
         System.out.println("genre: ");
@@ -58,7 +58,7 @@ public class AuthorMenu {
         bookService.init();
     }
 
-    public void removeBook() {
+    private void removeBook() {
         Author author = (Author)userService.getCurrentUser().get();
         List<UUID> bookList = authorService.getWrittenBooks(author);
         System.out.println("Enter index of book you want to remove: ");
@@ -71,7 +71,7 @@ public class AuthorMenu {
         System.out.println("Successfully removed book!");
     }
 
-    public void myBooks() {
+    private void myBooks() {
         Author author = (Author) userService.getCurrentUser().get();
 
         System.out.println("Books you wrote: ");
@@ -105,6 +105,9 @@ public class AuthorMenu {
         } while (flag);
 
     }
+    private void myFollowers() {
+
+    }
 
     public void start() {
         shelfService = new ShelfServiceImpl();
@@ -128,7 +131,7 @@ public class AuthorMenu {
                     flag = false;
                 }
                 case "2" -> {
-                    //myFollowers();
+                    myFollowers();
                     flag = false;
                 }
                 case "3" -> {

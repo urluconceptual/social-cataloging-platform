@@ -1,0 +1,107 @@
+
+l
+java:S1192ß"NDefine a constant instead of duplicating this literal "i am a reader" 3 times.(ÃÉË8ñ˜¯äó0
+m
+java:S1192ú"ODefine a constant instead of duplicating this literal "i am an author" 4 times.(™£äû8ñ˜¯äó0
+i
+java:S1192™"KDefine a constant instead of duplicating this literal "librarian1" 3 times.(°§­ß8ñ˜¯äó0
+n
+java:S1192¢"KDefine a constant instead of duplicating this literal "librarian2" 3 times.(çşÎùüÿÿÿÿ8ñ˜¯äó0
+k
+java:S1192ã"HDefine a constant instead of duplicating this literal "reader2" 7 times.(ÛÔÕŸúÿÿÿÿ8ñ˜¯äó0
+f
+java:S1192Ú"HDefine a constant instead of duplicating this literal "reader1" 6 times.(Ò™Îø8ñ˜¯äó0
+k
+java:S1192õ"HDefine a constant instead of duplicating this literal "author1" 5 times.(úİÑãÿÿÿÿÿ8ñ˜¯äó0
+f
+java:S1192ì"HDefine a constant instead of duplicating this literal "reader3" 7 times.(ºÉ“İ8ñ˜¯äó0
+n
+java:S1301Û"KReplace this "switch" statement by "if" statements to increase readability.(ÁØ —şÿÿÿÿ8ò˜¯äó0
+m
+java:S3655º"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8šš¯äó0
+s
+java:S3655ª"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ñãçğúÿÿÿÿ8šš¯äó0
+s
+java:S3655Û"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÁØ —şÿÿÿÿ8šš¯äó0
+s
+java:S3655·"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚšçÇüÿÿÿÿ8šš¯äó0
+s
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ëÿÂÆûÿÿÿÿ8šš¯äó0
+n
+java:S3655Ê"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8šš¯äó0
+n
+java:S3655Î"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8šš¯äó0
+n
+java:S3655Ë"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥óêë8šš¯äó0
+n
+java:S3655Ï"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(èÉ“õ8šš¯äó0
+s
+java:S3655¬"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¬ß«ıÿÿÿÿ8šš¯äó0
+m
+java:S3655³"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ç³ğm8šš¯äó0
+n
+java:S3655«"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ûÃ¨¯8šš¯äó0
+n
+java:S3655…"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(“´½Å8šš¯äó0
+s
+java:S3655§"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(€ºáÓûÿÿÿÿ8šš¯äó0
+s
+java:S3655Ã"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŒÍøûıÿÿÿÿ8šš¯äó0
+s
+java:S3655Ç"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŒÍøûıÿÿÿÿ8šš¯äó0
+s
+java:S3655²"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÖËèæùÿÿÿÿ8ó®°äó0
+m
+java:S3655Â"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8šš¯äó0
+m
+java:S3655¶"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8Ö°äó0
+s
+java:S3655¿"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŒÍøûıÿÿÿÿ8šš¯äó0
+n
+java:S3655Æ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8šš¯äó0
+n
+java:S3655»"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ì×É­8Ö°äó0
+s
+java:S3655¾"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÖËèæùÿÿÿÿ8šš¯äó0
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¦ƒá8›š¯äó0
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(”ºİÀøÿÿÿÿ8¢š¯äó0
+t
+java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(õù•½ıÿÿÿÿ8¢š¯äó0
+U	java:S106("9Replace this use of System.out or System.err by a logger.(Îñë8£š¯äó0
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(Îñë8¤š¯äó0
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(¨õ¨İúÿÿÿÿ8¤š¯äó0
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(Ó—ı‡8¥š¯äó0
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(ğÔìúÿÿÿÿ8¥š¯äó0
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(¶¨ÉÁúÿÿÿÿ8¥š¯äó0
+Z	java:S106S"9Replace this use of System.out or System.err by a logger.(à¾œ¯ÿÿÿÿÿ8¦š¯äó0
+T	java:S106V"9Replace this use of System.out or System.err by a logger.(•“ú=8¦š¯äó0
+Z	java:S106\"9Replace this use of System.out or System.err by a logger.(Á¿áÑúÿÿÿÿ8¦š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+^
+java:S6353^"<Use concise character class syntax '\\d' instead of '[0-9]'.(Òğê£úÿÿÿÿ8§š¯äó0
+Z	java:S106f"9Replace this use of System.out or System.err by a logger.(ÿÒ„ìüÿÿÿÿ8¨š¯äó0
+F	java:S108‡")Either remove or fill this block of code.(”ì­è8ªš¯äó0
+?
+java:S1116ˆ"Remove this empty statement.(ôŸìúÿÿÿÿ8ªš¯äó0
+V	java:S106Œ"9Replace this use of System.out or System.err by a logger.(Îñë8ªš¯äó0
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ëÿÂÆûÿÿÿÿ8«š¯äó0
+V	java:S106”"9Replace this use of System.out or System.err by a logger.(Îñë8¬š¯äó0
+[	java:S106›"9Replace this use of System.out or System.err by a logger.(ğÔìúÿÿÿÿ8­š¯äó0
+[	java:S106¥"9Replace this use of System.out or System.err by a logger.(¶¨ÉÁúÿÿÿÿ8®š¯äó0
+V	java:S106°"9Replace this use of System.out or System.err by a logger.(ôÉı¤8¯š¯äó0
+V	java:S106´"9Replace this use of System.out or System.err by a logger.(Îñë8°š¯äó0
+V	java:S106È"9Replace this use of System.out or System.err by a logger.(Îñë8²š¯äó0
+^	java:S125Ğ"<This block of commented-out lines of code should be removed.(ëôğøÿÿÿÿ8³š¯äó0
+V	java:S106Ô"9Replace this use of System.out or System.err by a logger.(Îñë8Áš¯äó0
+{	java:S131Û"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÁØ —şÿÿÿÿ8Áš¯äó0
+^	java:S125Ü"<This block of commented-out lines of code should be removed.(âÿ§àùÿÿÿÿ8Âš¯äó0

@@ -3,14 +3,8 @@ package ro.project.application;
 import ro.project.model.*;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
-import ro.project.service.BookService;
-import ro.project.service.ConnectionService;
-import ro.project.service.ReaderService;
-import ro.project.service.UserService;
-import ro.project.service.impl.BookServiceImpl;
-import ro.project.service.impl.ConnectionServiceImpl;
-import ro.project.service.impl.ReaderServiceImpl;
-import ro.project.service.impl.UserServiceImpl;
+import ro.project.service.*;
+import ro.project.service.impl.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -23,7 +17,9 @@ public class GeneralMenu {
     private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderMenu readerMenu = ReaderMenu.getInstance();
+    private static AuthorMenu authorMenu = AuthorMenu.getInstance();
     private static ReaderService readerService = new ReaderServiceImpl();
+    private static AuthorService authorService = new AuthorServiceImpl();
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
 
@@ -105,15 +101,18 @@ public class GeneralMenu {
         String bio = scanner.next();
 
         switch (type) {
-            case AUTHOR -> userService.addUser(Author.builder()
-                                 .username(username)
-                                 .password(password)
-                                 .firstName(firstName)
-                                 .lastName(lastName)
-                                 .birthDate(birthDate)
-                                 .bio(bio)
-                                 .type(type)
-                                 .build());
+            case AUTHOR -> {
+                userService.addUser(Author.builder()
+                                          .username(username)
+                                          .password(password)
+                                          .firstName(firstName)
+                                          .lastName(lastName)
+                                          .birthDate(birthDate)
+                                          .bio(bio)
+                                          .type(type)
+                                          .build());
+                authorService.init((Author) userService.getByUsername(username).get());
+            }
             case LIBRARIAN -> userService.addUser(Librarian.builder()
                                        .username(username)
                                        .password(password)
@@ -204,152 +203,7 @@ public class GeneralMenu {
                                    type "exit" if you want to close the application.""");
     }
 
-    public static void populate() {
-        addSomeUsers();
-        addSomeConnections();
-        addSomeBooks();
-//        addSomeEditions();
-//        addSomeReviews();
-//        addSomeBookClubs();
-//        addSomeMessages();
-    }
 
-    public static void addSomeUsers() {
-        userService.addUsers(List.of(
-                Reader.builder()
-                      .username("reader1")
-                      .password("reader1")
-                      .firstName("John")
-                      .lastName("Doe")
-                      .birthDate(LocalDate.of(2000, 1, 1))
-                      .bio("i am a reader")
-                      .type(UserType.READER)
-                      .build(),
-                Reader.builder()
-                      .username("reader2")
-                      .password("reader2")
-                      .firstName("Stanley")
-                      .lastName("Kubrik")
-                      .birthDate(LocalDate.of(2002, 1, 1))
-                      .bio("i am a reader")
-                      .type(UserType.READER)
-                      .build(),
-                Reader.builder()
-                      .username("reader3")
-                      .password("reader3")
-                      .firstName("John")
-                      .lastName("Locke")
-                      .birthDate(LocalDate.of(1973, 4, 6))
-                      .bio("i am a reader")
-                      .type(UserType.READER)
-                      .build(),
-                Author.builder()
-                      .username("author1")
-                      .password("author1")
-                      .firstName("Stephen")
-                      .lastName("King")
-                      .birthDate(LocalDate.of(1970, 1, 1))
-                      .bio("i am an author")
-                      .type(UserType.AUTHOR)
-                      .build(),
-                Author.builder()
-                      .username("author2")
-                      .password("author2")
-                      .firstName("Mircea")
-                      .lastName("Cartarescu")
-                      .birthDate(LocalDate.of(1981, 1, 1))
-                      .bio("i am an author")
-                      .type(UserType.AUTHOR)
-                      .build(),
-                Author.builder()
-                      .username("author3")
-                      .password("author3")
-                      .firstName("Gabriel")
-                      .lastName("Marquez")
-                      .birthDate(LocalDate.of(1995, 4, 2))
-                      .bio("i am an author")
-                      .type(UserType.AUTHOR)
-                      .build(),
-                Author.builder()
-                      .username("author4")
-                      .password("author4")
-                      .firstName("Rhys")
-                      .lastName("Montrose")
-                      .birthDate(LocalDate.of(1995, 4, 2))
-                      .bio("i am an author")
-                      .type(UserType.AUTHOR)
-                      .build(),
-                Librarian.builder()
-                         .username("librarian1")
-                         .password("librarian1")
-                         .firstName("Joe")
-                         .lastName("Goldberg")
-                         .birthDate(LocalDate.of(1999, 12, 1))
-                         .bio("i am a librarian")
-                         .type(UserType.LIBRARIAN)
-                         .build(),
-                Librarian.builder()
-                         .username("librarian2")
-                         .password("librarian2")
-                         .firstName("Jane")
-                         .lastName("Doe")
-                         .birthDate(LocalDate.of(1981, 1, 1))
-                         .bio("i am a librarian")
-                         .type(UserType.LIBRARIAN)
-                         .build()));
-        readerService.init((Reader)userService.getByUsername("reader1").get());
-        readerService.init((Reader)userService.getByUsername("reader2").get());
-        readerService.init((Reader)userService.getByUsername("reader3").get());
-    }
-
-    private static void addSomeConnections() {
-        connectionService.addConnections(List.of(
-                Connection.builder()
-                          .follower(userService.getByUsername("reader1").get().getId())
-                          .followed(userService.getByUsername("reader2").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader2").get().getId())
-                          .followed(userService.getByUsername("reader1").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader2").get().getId())
-                          .followed(userService.getByUsername("reader3").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader1").get().getId())
-                          .followed(userService.getByUsername("author1").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader2").get().getId())
-                          .followed(userService.getByUsername("author1").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader3").get().getId())
-                          .followed(userService.getByUsername("author1").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader3").get().getId())
-                          .followed(userService.getByUsername("librarian1").get().getId())
-                          .build(),
-                Connection.builder()
-                          .follower(userService.getByUsername("reader3").get().getId())
-                          .followed(userService.getByUsername("librarian2").get().getId())
-                          .build()));
-    }
-
-    private static void addSomeBooks() {
-        bookService.addBooks(List.of(
-                Book.builder()
-                    .title("The Shining")
-                    .authorId(Optional.of(userService.getByUsername("author1").get().getId()))
-                    .author("Stephen King")
-                    .genre(BookGenre.HORROR)
-                    .numberOfPages(500)
-                    .build()
-                                    ));
-        bookService.init();
-    }
 
     public static void start() {
         System.out.println("""
@@ -360,8 +214,8 @@ public class GeneralMenu {
         intro();
 
         switch (userService.getCurrentUser().get().getType()) {
-//            case AUTHOR -> authorMenu();
-//            case LIBRARIAN -> librarianMenu();
+            case AUTHOR -> authorMenu.start();
+            //case LIBRARIAN -> librarianMenu();
             case READER -> readerMenu.start();
         }
 

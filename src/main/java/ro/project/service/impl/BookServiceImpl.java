@@ -50,4 +50,16 @@ public class BookServiceImpl implements BookService {
         bookMap.remove(id);
     }
 
+    @Override
+    public void printBookData(UUID id) {
+        Book book = getById(id).get();
+        System.out.println(
+                "title: " + book.getTitle() +
+                        "\nauthor: " + book.getAuthor() +
+                        "\ngenre: " + book.getGenre().getName() +
+                        "\nnumber of pages: " + book.getNumberOfPages() +
+                        "\nrating: " + book.getRating()
+                          );
+    }
+
 }

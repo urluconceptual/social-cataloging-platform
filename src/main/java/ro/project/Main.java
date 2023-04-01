@@ -1,6 +1,7 @@
 package ro.project;
 
 import ro.project.application.GeneralMenu;
+import ro.project.application.PopulateScript;
 
 import java.util.Scanner;
 
@@ -10,8 +11,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         GeneralMenu.getInstance();
+        PopulateScript.getInstance();
 
-        GeneralMenu.populate();
+        PopulateScript.populate();
 
         do {
             GeneralMenu.start();

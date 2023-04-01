@@ -23,8 +23,6 @@ b
 2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
 c
 3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
-]
--src/main/java/ro/project/model/Librarian.java,7\1\71eed1a642ff162bc884326cad6861f515f3ee4b
 j
 :src/main/java/ro/project/service/impl/UserServiceImpl.java,b\3\b3ef98ba54c37b2236e3e3785eabb43bacea2d8d
 p
@@ -37,5 +35,3 @@ l
 <src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
 b
 2src/main/java/ro/project/model/abstracts/User.java,f\0\f09dfbf02d0282028546d09791e7f90636454246
-Z
-*src/main/java/ro/project/model/Reader.java,d\6\d6af499c46f6fa18a9a4ddd2a5935f18b239b440

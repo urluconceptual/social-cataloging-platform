@@ -1,9 +1,9 @@
 package ro.project.application;
 
+import ro.project.model.Author;
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
 import ro.project.model.SharedShelf;
-import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -12,9 +12,9 @@ import ro.project.service.impl.*;
 
 import java.util.*;
 
-public class ReaderMenu {
+public class AuthorMenu {
     private static final Scanner scanner = new Scanner(System.in);
-    private static ReaderMenu INSTANCE;
+    private static AuthorMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
@@ -23,11 +23,11 @@ public class ReaderMenu {
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
 
-    private ReaderMenu() {
+    private AuthorMenu() {
     }
 
-    public static ReaderMenu getInstance() {
-        return (INSTANCE == null ? new ReaderMenu() : INSTANCE);
+    public static AuthorMenu getInstance() {
+        return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
     }
 
     private static void myConnections() {
@@ -148,50 +148,17 @@ public class ReaderMenu {
         } while (flag);
     }
 
-    private void addPersonalShelf(String shelfName) {
-        shelfService.addShelf(PersonalShelf.builder()
-                                           .name(shelfName)
-                                           .type(ShelfType.PERSONAL)
-                                           .owner(userService.getCurrentUser().get().getId())
-                                           .build());
-    }
+    public void myBooks() {
+        Author author = (Author) userService.getCurrentUser().get();
 
-    private void addSharedShelf(String shelfName) {
-        List<User> friends = readerService.getFriends().stream().toList();
-        List<UUID> collaborators = new LinkedList<>();
-        collaborators.add(userService.getCurrentUser().get().getId());
-        System.out.println("Choose friends to collaborate:");
-        int i = 0;
-        for (; i < friends.size(); i++) {
-            System.out.println((i + 1) + " -> " + friends.get(i).getUsername());
-        }
-        System.out.println("done -> Done");
+        System.out.println("Books you wrote: ");
 
+        authorService.printBooks((Author) userService.getCurrentUser().get());
         System.out.println("""
-                                   Choose indexes for all the collaborators you want to add,
-                                   or type "done" if you're done:""");
-
-        String options = scanner.next();
-
-        while(!options.equals("done")) {
-            collaborators.add(friends.get(Integer.parseInt(options) - 1).getId());
-            options = scanner.next();
-        }
-
-        shelfService.addShelf(SharedShelf.builder()
-                                         .name(shelfName)
-                                         .type(ShelfType.SHARED)
-                                         .ownerIdList(collaborators)
-                                         .build());
-    }
-
-    private void addShelf() {
-        System.out.println("Enter shelf name (one word):");
-        String shelfName = scanner.next();
-        System.out.println("""
-                                   Type of shelf:
-                                   1 -> Personal
-                                   2 -> Shared
+                                                                      
+                                   1 -> Add new book
+                                   2 -> Remove book
+                                   3 -> Go back
                                                                       
                                    Choose option:""");
         String option;
@@ -200,74 +167,12 @@ public class ReaderMenu {
             option = scanner.next();
             switch (option) {
                 case "1" -> {
-                    addPersonalShelf(shelfName);
                     flag = false;
                 }
                 case "2" -> {
-                    addSharedShelf(shelfName);
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
-            }
-        } while (flag);
-        System.out.println("Successfully added shelf!");
-    }
-
-    private void removeShelf() {
-        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
-        System.out.println("Enter index of shelf you want to remove:");
-        int i = scanner.nextInt();
-        while(i > shelves.size()) {
-            generalMenu.invalidMessage("Shelf does not exist.");
-            i = scanner.nextInt();
-        }
-        readerService.removeShelf(shelves.get(i - 1));
-        System.out.println("Successfully removed shelf!");
-    }
-
-    public void seeShelf() {
-        List<UUID> shelves = ((Reader)userService.getCurrentUser().get()).getShelves();
-        System.out.println("Enter index of shelf you want to see:");
-        int i = scanner.nextInt();
-        while(i > shelves.size()) {
-            generalMenu.invalidMessage("Shelf does not exist.");
-            i = scanner.nextInt();
-        }
-        shelfService.printShelfData(shelves.get(i-1));
-    }
-
-    public void myShelves() {
-        Reader reader = (Reader) userService.getCurrentUser().get();
-
-        System.out.println("Your current shelves: ");
-
-        readerService.printShelves(reader);
-        System.out.println("""
-                                                                      
-                                   1 -> Add new shelf
-                                   2 -> Remove shelf
-                                   3 -> See shelf
-                                   4 -> Go back
-                                                                      
-                                   Choose option:""");
-        String option;
-        boolean flag = true;
-        do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    addShelf();
-                    flag = false;
-                }
-                case "2" -> {
-                    removeShelf();
                     flag = false;
                 }
                 case "3" -> {
-                    seeShelf();
-                    flag = false;
-                }
-                case "4" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
@@ -280,12 +185,11 @@ public class ReaderMenu {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
                                                                       
-                                   1 -> My shelves
-                                   2 -> My connections
-                                   3 -> Show other readers
-                                   4 -> Show authors
-                                   5 -> Show librarians
-                                   6 -> Logout
+                                   1 -> My books
+                                   2 -> My followers
+                                   3 -> My influences
+                                   4 -> My average rating
+                                   5 -> Logout
                                                                       
                                    Choose option:""");
         String options;
@@ -295,26 +199,22 @@ public class ReaderMenu {
             options = scanner.next();
             switch (options) {
                 case "1" -> {
-                    myShelves();
+                    myBooks();
                     flag = false;
                 }
                 case "2" -> {
-                    myConnections();
+                    //myFollowers();
                     flag = false;
                 }
                 case "3" -> {
-                    showUsers(UserType.READER);
+                    //myInfluences();
                     flag = false;
                 }
                 case "4" -> {
-                    showUsers(UserType.AUTHOR);
+                    //myAverageRating();
                     flag = false;
                 }
                 case "5" -> {
-                    showUsers(UserType.LIBRARIAN);
-                    flag = false;
-                }
-                case "6" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

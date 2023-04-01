@@ -10,6 +10,7 @@ import java.util.UUID;
 
 @SuperBuilder
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
@@ -18,7 +19,6 @@ public class Librarian extends User {
     @Builder.Default
     private List<UUID> curatedBookClubIds = new ArrayList<>();
     @ToString.Exclude
-    @Builder.Default
-    private PersonalShelf curatedRecommendationsList = new PersonalShelf();
+    private UUID curatedRecommendationsList;
 
 }

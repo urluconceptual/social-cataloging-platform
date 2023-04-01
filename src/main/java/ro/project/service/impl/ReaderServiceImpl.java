@@ -8,10 +8,7 @@ import ro.project.service.ReaderService;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public class ReaderServiceImpl implements ReaderService {
     private static UserService userService = new UserServiceImpl();
@@ -23,17 +20,17 @@ public class ReaderServiceImpl implements ReaderService {
                 PersonalShelf.builder()
                              .owner(reader.getId())
                              .name("want-to-read")
-                             .bookList(new ArrayList<>())
+                             .bookList(new HashSet<>())
                              .build(),
                 PersonalShelf.builder()
                              .owner(reader.getId())
                              .name("currently-reading")
-                             .bookList(new ArrayList<>())
+                             .bookList(new HashSet<>())
                              .build(),
                 PersonalShelf.builder()
                              .owner(reader.getId())
                              .name("read")
-                             .bookList(new ArrayList<>())
+                             .bookList(new HashSet<>())
                              .build()));
         return reader;
     }

@@ -17,4 +17,5 @@ public interface BookService {
     void editBookById(UUID id, Book newBook);
 
     void removeBookById(UUID id);
+    void printBookData(UUID id);
 }

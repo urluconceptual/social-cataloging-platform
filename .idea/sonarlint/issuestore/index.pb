@@ -23,8 +23,6 @@ b
 2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
 c
 3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
-j
-:src/main/java/ro/project/service/impl/UserServiceImpl.java,b\3\b3ef98ba54c37b2236e3e3785eabb43bacea2d8d
 p
 @src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
 g
@@ -49,7 +47,5 @@ Z
 -src/main/java/ro/project/model/Librarian.java,7\1\71eed1a642ff162bc884326cad6861f515f3ee4b
 h
 8src/main/java/ro/project/application/PopulateScript.java,c\2\c22568e332f4b35bb4c29cc06901ea7c22124866
-d
-4src/main/java/ro/project/application/AuthorMenu.java,2\f\2f806b84cb9a12a49dfa4e2e58e71a33ac969cba
 c
 3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa

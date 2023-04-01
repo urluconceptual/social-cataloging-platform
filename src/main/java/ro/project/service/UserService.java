@@ -27,7 +27,7 @@ public interface UserService {
 
     void setCurrentUser(String username);
 
-    void printUserData(User user);
+    void printUserData(UUID userId);
 
     void addConnectionId(User user, UUID connection);
 

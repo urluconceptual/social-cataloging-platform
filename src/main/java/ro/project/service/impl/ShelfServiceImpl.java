@@ -74,8 +74,19 @@ public class ShelfServiceImpl implements ShelfService {
             });
         } else {
             SharedShelf sharedShelf = (SharedShelf) getById(id).get();
-            sharedShelf.getEditorBookMap().forEach((user, book) -> System.out.println(book.toString() + " (" + user.toString() + " )\n"));
+            sharedShelf.getEditorBookMap().forEach((userId, bookId) -> {
+                System.out.println("Collaborator:");
+                userService.printUserData(userId);
+                System.out.println("Added book:");
+                bookService.printBookData(bookId);
+                System.out.println();
+            });
         }
+    }
+
+    @Override
+    public void getShelfBooks(UUID id) {
+
     }
 
     @Override

@@ -74,7 +74,7 @@ public class ReaderMenu {
             if (user.isEmpty()) {
                 generalMenu.invalidMessage("Invalid username.");
             } else {
-                userService.printUserData(user.get());
+                userService.printUserData(user.get().getId());
                 break;
             }
         } while (true);
@@ -243,7 +243,7 @@ public class ReaderMenu {
         shelfService.addBookToShelf(shelfId, bookList.get(input - 1).getId());
     }
 
-    void removeFromShelf() {
+    void removeFromShelf(UUID shelfId) {
 
     }
 
@@ -274,7 +274,7 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "2" -> {
-                    removeFromShelf();
+                    removeFromShelf(shelves.get(i - 1));
                     flag = false;
                 }
                 case "3" -> {

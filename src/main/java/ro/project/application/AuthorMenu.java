@@ -102,7 +102,7 @@ public class AuthorMenu {
             if (user.isEmpty()) {
                 generalMenu.invalidMessage("Invalid username.");
             } else {
-                userService.printUserData(user.get());
+                userService.printUserData(user.get().getId());
                 break;
             }
         } while (true);

@@ -1,3 +1,4 @@
+
 # Social Cataloging Platform :closed_book:
 
 Social cataloging platform application running in CLI, implemented using Java 19, with similar functionality to Goodreads: a place for people to review books and connect with other readers and authors.
@@ -5,11 +6,11 @@ Social cataloging platform application running in CLI, implemented using Java 19
 
 
 ## Table of Contents :bookmark_tabs:
-* [Stage 1](#Stage-1)
+* [Stage 1](#Stage-one)
 * Stage 2
-* [Class Hierarchy](#Class-Hierarchy)
+* [Class Hierarchy](#Class-Hierarchy-bar_chart)
 * [Functionality](#Functionality)
-* [Screenshots](#Screenshots)
+* [Screenshots](#Screenshots-camera)
 ## Stage :one:
 
 ### Defining and Implementing the System :book:

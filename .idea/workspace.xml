@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReadingChallengeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReadingChallengeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/208da94237a1dc26c5d59d8e89d9208636a3eab3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/0/208da94237a1dc26c5d59d8e89d9208636a3eab3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/ReadingChallenge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/ReadingChallenge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +89,7 @@
       <workItem from="1680283655387" duration="7454000" />
       <workItem from="1680345578907" duration="3471000" />
       <workItem from="1680357633956" duration="8791000" />
-      <workItem from="1680378720648" duration="6456000" />
+      <workItem from="1680378720648" duration="6919000" />
     </task>
     <servers />
   </component>

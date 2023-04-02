@@ -1,0 +1,87 @@
+
+r
+java:S1192?"PDefine a constant instead of duplicating this literal "Invalid option." 8 times.(á›¥üÿÿÿÿ8©×Ëõó0
+d
+java:S11923"GDefine a constant instead of duplicating this literal " user)" 3 times.(ÊÒ…¯8©×Ëõó0
+s
+java:S3655¤"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(«İÃ¥ùÿÿÿÿ8É×Ëõó0
+r
+java:S3655T"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ıËÆÆøÿÿÿÿ8É×Ëõó0
+n
+java:S3655Û"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÍåï8É×Ëõó0
+s
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Î–œàıÿÿÿÿ8É×Ëõó0
+s
+java:S3655«"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(µí½òıÿÿÿÿ8É×Ëõó0
+m
+java:S3655S"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŸŠŞ8É×Ëõó0
+n
+java:S3655„"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÍåï8É×Ëõó0
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¥¤ò8É×Ëõó0
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(Îñë8Î×Ëõó0
+T	java:S1061"9Replace this use of System.out or System.err by a logger.(©åß8Î×Ëõó0
+U	java:S1063"9Replace this use of System.out or System.err by a logger.(ÊÒ…¯8Ï×Ëõó0
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(Ä‡Ê—ûÿÿÿÿ8Ï×Ëõó0
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(ÊÒ…¯8Ï×Ëõó0
+W
+java:S2209?"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Ï×Ëõó0
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(›œéúÿÿÿÿ8Ğ×Ëõó0
+W
+java:S2209L"5Change this instance-reference to a static reference.(é†­…ÿÿÿÿÿ8Ğ×Ëõó0
+U	java:S106U"9Replace this use of System.out or System.err by a logger.(ô’ÖØ8Ñ×Ëõó0
+T	java:S106W"9Replace this use of System.out or System.err by a logger.(†½¿q8Ñ×Ëõó0
+U	java:S106Z"9Replace this use of System.out or System.err by a logger.(Îñë8Ñ×Ëõó0
+U	java:S106h"9Replace this use of System.out or System.err by a logger.(ô’ÖØ8Ñ×Ëõó0
+T	java:S106m"9Replace this use of System.out or System.err by a logger.(†½¿q8Ñ×Ëõó0
+W
+java:S2209s"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Ò×Ëõó0
+U	java:S106{"9Replace this use of System.out or System.err by a logger.(ò©èÅ8Ò×Ëõó0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¨ë·Ø8Ó×Ëõó0
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(Îñë8Ó×Ëõó0
+X
+java:S2209”"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Ó×Ëõó0
+V	java:S106¥"9Replace this use of System.out or System.err by a logger.(ÿ®Ñâ8Õ×Ëõó0
+V	java:S106¨"9Replace this use of System.out or System.err by a logger.(ÍëÀî8Õ×Ëõó0
+V	java:S106ª"9Replace this use of System.out or System.err by a logger.(¤„Ù‚8Õ×Ëõó0
+V	java:S106¬"9Replace this use of System.out or System.err by a logger.(Îñë8Õ×Ëõó0
+[	java:S106¿"9Replace this use of System.out or System.err by a logger.(âü‡£ûÿÿÿÿ8Ö×Ëõó0
+V	java:S106Á"9Replace this use of System.out or System.err by a logger.(Îñë8Ö×Ëõó0
+X
+java:S2209Ô"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8××Ëõó0
+[	java:S106×"9Replace this use of System.out or System.err by a logger.(…Î•Øşÿÿÿÿ8××Ëõó0
+V	java:S106Ü"9Replace this use of System.out or System.err by a logger.(Èˆúæ8××Ëõó0
+S
+java:S2209ß"5Change this instance-reference to a static reference.(½ıÉ…8Ø×Ëõó0
+V	java:S106ã"9Replace this use of System.out or System.err by a logger.(ÎÂçú8Ø×Ëõó0
+[	java:S106ê"9Replace this use of System.out or System.err by a logger.(ÚÊşÿÿÿÿ8Ø×Ëõó0
+[	java:S106î"9Replace this use of System.out or System.err by a logger.(‹¤êÇıÿÿÿÿ8Ø×Ëõó0
+S
+java:S2209ñ"5Change this instance-reference to a static reference.(èàß8Ù×Ëõó0
+[	java:S106ù"9Replace this use of System.out or System.err by a logger.(ÉëÔÕúÿÿÿÿ8Ù×Ëõó0
+S
+java:S2209ü"5Change this instance-reference to a static reference.(èàß8Ù×Ëõó0
+V	java:S106€"9Replace this use of System.out or System.err by a logger.(ÉâˆŒ8Ú×Ëõó0
+V	java:S106…"9Replace this use of System.out or System.err by a logger.(¬—Éè8Ú×Ëõó0
+S
+java:S2209ˆ"5Change this instance-reference to a static reference.(½ıÉ…8Ú×Ëõó0
+[	java:S106‹"9Replace this use of System.out or System.err by a logger.(…‡ñ›øÿÿÿÿ8Ú×Ëõó0
+V	java:S106"9Replace this use of System.out or System.err by a logger.(Îñë8Û×Ëõó0
+X
+java:S2209¥"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Û×Ëõó0
+[	java:S106­"9Replace this use of System.out or System.err by a logger.(×Æşÿÿÿÿ8Û×Ëõó0
+V	java:S106°"9Replace this use of System.out or System.err by a logger.(Îñë8Ü×Ëõó0
+X
+java:S2209Ì"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Ü×Ëõó0
+[	java:S106Ó"9Replace this use of System.out or System.err by a logger.(Éµ˜”ıÿÿÿÿ8İ×Ëõó0
+V	java:S106Û"9Replace this use of System.out or System.err by a logger.(Îñë8İ×Ëõó0
+X
+java:S2209î"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8İ×Ëõó0
+[	java:S106ò"9Replace this use of System.out or System.err by a logger.(°öŒ‰şÿÿÿÿ8†Ùõó0
+V	java:S106ø"9Replace this use of System.out or System.err by a logger.(Îñë8ĞñÚõó0
+X
+java:S2209¤"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8Ş×Ëõó0
+N
+java:S1068"1Remove this unused "authorService" private field.(îú¸Ê8Ş×Ëõó0
+V
+java:S1068"4Remove this unused "librarianService" private field.(Öã‰Ùşÿÿÿÿ8Ş×Ëõó0

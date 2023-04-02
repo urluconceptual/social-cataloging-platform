@@ -1,0 +1,23 @@
+
+r
+java:S3655^"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ƒÕ—ÿÿÿÿÿ8œééÀó0
+r
+java:S3655P"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÅØ†ûÿÿÿÿ8“ïóó0
+G
+java:S21754"*A "Set<User>" cannot contain a "Optional".(Çó˜œ8¤ééÀó0
+G
+java:S2175<"*A "Set<User>" cannot contain a "Optional".(Çó˜œ8¤ééÀó0
+S
+java:S2696C"6Make the enclosing method "static" or remove this set.(Ô®Ô8ï™Åó0
+S
+java:S2696E"6Make the enclosing method "static" or remove this set.(Á†üÄ8ğ™Åó0
+U	java:S106Q"9Replace this use of System.out or System.err by a logger.(ÙÁôâ8¥ééÀó0
+U	java:S106R"9Replace this use of System.out or System.err by a logger.(ïêš8¥ééÀó0
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(·Àå 8¥ééÀó0
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(ä ¾ë8¥ééÀó0
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8§ééÀó0
+N
+java:S1068"1Remove this unused "authorService" private field.(îú¸Ê8§ééÀó0
+V
+java:S1068"4Remove this unused "librarianService" private field.(Öã‰Ùşÿÿÿÿ8§ééÀó0

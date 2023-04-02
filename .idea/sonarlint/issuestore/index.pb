@@ -7,12 +7,8 @@ f
 6src/main/java/ro/project/service/LibrarianService.java,f\5\f5f16272a867740411ae6a1786d4dfadda4c9509
 \
 ,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
-Z
-*src/main/java/ro/project/model/Review.java,b\d\bd9f7db39c03b184d1fd6485b9ced1d589a20fd6
 ^
 .src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
-g
-7src/main/java/ro/project/model/enums/EditionFormat.java,d\a\dab5ae9f8b7e6c86799f63ad7ec83d108e72f080
 b
 2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
 c

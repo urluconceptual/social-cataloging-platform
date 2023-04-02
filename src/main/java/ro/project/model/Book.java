@@ -4,7 +4,6 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.AbstractEntity;
 import ro.project.model.enums.BookGenre;
-import ro.project.model.records.Edition;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +26,4 @@ public class Book extends AbstractEntity {
     private Double rating = 0.0;
     @Builder.Default
     private List<Review> reviewList = new ArrayList<>();
-    @Builder.Default
-    private List<Edition> editionList = new ArrayList<>();
 }

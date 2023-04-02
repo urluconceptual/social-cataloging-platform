@@ -66,7 +66,7 @@ As a _reader_, you can:
 As an _author_, you can:
 
 * Use the platform to promote your books;
-* Completely remove your book from platform;
+* Completely remove your book from the platform;
 * Check your current followers;
 * Check your average rating, determined as the mean of the ratings that your books have gotten.
 ## Screenshots :camera:

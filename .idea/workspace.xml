@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/records/Edition.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

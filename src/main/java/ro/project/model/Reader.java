@@ -27,8 +27,5 @@ public class Reader extends User {
     private List<Review> reviewList = new ArrayList<>();
     @ToString.Exclude
     @Builder.Default
-    private List<UUID> joinedBookClubIdList = new ArrayList<>();
-    @ToString.Exclude
-    @Builder.Default
     private double averageRating = 0;
 }

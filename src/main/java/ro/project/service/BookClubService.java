@@ -15,7 +15,7 @@ public interface BookClubService {
 
     void addBookClubs(List<BookClub> bookClubList);
 
-    void removeBookById(UUID id);
+    void removeBookClubById(UUID id);
 
     void printMessages(UUID id);
 

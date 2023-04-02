@@ -39,6 +39,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<User> getAllUsers() {
+        return new ArrayList<>(users);
+    }
+
+    @Override
     public void addUser(User user) {
         users.add(user);
     }

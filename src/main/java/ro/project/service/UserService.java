@@ -15,6 +15,8 @@ public interface UserService {
 
     Set<User> getByType(UserType type);
 
+    List<User> getAllUsers();
+
     void addUser(User user);
 
     void addUsers(List<User> userList);

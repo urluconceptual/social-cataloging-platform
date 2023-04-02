@@ -3,13 +3,16 @@ package ro.project.application;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
+import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class GeneralMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -207,6 +210,15 @@ public class GeneralMenu {
                                    type "exit" if you want to close the application.""");
     }
 
+    private static void statistics() {
+        Map<UserType, Long> groupByType = userService.getAllUsers()
+                                                        .stream()
+                                                        .collect(Collectors.groupingBy(User::getType, Collectors.counting()));
+        System.out.println("We currently have " + userService.getAllUsers().size() + " registered users: ");
+        groupByType.entrySet().forEach(entry -> System.out.println(entry.getValue() + " " + entry.getKey().getType() + "s"));
+        System.out.println();
+    }
+
 
     public static void start() {
         System.out.println("""
@@ -214,6 +226,8 @@ public class GeneralMenu {
                                    Welcome! To use the platform, you have to register or to log
                                    into your account.
                                    """);
+        statistics();
+
         intro();
 
         switch (userService.getCurrentUser().get().getType()) {

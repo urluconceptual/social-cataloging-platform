@@ -146,8 +146,11 @@ public class LibrarianMenu {
                                      
                                    0 -> Log out                                 
                                    1 -> My recommended books
+                                        -> Add new book
+                                        -> Remove book
                                    2 -> My followers
                                    3 -> My book club
+                                        -> Add new message
                                                                       
                                    Choose option:""");
         String options;

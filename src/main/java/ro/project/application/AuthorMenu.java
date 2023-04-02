@@ -118,6 +118,8 @@ public class AuthorMenu {
                                     
                                    0 -> Log out                                  
                                    1 -> My books
+                                        -> Add new book
+                                        -> Remove book
                                    2 -> My followers
                                    3 -> My average rating
                                                                       

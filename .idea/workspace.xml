@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/AuthorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/AuthorMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

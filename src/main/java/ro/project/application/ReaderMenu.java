@@ -34,10 +34,11 @@ public class ReaderMenu {
 
     private static void myConnections() {
         System.out.println("""
-                                                                      
+                                   
+                                   0 -> Go back                                 
                                    1 -> Users you follow
                                    2 -> Users following you
-                                   3 -> Go back
+                                   3 -> Friends
                                                                       
                                    Choose option:""");
         String option;
@@ -45,6 +46,9 @@ public class ReaderMenu {
         do {
             option = scanner.next();
             switch (option) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     System.out.println("You follow:");
                     userService.getFollowing()
@@ -58,7 +62,10 @@ public class ReaderMenu {
                     flag = false;
                 }
                 case "3" -> {
-                    return;
+                    List<User> friends = readerService.getFriends().stream().toList();
+                    System.out.println("Friends:");
+                    friends.forEach(friend -> System.out.println(friend.getUsername()));
+                    flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }
@@ -268,10 +275,11 @@ public class ReaderMenu {
         shelfService.printShelfData(shelves.get(i - 1));
 
         System.out.println("""
-                                                                      
+                                        
+                                   0 -> Go back                              
                                    1 -> Add book to shelf
                                    2 -> Remove book from shelf
-                                   3 -> Go back
+                                   
                                                                       
                                    Choose option:""");
         String option;
@@ -279,6 +287,9 @@ public class ReaderMenu {
         do {
             option = scanner.next();
             switch (option) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     addToShelf(shelves.get(i - 1));
                     flag = false;
@@ -286,9 +297,6 @@ public class ReaderMenu {
                 case "2" -> {
                     removeFromShelf(shelves.get(i - 1));
                     flag = false;
-                }
-                case "3" -> {
-                    return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }
@@ -375,13 +383,31 @@ public class ReaderMenu {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
                                                                       
-                                   0 -> Log out                                  
+                                   0 -> Log out
                                    1 -> My shelves
+                                        -> Add new shelf
+                                        -> Remove shelf
+                                        -> See shelf
+                                            -> Add book to shelf
+                                            -> Remove book from shelf
                                    2 -> My connections
+                                        -> Users you follow
+                                        -> Users following you
+                                        -> Friends
                                    3 -> Show other readers
+                                        -> Choose profile to view
+                                            -> Follow user
+                                            -> Unfollow user
                                    4 -> Show authors
+                                        -> Choose profile to view
+                                            -> Follow user
+                                            -> Unfollow user
                                    5 -> Show librarians
+                                        -> Choose profile to view
+                                            -> Follow user
+                                            -> Unfollow user
                                    6 -> My reading challenge
+                                        -> Set new reading challenge
                                                     
                                    Choose option:""");
         String options;

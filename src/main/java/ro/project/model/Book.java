@@ -25,5 +25,5 @@ public class Book extends AbstractEntity {
     @Builder.Default
     private Double rating = 0.0;
     @Builder.Default
-    private List<Review> reviewList = new ArrayList<>();
+    private List<UUID> reviewList = new ArrayList<>();
 }

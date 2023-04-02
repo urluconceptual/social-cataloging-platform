@@ -85,7 +85,7 @@ public class BookServiceImpl implements BookService {
         Integer sum = getById(bookId).get().getReviewList().stream().mapToInt(r -> r.getRating()).sum();
         Integer total = getById(bookId).get().getReviewList().size() * 10;
         book.setRating((int)((double)sum/total*1000)/100.0);
-        readerService.addReview(review.getId());
+        readerService.addReview(review);
         if (book.getAuthorId().isPresent())
             authorService.updateRating(book.getAuthorId().get());
     }

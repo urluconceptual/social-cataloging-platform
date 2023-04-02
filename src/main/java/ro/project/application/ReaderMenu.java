@@ -423,6 +423,11 @@ public class ReaderMenu {
         }
     }
 
+    private void myTopBooks() {
+        System.out.println("Your best ratings: ");
+        readerService.printTopReviews();
+    }
+
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
@@ -454,6 +459,7 @@ public class ReaderMenu {
                                    6 -> My reading challenge
                                         -> Set new reading challenge
                                    7 -> Show all books
+                                   8 -> My top books
                                                     
                                    Choose option:""");
         String options;
@@ -491,6 +497,10 @@ public class ReaderMenu {
                 }
                 case "7" -> {
                     showAllBooks();
+                    flag = false;
+                }
+                case "8" -> {
+                    myTopBooks();
                     flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

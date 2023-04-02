@@ -1,6 +1,7 @@
 package ro.project.service;
 
 import ro.project.model.Reader;
+import ro.project.model.Review;
 import ro.project.model.abstracts.User;
 
 import java.util.Set;
@@ -15,5 +16,7 @@ public interface ReaderService {
 
     void printShelves(Reader reader);
 
-    void addReview(UUID reviewId);
+    void addReview(Review review);
+
+    void printTopReviews();
 }

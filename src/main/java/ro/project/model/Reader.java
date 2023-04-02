@@ -24,7 +24,7 @@ public class Reader extends User {
     private Optional<ReadingChallenge> readingChallenge = Optional.empty();
     @ToString.Exclude
     @Builder.Default
-    private List<UUID> reviewIdList = new ArrayList<>();
+    private List<Review> reviewList = new ArrayList<>();
     @ToString.Exclude
     @Builder.Default
     private List<UUID> joinedBookClubIdList = new ArrayList<>();

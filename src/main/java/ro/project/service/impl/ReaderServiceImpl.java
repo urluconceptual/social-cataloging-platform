@@ -2,10 +2,9 @@ package ro.project.service.impl;
 
 import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
+import ro.project.model.Review;
 import ro.project.model.abstracts.User;
-import ro.project.service.ReaderService;
-import ro.project.service.ShelfService;
-import ro.project.service.UserService;
+import ro.project.service.*;
 
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +14,8 @@ import java.util.UUID;
 public class ReaderServiceImpl implements ReaderService {
     private static UserService userService = new UserServiceImpl();
     private static ShelfService shelfService = new ShelfServiceImpl();
+    private static BookService bookService = new BookServiceImpl();
+    private static ReviewService reviewService = new ReviewServiceImpl();
 
     @Override
     public Reader init(Reader reader) {
@@ -60,7 +61,22 @@ public class ReaderServiceImpl implements ReaderService {
     }
 
     @Override
-    public void addReview(UUID reviewId) {
-        ((Reader) userService.getCurrentUser().get()).getReviewIdList().add(reviewId);
+    public void addReview(Review review) {
+        ((Reader) userService.getCurrentUser().get()).getReviewList().add(review);
     }
+
+    @Override
+    public void printTopReviews() {
+        Reader reader = (Reader) userService.getCurrentUser().get();
+        List<Review> reviewList = reviewService.sorted(reader.getReviewList());
+        reviewList.forEach(r -> {
+            System.out.println("---- YOUR RATING:");
+            System.out.println(r.getRating() + "/10");
+            System.out.println("---- BOOK:");
+            bookService.printBookData(r.getBookId());
+
+        });
+    }
+
+
 }

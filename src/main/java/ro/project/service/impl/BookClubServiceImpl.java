@@ -11,8 +11,12 @@ public class BookClubServiceImpl implements BookClubService {
 
 
     @Override
-    public void printMessages(UUID id) {
-
+    public void printMessages(BookClub bookClub) {
+        bookClub.getMessageMap().forEach((time, message) -> {
+            System.out.println("time: " + time);
+            System.out.println("message:" + message);
+            System.out.println();
+        });
     }
 
     @Override
@@ -21,7 +25,7 @@ public class BookClubServiceImpl implements BookClubService {
     }
 
     @Override
-    public void addMessage(UUID bookClubId, Message message) {
-
+    public void addMessage(BookClub bookClub, Message message) {
+        bookClub.getMessageMap().put(message.sentTime(), message);
     }
 }

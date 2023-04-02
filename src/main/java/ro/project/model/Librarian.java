@@ -17,7 +17,7 @@ import java.util.UUID;
 public class Librarian extends User {
     @ToString.Exclude
     @Builder.Default
-    private BookClub bookClubId = new BookClub();
+    private BookClub bookClub = new BookClub();
     @ToString.Exclude
     private UUID recommendationsList;
 

@@ -2,10 +2,12 @@ package ro.project.application;
 
 import ro.project.model.Author;
 import ro.project.model.Book;
+import ro.project.model.BookClub;
 import ro.project.model.Librarian;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
+import ro.project.model.records.Message;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
@@ -23,6 +25,7 @@ public class LibrarianMenu {
     private static BookService bookService = new BookServiceImpl();
     private static LibrarianService librarianService = new LibrarianServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
+    private static BookClubService bookClubService = new BookClubServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
 
@@ -106,6 +109,41 @@ public class LibrarianMenu {
         }
     }
 
+    private void addMessage(BookClub bookClub) {
+        System.out.println("Type message(one line): ");
+        scanner.nextLine();
+        String text = scanner.nextLine();
+        Message message = new Message(text);
+        bookClubService.addMessage(bookClub, message);
+    }
+
+    private void myBookClub() {
+        Librarian librarian = (Librarian) userService.getCurrentUser().get();
+        System.out.println("My posts: ");
+        bookClubService.printMessages(librarian.getBookClub());
+        System.out.println("""
+                                   
+                                   0 -> Go back
+                                   1 -> Add new message
+                                   
+                                   Choose option: """);
+        String options;
+        boolean flag = true;
+        do {
+            options = scanner.next();
+            switch (options) {
+                case "0" -> {
+                    return;
+                }
+                case "1" -> {
+                    addMessage(librarian.getBookClub());
+                    flag = false;
+                }
+                default -> generalMenu.invalidMessage("Invalid option.");
+            }
+        } while (flag);
+    }
+
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
@@ -113,7 +151,7 @@ public class LibrarianMenu {
                                    0 -> Log out                                 
                                    1 -> My recommended books
                                    2 -> My followers
-                                   3 -> My book clubs
+                                   3 -> My book club
                                                                       
                                    Choose option:""");
         String options;
@@ -134,7 +172,7 @@ public class LibrarianMenu {
                     flag = false;
                 }
                 case "3" -> {
-                    //myBookClubs();
+                    myBookClub();
                     flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

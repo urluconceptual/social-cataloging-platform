@@ -21,7 +21,6 @@ public class PopulateScript {
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static LibrarianService librarianService = new LibrarianServiceImpl();
-    private static BookClubService bookClubService = new BookClubServiceImpl();
 
     private PopulateScript() {
     }

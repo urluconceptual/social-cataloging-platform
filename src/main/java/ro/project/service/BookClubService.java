@@ -10,9 +10,9 @@ import java.util.UUID;
 
 public interface BookClubService {
 
-    void printMessages(UUID id);
+    void printMessages(BookClub bookClub);
 
     List<Book> getListOfAllBooksClubs();
 
-    void addMessage(UUID bookClubId, Message message);
+    void addMessage(BookClub bookClub, Message message);
 }

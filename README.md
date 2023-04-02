@@ -30,6 +30,7 @@ The applications features:
 
 #### 2. Regular Classes:
 * Author - derived from User
+* Librarian - derived from User
 * Reader - derived from User
 * Book
 * Connection
@@ -40,11 +41,10 @@ The applications features:
 * ReadingChallange
 
 #### 3. Records:
-* Edition
+* Message
 
 #### 4. Enums:
 * BookGenre
-* EditionFormat
 * ShelfType
 * UserType
 ## Functionality
@@ -70,6 +70,14 @@ As an _author_, you can:
 * Completely remove your book from the platform;
 * Check your current followers;
 * Check your average rating, determined as the mean of the ratings that your books have gotten.
+
+### 3. Librarian Functionality :black_nib:
+As a _librarian_, you can:
+
+* Use the platform to recommend books;
+* Check your current followers;
+* Add posts on your personal book club, to share your book knowledge with the readers.
+
 ## Screenshots :camera:
 
 To do! Add screenshots.

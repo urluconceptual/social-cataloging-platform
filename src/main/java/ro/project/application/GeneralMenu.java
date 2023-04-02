@@ -17,10 +17,10 @@ public class GeneralMenu {
     private static UserService userService = new UserServiceImpl();
     private static ReaderMenu readerMenu = ReaderMenu.getInstance();
     private static AuthorMenu authorMenu = AuthorMenu.getInstance();
+    private static LibrarianMenu librarianMenu = LibrarianMenu.getInstance();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
-    private static BookService bookService = new BookServiceImpl();
-    private static ConnectionService connectionService = new ConnectionServiceImpl();
+    private static LibrarianService librarianService = new LibrarianServiceImpl();
 
     private GeneralMenu() {
     }
@@ -112,15 +112,18 @@ public class GeneralMenu {
                                           .build());
                 authorService.init((Author) userService.getByUsername(username).get());
             }
-            case LIBRARIAN -> userService.addUser(Librarian.builder()
-                                                           .username(username)
-                                                           .password(password)
-                                                           .firstName(firstName)
-                                                           .lastName(lastName)
-                                                           .birthDate(birthDate)
-                                                           .bio(bio)
-                                                           .type(type)
-                                                           .build());
+            case LIBRARIAN -> {
+                userService.addUser(Librarian.builder()
+                                             .username(username)
+                                             .password(password)
+                                             .firstName(firstName)
+                                             .lastName(lastName)
+                                             .birthDate(birthDate)
+                                             .bio(bio)
+                                             .type(type)
+                                             .build());
+                librarianService.init((Librarian) userService.getByUsername(username).get());
+            }
             case READER -> {
                 userService.addUser(Reader.builder()
                                           .username(username)
@@ -136,7 +139,6 @@ public class GeneralMenu {
             default -> {
             }
         }
-        ;
 
         userService.setCurrentUser(username);
 
@@ -216,7 +218,7 @@ public class GeneralMenu {
 
         switch (userService.getCurrentUser().get().getType()) {
             case AUTHOR -> authorMenu.start();
-            //case LIBRARIAN -> librarianMenu();
+            case LIBRARIAN -> librarianMenu.start();
             case READER -> readerMenu.start();
         }
 

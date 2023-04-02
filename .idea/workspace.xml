@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71eed1a642ff162bc884326cad6861f515f3ee4b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f5f16272a867740411ae6a1786d4dfadda4c9509" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/e/6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/1/71eed1a642ff162bc884326cad6861f515f3ee4b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/5/f5f16272a867740411ae6a1786d4dfadda4c9509" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReaderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/AuthorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/AuthorMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/LibrarianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/LibrarianService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

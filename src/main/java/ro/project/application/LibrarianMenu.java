@@ -2,6 +2,7 @@ package ro.project.application;
 
 import ro.project.model.Author;
 import ro.project.model.Book;
+import ro.project.model.Librarian;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
@@ -13,9 +14,9 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class AuthorMenu {
+public class LibrarianMenu {
     private static final Scanner scanner = new Scanner(System.in);
-    private static AuthorMenu INSTANCE;
+    private static LibrarianMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
@@ -25,61 +26,47 @@ public class AuthorMenu {
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
 
-    private AuthorMenu() {
+    private LibrarianMenu() {
     }
 
-    public static AuthorMenu getInstance() {
-        return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
+    public static LibrarianMenu getInstance() {
+        return (INSTANCE == null ? new LibrarianMenu() : INSTANCE);
     }
 
     private void addNewBook() {
-        System.out.println("book title(please use this-format-for-your-title): ");
-        String title = scanner.next();
-        System.out.println("genre: ");
-        for (BookGenre bookGenre : BookGenre.values()) {
-                System.out.println("    " + bookGenre.getName());
+        Librarian librarian = (Librarian) userService.getCurrentUser().get();
+        List<Book> bookList = bookService.getListOfAllBooks();
+        showAllBooks();
+        System.out.println("Enter index of book you want to recommend:");
+        int input = scanner.nextInt();
+        while (input > bookList.size()) {
+            generalMenu.invalidMessage("Book index does not exist.");
+            input = scanner.nextInt();
         }
-
-        String inputType = scanner.next();
-        BookGenre genre = BookGenre.getEnumByFieldString(inputType);
-
-        System.out.println("number of pages: ");
-        int n = scanner.nextInt();
-
-        Author author = (Author) userService.getCurrentUser().get();
-
-        bookService.addBook(Book.builder()
-                                    .title(title)
-                                    .authorId(Optional.of(author.getId()))
-                                    .author(author.getFirstName() + " " + author.getLastName())
-                                    .genre(genre)
-                                    .numberOfPages(n)
-                                    .build());
-        bookService.init();
+        shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(input - 1).getId());
     }
 
     private void removeBook() {
-        Author author = (Author)userService.getCurrentUser().get();
-        List<UUID> bookList = authorService.getWrittenBooks(author);
+        Librarian librarian = (Librarian) userService.getCurrentUser().get();
+        List<UUID> bookList = librarianService.getRecommendedBooks(librarian);
         System.out.println("Enter index of book you want to remove: ");
         int input = scanner.nextInt();
         while (input > bookList.size()) {
             generalMenu.invalidMessage("Book index does not exist.");
             input = scanner.nextInt();
         }
-        bookService.removeBookById(bookList.get(input - 1));
-        System.out.println("Successfully removed book!");
+        shelfService.removeBookFromShelf(librarian.getRecommendationsList(), bookList.get(input - 1));
+        System.out.println("Successfully removed book from shelf!");
     }
 
     private void myBooks() {
-        Author author = (Author) userService.getCurrentUser().get();
+        Librarian librarian = (Librarian) userService.getCurrentUser().get();
 
-        System.out.println("Books you wrote: ");
-
-        authorService.printBooks((Author) userService.getCurrentUser().get());
+        System.out.println("Books you recommend: ");
+        librarianService.printBooks((Librarian) userService.getCurrentUser().get());
         System.out.println("""
-                                     
-                                   0 -> Go back                                 
+                                       
+                                   0 -> Go back                               
                                    1 -> Add new book
                                    2 -> Remove book
                                                                       
@@ -109,18 +96,24 @@ public class AuthorMenu {
         userService.getFollowed().forEach(user -> System.out.println(user.getUsername()));
     }
 
-    private void myAverageRating() {
-        ((Author) userService.getCurrentUser().get()).getAverageRating();
+    private void showAllBooks() {
+        List<Book> bookList = bookService.getListOfAllBooks();
+        int i = 1;
+        for (Book book : bookList) {
+            System.out.println("---- " + i + ": ");
+            bookService.printBookData(book.getId());
+            i++;
+        }
     }
 
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
-                                    
-                                   0 -> Log out                                  
-                                   1 -> My books
+                                     
+                                   0 -> Log out                                 
+                                   1 -> My recommended books
                                    2 -> My followers
-                                   3 -> My average rating
+                                   3 -> My book clubs
                                                                       
                                    Choose option:""");
         String options;
@@ -141,7 +134,7 @@ public class AuthorMenu {
                     flag = false;
                 }
                 case "3" -> {
-                    myAverageRating();
+                    //myBookClubs();
                     flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

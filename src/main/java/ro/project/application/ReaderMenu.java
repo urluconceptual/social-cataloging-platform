@@ -93,10 +93,10 @@ public class ReaderMenu {
         }
 
         System.out.println("""
-                                                                      
+                                    
+                                   0 -> Go back                                  
                                    1 -> Follow user
                                    2 -> Unfollow user
-                                   3 -> Go back
                                                                       
                                    Choose option:""");
 
@@ -104,6 +104,9 @@ public class ReaderMenu {
         do {
             option = scanner.next();
             switch (option) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     connectionService.addConnection(user.get().getId());
                     System.out.println("You follow this user!");
@@ -112,9 +115,6 @@ public class ReaderMenu {
                 case "2" -> {
                     connectionService.unfollowConnection(user.get().getId());
                     System.out.println("You don't follow this user!");
-                    return;
-                }
-                case "3" -> {
                     return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
@@ -344,11 +344,11 @@ public class ReaderMenu {
 
         readerService.printShelves(reader);
         System.out.println("""
-                                                                      
+                                        
+                                   0 -> Go back                              
                                    1 -> Add new shelf
                                    2 -> Remove shelf
                                    3 -> See shelf
-                                   4 -> Go back
                                                                       
                                    Choose option:""");
         String option;
@@ -356,6 +356,9 @@ public class ReaderMenu {
         do {
             option = scanner.next();
             switch (option) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     addShelf();
                     flag = false;
@@ -367,9 +370,6 @@ public class ReaderMenu {
                 case "3" -> {
                     seeShelf();
                     flag = false;
-                }
-                case "4" -> {
-                    return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }

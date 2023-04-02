@@ -1,6 +1,7 @@
 package ro.project.service.impl;
 
 import ro.project.model.Author;
+import ro.project.model.Librarian;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
@@ -91,6 +92,9 @@ public class UserServiceImpl implements UserService {
 
         if (user instanceof Author author) {
             authorService.printAuthorData(author);
+        }
+        if(user instanceof Librarian librarian) {
+            librarianService.printLibrarianData(librarian);
         }
     }
 

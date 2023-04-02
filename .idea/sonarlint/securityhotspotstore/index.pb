@@ -1,10 +1,6 @@
 
 c
 3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
-f
-6src/main/java/ro/project/service/LibrarianService.java,f\5\f5f16272a867740411ae6a1786d4dfadda4c9509
-o
-?src/main/java/ro/project/service/impl/LibrarianServiceImpl.java,6\e\6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16
 \
 ,src/main/java/ro/project/model/BookClub.java,4\d\4dba5289b82b7523b6f049a319864c34fa231462
 ^
@@ -27,5 +23,3 @@ c
 3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
 c
 3src/main/java/ro/project/model/records/Edition.java,0\1\0158b47f843fe6835d2691191f1d04fdce84889f
-]
--src/main/java/ro/project/model/Librarian.java,7\1\71eed1a642ff162bc884326cad6861f515f3ee4b

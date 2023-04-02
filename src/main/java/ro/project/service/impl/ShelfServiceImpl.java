@@ -35,7 +35,7 @@ public class ShelfServiceImpl implements ShelfService {
             } else if (owner instanceof Author author) {
                 author.setBookIdList(shelf.getId());
             } else if (owner instanceof Librarian librarian) {
-                librarian.setCuratedRecommendationsList(shelf.getId());
+                librarian.setRecommendationsList(shelf.getId());
             }
         }
         if (shelf instanceof SharedShelf sharedShelf) {

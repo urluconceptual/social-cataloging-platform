@@ -19,6 +19,6 @@ public class Librarian extends User {
     @Builder.Default
     private List<UUID> curatedBookClubIds = new ArrayList<>();
     @ToString.Exclude
-    private UUID curatedRecommendationsList;
+    private UUID recommendationsList;
 
 }

@@ -20,6 +20,7 @@ public class PopulateScript {
     private static AuthorService authorService = new AuthorServiceImpl();
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
+    private static LibrarianService librarianService = new LibrarianServiceImpl();
 
     private PopulateScript() {
     }
@@ -128,6 +129,8 @@ public class PopulateScript {
         authorService.init((Author) userService.getByUsername("author2").get());
         authorService.init((Author) userService.getByUsername("author3").get());
         authorService.init((Author) userService.getByUsername("author4").get());
+        librarianService.init((Librarian) userService.getByUsername("librarian1").get());
+        librarianService.init((Librarian) userService.getByUsername("librarian2").get());
     }
 
     private static void addSomeConnections() {

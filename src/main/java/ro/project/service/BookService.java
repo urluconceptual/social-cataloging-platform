@@ -1,6 +1,7 @@
 package ro.project.service;
 
 import ro.project.model.Book;
+import ro.project.model.Review;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,4 +23,6 @@ public interface BookService {
     void printBookData(UUID id);
 
     List<Book> getListOfAllBooks();
+
+    void addReview(UUID bookId, Review review);
 }

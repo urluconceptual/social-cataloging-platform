@@ -23,7 +23,8 @@ public class Book extends AbstractEntity {
     private BookGenre genre;
     private Integer numberOfPages;
     @Builder.Default
+    @Setter
     private Double rating = 0.0;
     @Builder.Default
-    private List<UUID> reviewList = new ArrayList<>();
+    private List<Review> reviewList = new ArrayList<>();
 }

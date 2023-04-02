@@ -3,10 +3,7 @@ package ro.project.service.impl;
 import ro.project.model.*;
 import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
-import ro.project.service.BookService;
-import ro.project.service.ReadingChallengeService;
-import ro.project.service.ShelfService;
-import ro.project.service.UserService;
+import ro.project.service.*;
 
 import java.util.*;
 
@@ -15,6 +12,8 @@ public class ShelfServiceImpl implements ShelfService {
     public static UserService userService = new UserServiceImpl();
 
     public static BookService bookService = new BookServiceImpl();
+
+    public static ReviewService reviewService = new ReviewServiceImpl();
     public static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
 
     @Override

@@ -24,6 +24,7 @@ public interface UserService {
     void removeUserById(UUID id);
 
     Optional<User> getCurrentUser();
+    UUID getIdOfCurrentUser();
 
     void setCurrentUser(String username);
 

@@ -76,6 +76,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UUID getIdOfCurrentUser() {
+        return getCurrentUser().get().getId();
+    }
+
+    @Override
     public void printUserData(UUID userId) {
         User user = getById(userId).get();
         System.out.println("username: " + user.getUsername());

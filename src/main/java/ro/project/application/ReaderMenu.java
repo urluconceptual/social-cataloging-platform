@@ -1,9 +1,6 @@
 package ro.project.application;
 
-import ro.project.model.Book;
-import ro.project.model.PersonalShelf;
-import ro.project.model.Reader;
-import ro.project.model.SharedShelf;
+import ro.project.model.*;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
 import ro.project.model.enums.UserType;
@@ -21,6 +18,7 @@ public class ReaderMenu {
     private static LibrarianService librarianService = new LibrarianServiceImpl();
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
+    public static ReviewService reviewService = new ReviewServiceImpl();
     private static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
@@ -87,8 +85,8 @@ public class ReaderMenu {
             }
         } while (true);
 
-        if (connectionService.getByUsers(userService.getCurrentUser().get().getId(), user.get().getId()).isPresent()
-                || connectionService.getByUsers(user.get().getId(), userService.getCurrentUser().get().getId()).isPresent()) {
+        if (connectionService.getByUsers(userService.getIdOfCurrentUser(), user.get().getId()).isPresent()
+                || connectionService.getByUsers(user.get().getId(), userService.getIdOfCurrentUser()).isPresent()) {
             System.out.println("You follow this user!");
         } else {
             System.out.println("You don't follow this user!");
@@ -161,14 +159,14 @@ public class ReaderMenu {
         shelfService.addShelf(PersonalShelf.builder()
                                            .name(shelfName)
                                            .type(ShelfType.PERSONAL)
-                                           .owner(userService.getCurrentUser().get().getId())
+                                           .owner(userService.getIdOfCurrentUser())
                                            .build());
     }
 
     private void addSharedShelf(String shelfName) {
         List<User> friends = readerService.getFriends().stream().toList();
         List<UUID> collaborators = new LinkedList<>();
-        collaborators.add(userService.getCurrentUser().get().getId());
+        collaborators.add(userService.getIdOfCurrentUser());
         System.out.println("Choose friends to collaborate:");
         int i = 0;
         for (; i < friends.size(); i++) {
@@ -234,7 +232,26 @@ public class ReaderMenu {
         System.out.println("Successfully removed shelf!");
     }
 
-    void addToShelf(UUID shelfId) {
+    private void addReview(UUID bookId) {
+        scanner.nextLine();
+        System.out.println("review: ");
+        String text = scanner.nextLine();
+        System.out.println("rating(1-10): ");
+        int rating = scanner.nextInt();
+        while (rating>10 || rating<1) {
+            generalMenu.invalidMessage("Please enter a number from specified range.");
+            rating = scanner.nextInt();
+        }
+        Review review = Review.builder()
+                .bookId(bookId)
+                .readerId(userService.getIdOfCurrentUser())
+                .reviewMessage(text)
+                .rating(rating)
+                .build();
+        reviewService.addReview(bookId, review);
+    }
+
+    private void addToShelf(UUID shelfId) {
         List<Book> bookList = bookService.getListOfAllBooks();
         int i = 1;
         for (Book book : bookList) {
@@ -249,6 +266,27 @@ public class ReaderMenu {
             input = scanner.nextInt();
         }
         shelfService.addBookToShelf(shelfId, bookList.get(input - 1).getId());
+        if (shelfService.getById(shelfId).get().getName().equals("read")) {
+            System.out.println("""
+                                       
+                                       0 -> Go back
+                                       1 -> Add review""");
+            String option;
+            boolean flag = true;
+            do {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> {
+                        addReview(bookList.get(input-1).getId());
+                        flag = false;
+                    }
+                    default -> generalMenu.invalidMessage("Invalid option.");
+                }
+            } while (flag);
+        }
     }
 
     void removeFromShelf(UUID shelfId) {
@@ -389,6 +427,7 @@ public class ReaderMenu {
                                         -> Remove shelf
                                         -> See shelf
                                             -> Add book to shelf
+                                                -> Leave review
                                             -> Remove book from shelf
                                    2 -> My connections
                                         -> Users you follow

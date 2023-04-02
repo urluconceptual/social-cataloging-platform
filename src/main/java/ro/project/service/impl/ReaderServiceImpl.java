@@ -58,4 +58,9 @@ public class ReaderServiceImpl implements ReaderService {
             i++;
         }
     }
+
+    @Override
+    public void addReview(UUID reviewId) {
+        ((Reader) userService.getCurrentUser().get()).getReviewIdList().add(reviewId);
+    }
 }

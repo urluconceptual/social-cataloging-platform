@@ -3,10 +3,7 @@ package ro.project.service.impl;
 import ro.project.model.Author;
 import ro.project.model.Book;
 import ro.project.model.Review;
-import ro.project.service.AuthorService;
-import ro.project.service.BookService;
-import ro.project.service.ShelfService;
-import ro.project.service.UserService;
+import ro.project.service.*;
 
 import java.util.*;
 
@@ -14,6 +11,7 @@ public class BookServiceImpl implements BookService {
     private static Map<UUID, Book> bookMap = new HashMap<>();
     private static AuthorService authorService = new AuthorServiceImpl();
     private static UserService userService = new UserServiceImpl();
+    private static ReaderService readerService = new ReaderServiceImpl();
     private static ShelfService shelfService = new ShelfServiceImpl();
 
     @Override
@@ -82,10 +80,14 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void addReview(UUID bookId, Review review) {
-        getById(bookId).get().getReviewList().add(review);
+        Book book = getById(bookId).get();
+        book.getReviewList().add(review);
         Integer sum = getById(bookId).get().getReviewList().stream().mapToInt(r -> r.getRating()).sum();
         Integer total = getById(bookId).get().getReviewList().size() * 10;
-        getById(bookId).get().setRating((int)((double)sum/total*1000)/100.0);
+        book.setRating((int)((double)sum/total*1000)/100.0);
+        readerService.addReview(review.getId());
+        if (book.getAuthorId().isPresent())
+            authorService.updateRating(book.getAuthorId().get());
     }
 
 }

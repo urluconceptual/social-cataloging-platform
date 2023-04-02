@@ -14,4 +14,6 @@ public interface AuthorService {
 
     void addToBookList(Author author, UUID bookId);
     List<UUID> getWrittenBooks(Author author);
+
+    void updateRating(UUID authorId);
 }

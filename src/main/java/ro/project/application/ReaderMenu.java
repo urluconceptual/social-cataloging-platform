@@ -133,8 +133,9 @@ public class ReaderMenu {
                                                       ));
 
         System.out.println("""
+                                   
+                                   0 -> Go back
                                    1 -> Choose profile to view
-                                   2 -> Go back
                                                                       
                                    Choose option:""");
 
@@ -143,12 +144,12 @@ public class ReaderMenu {
         do {
             option = scanner.next();
             switch (option) {
+                case "0" -> {
+                    return;
+                }
                 case "1" -> {
                     viewProfile();
                     flag = false;
-                }
-                case "2" -> {
-                    return;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");
             }
@@ -253,12 +254,7 @@ public class ReaderMenu {
 
     private void addToShelf(UUID shelfId) {
         List<Book> bookList = bookService.getListOfAllBooks();
-        int i = 1;
-        for (Book book : bookList) {
-            System.out.println("---- " + i + ": ");
-            bookService.printBookData(book.getId());
-            i++;
-        }
+        showAllBooks();
         System.out.println("Enter index of book you want to add:");
         int input = scanner.nextInt();
         while (input > bookList.size()) {
@@ -417,6 +413,16 @@ public class ReaderMenu {
         readingChallengeService.printStatus();
     }
 
+    private void showAllBooks() {
+        List<Book> bookList = bookService.getListOfAllBooks();
+        int i = 1;
+        for (Book book : bookList) {
+            System.out.println("---- " + i + ": ");
+            bookService.printBookData(book.getId());
+            i++;
+        }
+    }
+
     public void start() {
         shelfService = new ShelfServiceImpl();
         System.out.println("""
@@ -447,6 +453,7 @@ public class ReaderMenu {
                                             -> Unfollow user
                                    6 -> My reading challenge
                                         -> Set new reading challenge
+                                   7 -> Show all books
                                                     
                                    Choose option:""");
         String options;
@@ -480,6 +487,10 @@ public class ReaderMenu {
                 }
                 case "6" -> {
                     myReadingChallenge();
+                    flag = false;
+                }
+                case "7" -> {
+                    showAllBooks();
                     flag = false;
                 }
                 default -> generalMenu.invalidMessage("Invalid option.");

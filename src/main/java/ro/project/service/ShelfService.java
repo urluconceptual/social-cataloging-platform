@@ -26,4 +26,6 @@ public interface ShelfService {
     void removeBookFromShelf(UUID shelfId, UUID bookId);
 
     void removeBookFromAllShelves(UUID bookId);
+
+    Double getShelfAverage(UUID shelfId);
 }

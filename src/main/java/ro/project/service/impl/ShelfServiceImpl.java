@@ -132,5 +132,17 @@ public class ShelfServiceImpl implements ShelfService {
         }
     }
 
+    @Override
+    public Double getShelfAverage(UUID shelfId) {
+        Shelf shelf = getById(shelfId).get();
+        if (shelf instanceof PersonalShelf personalShelf) {
+            Double sum = personalShelf.getBookList().stream().mapToDouble(b -> bookService.getById(b).get().getRating()).sum();
+            Integer total = personalShelf.getBookList().size();
+            return (sum/total*100)/100.0;
+        }
+        else
+            return -1.0;
+    }
+
 
 }

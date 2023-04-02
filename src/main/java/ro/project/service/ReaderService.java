@@ -14,4 +14,6 @@ public interface ReaderService {
     void removeShelf(UUID shelfId);
 
     void printShelves(Reader reader);
+
+    void addReview(UUID reviewId);
 }

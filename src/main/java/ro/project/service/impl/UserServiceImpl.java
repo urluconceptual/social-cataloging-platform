@@ -1,5 +1,6 @@
 package ro.project.service.impl;
 
+import ro.project.model.Author;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.service.*;
@@ -87,6 +88,10 @@ public class UserServiceImpl implements UserService {
         System.out.println("name: " + user.getFirstName() + " " + user.getLastName());
         System.out.println("date of birth: " + user.getBirthDate());
         System.out.println("about: " + user.getBio());
+
+        if (user instanceof Author author) {
+            authorService.printAuthorData(author);
+        }
     }
 
     @Override

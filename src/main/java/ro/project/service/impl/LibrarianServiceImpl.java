@@ -13,6 +13,7 @@ import java.util.UUID;
 public class LibrarianServiceImpl implements LibrarianService {
     private static ShelfService shelfService = new ShelfServiceImpl();
     private static BookClubService bookClubService = new BookClubServiceImpl();
+
     @Override
     public Librarian init(Librarian librarian) {
         shelfService.addShelf(
@@ -23,6 +24,7 @@ public class LibrarianServiceImpl implements LibrarianService {
                              .build());
         return librarian;
     }
+
     @Override
     public void printBooks(Librarian librarian) {
         shelfService.printShelfData(librarian.getRecommendationsList());
@@ -30,7 +32,7 @@ public class LibrarianServiceImpl implements LibrarianService {
 
     @Override
     public List<UUID> getRecommendedBooks(Librarian librarian) {
-            return shelfService.getShelfBooks(librarian.getRecommendationsList());
+        return shelfService.getShelfBooks(librarian.getRecommendationsList());
     }
 
     @Override

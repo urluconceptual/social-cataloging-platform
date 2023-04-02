@@ -4,8 +4,6 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import ro.project.model.abstracts.User;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @SuperBuilder

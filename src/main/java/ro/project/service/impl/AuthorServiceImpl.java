@@ -1,9 +1,7 @@
 package ro.project.service.impl;
 
 import ro.project.model.Author;
-import ro.project.model.Book;
 import ro.project.model.PersonalShelf;
-import ro.project.model.abstracts.User;
 import ro.project.service.AuthorService;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;

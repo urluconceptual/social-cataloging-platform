@@ -7,5 +7,6 @@ import java.util.UUID;
 
 public interface ReviewService {
     void addReview(UUID bookId, Review review);
+
     List<Review> sorted(List<Review> reviewList);
 }

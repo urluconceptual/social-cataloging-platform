@@ -2,9 +2,7 @@ package ro.project.application;
 
 import ro.project.model.Author;
 import ro.project.model.Book;
-import ro.project.model.abstracts.User;
 import ro.project.model.enums.BookGenre;
-import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
@@ -37,7 +35,7 @@ public class AuthorMenu {
         String title = scanner.next();
         System.out.println("genre: ");
         for (BookGenre bookGenre : BookGenre.values()) {
-                System.out.println("    " + bookGenre.getName());
+            System.out.println("    " + bookGenre.getName());
         }
 
         String inputType = scanner.next();
@@ -49,17 +47,17 @@ public class AuthorMenu {
         Author author = (Author) userService.getCurrentUser().get();
 
         bookService.addBook(Book.builder()
-                                    .title(title)
-                                    .authorId(Optional.of(author.getId()))
-                                    .author(author.getFirstName() + " " + author.getLastName())
-                                    .genre(genre)
-                                    .numberOfPages(n)
-                                    .build());
+                                .title(title)
+                                .authorId(Optional.of(author.getId()))
+                                .author(author.getFirstName() + " " + author.getLastName())
+                                .genre(genre)
+                                .numberOfPages(n)
+                                .build());
         bookService.init();
     }
 
     private void removeBook() {
-        Author author = (Author)userService.getCurrentUser().get();
+        Author author = (Author) userService.getCurrentUser().get();
         List<UUID> bookList = authorService.getWrittenBooks(author);
         System.out.println("Enter index of book you want to remove: ");
         int input = scanner.nextInt();
@@ -105,6 +103,7 @@ public class AuthorMenu {
         } while (flag);
 
     }
+
     private void myFollowers() {
         userService.getFollowed().forEach(user -> System.out.println(user.getUsername()));
     }

@@ -11,14 +11,12 @@ import java.util.*;
 
 public class ReaderMenu {
     private static final Scanner scanner = new Scanner(System.in);
+    public static ReviewService reviewService = new ReviewServiceImpl();
     private static ReaderMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
-    private static AuthorService authorService = new AuthorServiceImpl();
-    private static LibrarianService librarianService = new LibrarianServiceImpl();
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
-    public static ReviewService reviewService = new ReviewServiceImpl();
     private static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
@@ -32,7 +30,7 @@ public class ReaderMenu {
 
     private static void myConnections() {
         System.out.println("""
-                                   
+                                                                      
                                    0 -> Go back                                 
                                    1 -> Users you follow
                                    2 -> Users following you
@@ -133,7 +131,7 @@ public class ReaderMenu {
                                                       ));
 
         System.out.println("""
-                                   
+                                                                      
                                    0 -> Go back
                                    1 -> Choose profile to view
                                                                       
@@ -239,16 +237,16 @@ public class ReaderMenu {
         String text = scanner.nextLine();
         System.out.println("rating(1-10): ");
         int rating = scanner.nextInt();
-        while (rating>10 || rating<1) {
+        while (rating > 10 || rating < 1) {
             generalMenu.invalidMessage("Please enter a number from specified range.");
             rating = scanner.nextInt();
         }
         Review review = Review.builder()
-                .bookId(bookId)
-                .readerId(userService.getIdOfCurrentUser())
-                .reviewMessage(text)
-                .rating(rating)
-                .build();
+                              .bookId(bookId)
+                              .readerId(userService.getIdOfCurrentUser())
+                              .reviewMessage(text)
+                              .rating(rating)
+                              .build();
         reviewService.addReview(bookId, review);
     }
 
@@ -264,7 +262,7 @@ public class ReaderMenu {
         shelfService.addBookToShelf(shelfId, bookList.get(input - 1).getId());
         if (shelfService.getById(shelfId).get().getName().equals("read")) {
             System.out.println("""
-                                       
+                                                                              
                                        0 -> Go back
                                        1 -> Add review""");
             String option;
@@ -276,7 +274,7 @@ public class ReaderMenu {
                         return;
                     }
                     case "1" -> {
-                        addReview(bookList.get(input-1).getId());
+                        addReview(bookList.get(input - 1).getId());
                         flag = false;
                     }
                     default -> generalMenu.invalidMessage("Invalid option.");
@@ -313,7 +311,7 @@ public class ReaderMenu {
                                    0 -> Go back                              
                                    1 -> Add book to shelf
                                    2 -> Remove book from shelf
-                                   
+                                                                      
                                                                       
                                    Choose option:""");
         String option;

@@ -5,7 +5,7 @@ import ro.project.model.BookClub;
 import ro.project.model.records.Message;
 import ro.project.service.BookClubService;
 
-import java.util.*;
+import java.util.List;
 
 public class BookClubServiceImpl implements BookClubService {
 

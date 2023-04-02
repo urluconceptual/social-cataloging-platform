@@ -13,6 +13,7 @@ public interface AuthorService {
     void printBooks(Author author);
 
     void addToBookList(Author author, UUID bookId);
+
     List<UUID> getWrittenBooks(Author author);
 
     void updateRating(UUID authorId);

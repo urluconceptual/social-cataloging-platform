@@ -98,7 +98,7 @@ public class UserServiceImpl implements UserService {
         if (user instanceof Author author) {
             authorService.printAuthorData(author);
         }
-        if(user instanceof Librarian librarian) {
+        if (user instanceof Librarian librarian) {
             librarianService.printLibrarianData(librarian);
         }
     }

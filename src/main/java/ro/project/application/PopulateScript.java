@@ -33,10 +33,6 @@ public class PopulateScript {
         addSomeUsers();
         addSomeConnections();
         addSomeBooks();
-//        addSomeEditions();
-//        addSomeReviews();
-//        addSomeBookClubs();
-//        addSomeMessages();
     }
 
     private static void addSomeUsers() {

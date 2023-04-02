@@ -127,7 +127,7 @@ public class ShelfServiceImpl implements ShelfService {
 
     @Override
     public void removeBookFromAllShelves(UUID bookId) {
-        for(Shelf shelf : shelfMap.values()) {
+        for (Shelf shelf : shelfMap.values()) {
             removeBookFromShelf(shelf.getId(), bookId);
         }
     }
@@ -136,12 +136,13 @@ public class ShelfServiceImpl implements ShelfService {
     public Double getShelfAverage(UUID shelfId) {
         Shelf shelf = getById(shelfId).get();
         if (shelf instanceof PersonalShelf personalShelf) {
-            Double sum = personalShelf.getBookList().stream().mapToDouble(b -> bookService.getById(b).get().getRating()).sum();
+            Double sum =
+                    personalShelf.getBookList().stream().mapToDouble(b -> bookService.getById(b).get().getRating()).sum();
             Integer total = personalShelf.getBookList().size();
-            return (sum/total*100)/100.0;
-        }
-        else
+            return (sum / total * 100) / 100.0;
+        } else {
             return -1.0;
+        }
     }
 
 

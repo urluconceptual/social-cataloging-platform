@@ -1,18 +1,13 @@
 package ro.project.application;
 
-import ro.project.model.Author;
 import ro.project.model.Book;
 import ro.project.model.BookClub;
 import ro.project.model.Librarian;
-import ro.project.model.abstracts.User;
-import ro.project.model.enums.BookGenre;
-import ro.project.model.enums.UserType;
 import ro.project.model.records.Message;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -95,6 +90,7 @@ public class LibrarianMenu {
         } while (flag);
 
     }
+
     private void myFollowers() {
         userService.getFollowed().forEach(user -> System.out.println(user.getUsername()));
     }
@@ -122,10 +118,10 @@ public class LibrarianMenu {
         System.out.println("My posts: ");
         bookClubService.printMessages(librarian.getBookClub());
         System.out.println("""
-                                   
+                                                                      
                                    0 -> Go back
                                    1 -> Add new message
-                                   
+                                                                      
                                    Choose option: """);
         String options;
         boolean flag = true;

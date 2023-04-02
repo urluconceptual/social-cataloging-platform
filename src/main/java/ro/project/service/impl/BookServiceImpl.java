@@ -67,10 +67,10 @@ public class BookServiceImpl implements BookService {
                         "\nreviews: \n"
                           );
         reviewList.forEach(review -> System.out.println("    reader: " +
-                userService.getById(review.getReaderId()).get().getUsername() +
-                "    rating: " + review.getRating() +
-                "    review: " + review.getReviewMessage() +
-                "\n"));
+                                                                userService.getById(review.getReaderId()).get().getUsername() +
+                                                                "    rating: " + review.getRating() +
+                                                                "    review: " + review.getReviewMessage() +
+                                                                "\n"));
     }
 
     @Override
@@ -84,10 +84,11 @@ public class BookServiceImpl implements BookService {
         book.getReviewList().add(review);
         Integer sum = getById(bookId).get().getReviewList().stream().mapToInt(r -> r.getRating()).sum();
         Integer total = getById(bookId).get().getReviewList().size() * 10;
-        book.setRating((int)((double)sum/total*1000)/100.0);
+        book.setRating((int) ((double) sum / total * 1000) / 100.0);
         readerService.addReview(review);
-        if (book.getAuthorId().isPresent())
+        if (book.getAuthorId().isPresent()) {
             authorService.updateRating(book.getAuthorId().get());
+        }
     }
 
 }

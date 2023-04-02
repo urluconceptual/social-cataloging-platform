@@ -26,9 +26,10 @@ public interface UserService {
     void removeUserById(UUID id);
 
     Optional<User> getCurrentUser();
-    UUID getIdOfCurrentUser();
 
     void setCurrentUser(String username);
+
+    UUID getIdOfCurrentUser();
 
     void printUserData(UUID userId);
 

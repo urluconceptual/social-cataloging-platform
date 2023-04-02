@@ -14,9 +14,6 @@ import java.util.*;
 @AllArgsConstructor
 @ToString(callSuper = true)
 public class BookClub extends AbstractEntity {
-    private UUID librarianId;
-    @Builder.Default
-    private List<UUID> userIdList = new ArrayList<>();
     @Builder.Default
     private Map<LocalDateTime, Message> messageMap = new TreeMap<>();
 }

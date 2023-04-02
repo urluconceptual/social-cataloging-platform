@@ -9,13 +9,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface BookClubService {
-    Optional<BookClub> getById(UUID id);
-
-    void addBookClub(BookClub bookClub);
-
-    void addBookClubs(List<BookClub> bookClubList);
-
-    void removeBookClubById(UUID id);
 
     void printMessages(UUID id);
 

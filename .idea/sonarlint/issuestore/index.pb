@@ -1,8 +1,6 @@
 
 c
 3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
-^
-.src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4
 b
 2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
 c

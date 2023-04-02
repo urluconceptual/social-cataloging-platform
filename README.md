@@ -59,7 +59,8 @@ As a _reader_, you can:
 * Connect with others users: readers or authors;
 * Add or remove books from one of your shelves;
 * Shelves are either personal or shared, between you and multiple other readers _(there's no limit on how many users can share a shelf, there's always room for more!)_;
-* Set reading challanges.
+* Set reading challanges;
+* Check top books, ranked by own rating.
 
 
 ### 2. Author Functionality :black_nib:

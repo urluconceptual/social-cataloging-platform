@@ -1,0 +1,16 @@
+package ro.project.service;
+
+import ro.project.model.Book;
+import ro.project.model.BookClub;
+import ro.project.model.records.Message;
+
+import java.util.List;
+
+public interface BookClubService {
+
+    void printMessages(BookClub bookClub);
+
+    List<Book> getListOfAllBooksClubs();
+
+    void addMessage(BookClub bookClub, Message message);
+}

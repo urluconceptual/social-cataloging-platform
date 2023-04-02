@@ -13,12 +13,12 @@ public enum UserType {
     READER("reader"),
     NONE("none");
 
-    private final String type;
+    public final String type;
 
     public static UserType getEnumByFieldString(String field) {
         return Arrays.stream(UserType.values())
-                .filter(enumElement -> enumElement.type.equals(field))
-                .findAny()
-                .orElse(NONE);
+                     .filter(enumElement -> enumElement.type.equals(field))
+                     .findAny()
+                     .orElse(NONE);
     }
 }

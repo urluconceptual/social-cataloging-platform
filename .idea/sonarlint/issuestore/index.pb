@@ -1,3 +1,21 @@
 
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
+c
+3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
+b
+2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
+c
+3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
+p
+@src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
+g
+7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c
+l
+<src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
+b
+2src/main/java/ro/project/model/abstracts/User.java,f\0\f09dfbf02d0282028546d09791e7f90636454246
+c
+3src/main/java/ro/project/model/records/Edition.java,0\1\0158b47f843fe6835d2691191f1d04fdce84889f
+_
+/src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
+c
+3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4

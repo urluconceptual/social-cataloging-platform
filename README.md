@@ -1,29 +1,83 @@
-# social-cataloging-platform
-## Java project for Advanced OOP course. Implemented an app that works like a social cataloging platform for books, emulating Goodreads' functionalities.
 
-1st stage:
+# Social Cataloging Platform :closed_book:
 
-## Defining the system  
-### Types of objects:  
-1. User <- extended by Reader, Author, Librarian  
-2. Shelf <- extended by PersonalShelf, SharedShelf  
-3. Book  
-4. Edition  
-5. Review  
-6. Connection  
-7. ReadingChallenge  
-8. BookClub  
-9. Message 
-### Functionalities:  
-1. A reader has by default 3 lists of books that they cannot remove: want-to-read, reading, read. They can add or remove books from these lists.
-2. A reader can create new personal shelves, that act as custom lists of books. The shelves are either public or private, and their visibility can be changed at any time.
-3. A reader can collaborate with their friends on shared shelves, where all the collaborators can edit the shelf.
-4. A reader can set their reading goals as a Reading Challenge and see how much of it they completed, as the status will be updated every time they add a new book to the "read" list.
-5. A reader can add reviews to the books they read, and their average rating will be visible on their profile, as well as a list of their top-rated books.
-6. A reader can also select the edition of the book they read, but it is not mandatory.
-7. A reader can join a BookClub and leave messages there.
-8. An author can use the platform to promote their books by adding them to their profile.
-9. An author has an average rating the users left for their books, and it is visible on their page.
-10. A librarian can create curated lists of recommendations and book clubs. They manage the contents of the lists, the members of the bookclubs, and the messages on their book clubs' chats.
-11. Two users can have a connection that can be either: mutual(friends), or one user following the other. A reader can follow any type of user, but can only befriend other readers.
-12. Two users that have a mutual connection can compare books to see what they have in common.
+Social cataloging platform application running in CLI, implemented using Java 19, with similar functionality to Goodreads: a place for people to review books and connect with other readers and authors.
+
+
+
+## Table of Contents :bookmark_tabs:
+* [Stage 1](#Stage-one)
+* Stage 2
+* [Class Hierarchy](#Class-Hierarchy-bar_chart)
+* [Functionality](#Functionality)
+* [Screenshots](#Screenshots-camera)
+## Stage :one:
+
+### Defining and Implementing the System :book:
+Creating a list of 10 actions possible in the system and at least 8 kinds of objects.
+The applications features:
+* Simple classes featuring private/protected fields with accessor methods (getters/setters);
+* Collections capable of managing the aforementioned object, with at least one such collection being sorted;
+* Use of inheritance for creating aditional classes and for use inside of the Collections
+* Service classes to expose the system's functionality
+* Service calls from the Menu classes, representing the application's interface for the user.
+
+### Class Hierachy :bar_chart:
+#### 1. Abstract Classes:
+* AbstractEntity
+* Shelf
+* User
+
+#### 2. Regular Classes:
+* Author - derived from User
+* Librarian - derived from User
+* Reader - derived from User
+* Book
+* Connection
+* Message
+* PersonalShelf - derived from Shelf
+* SharedShelf - derived from Shelf
+* Review
+* ReadingChallange
+
+#### 3. Records:
+* Message
+
+#### 4. Enums:
+* BookGenre
+* ShelfType
+* UserType
+## Functionality
+
+### 0. General Functionality :grey_exclamation:
+You can log in or register as a new user in the command-line interface.
+Afterwards, you'll be prompted by an interactive menu with the options at your disposal.
+
+
+### 1. Reader Functionality :page_with_curl:
+As a _reader_, you can:
+* Connect with others users: readers or authors;
+* Add or remove books from one of your shelves;
+* Shelves are either personal or shared, between you and multiple other readers _(there's no limit on how many users can share a shelf, there's always room for more!)_;
+* Set reading challanges;
+* Check top books, ranked by own rating.
+
+
+### 2. Author Functionality :black_nib:
+As an _author_, you can:
+
+* Use the platform to promote your books;
+* Completely remove your book from the platform;
+* Check your current followers;
+* Check your average rating, determined as the mean of the ratings that your books have gotten.
+
+### 3. Librarian Functionality :black_nib:
+As a _librarian_, you can:
+
+* Use the platform to recommend books;
+* Check your current followers;
+* Add posts on your personal book club, to share your book knowledge with the readers.
+
+## Screenshots :camera:
+
+To do! Add screenshots.

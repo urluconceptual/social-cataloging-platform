@@ -15,14 +15,14 @@ Social cataloging platform application running in CLI, implemented using Java 19
 
 ### Defining and Implementing the System :book:
 Creating a list of 10 actions possible in the system and at least 8 kinds of objects.
-The applications features:
+The application features:
 * Simple classes featuring private/protected fields with accessor methods (getters/setters);
 * Collections capable of managing the aforementioned object, with at least one such collection being sorted;
-* Use of inheritance for creating aditional classes and for use inside of the Collections
+* Use of inheritance for creating additional classes and for use inside the Collections
 * Service classes to expose the system's functionality
 * Service calls from the Menu classes, representing the application's interface for the user.
 
-### Class Hierachy :bar_chart:
+### Class Hierarchy :bar_chart:
 #### 1. Abstract Classes:
 * AbstractEntity
 * Shelf
@@ -38,7 +38,7 @@ The applications features:
 * PersonalShelf - derived from Shelf
 * SharedShelf - derived from Shelf
 * Review
-* ReadingChallange
+* ReadingChallenge
 
 #### 3. Records:
 * Message
@@ -59,7 +59,7 @@ As a _reader_, you can:
 * Connect with others users: readers or authors;
 * Add or remove books from one of your shelves;
 * Shelves are either personal or shared, between you and multiple other readers _(there's no limit on how many users can share a shelf, there's always room for more!)_;
-* Set reading challanges;
+* Set reading challenges;
 * Check top books, ranked by own rating.
 
 

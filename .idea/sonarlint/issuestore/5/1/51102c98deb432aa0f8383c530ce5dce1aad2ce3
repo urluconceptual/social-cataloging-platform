@@ -1,0 +1,25 @@
+
+r
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(§Ô©úÿÿÿÿ8Ò·Çô0
+m
+java:S3655/"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¶÷‹•8Ò·Çô0
+m
+java:S36550"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(†ÿ¸–8Ò·Çô0
+r
+java:S3655."PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ĞŠ¦µûÿÿÿÿ8Ò·Çô0
+l
+java:S36551"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÕÚŞ8Ò·Çô0
+r
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(§Ô©úÿÿÿÿ8Ñ·Çô0
+r
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(§Ô©úÿÿÿÿ8Ò·Çô0
+r
+java:S3655'"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(§Ô©úÿÿÿÿ8Ò·Çô0
+r
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±íÇøÿÿÿÿ8Ò·Çô0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ú²Èşùÿÿÿÿ8Ú·Çô0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ñ 8Û·Çô0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Ü·Çô0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(‚»æ8İ·Çô0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(€÷ı€8İ·Çô0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‡£‘Øüÿÿÿÿ8Ş·Çô0

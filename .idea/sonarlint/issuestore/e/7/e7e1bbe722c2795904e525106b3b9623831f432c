@@ -1,0 +1,46 @@
+
+r
+java:S1192X"PDefine a constant instead of duplicating this literal "Invalid option." 3 times.(á›¥üÿÿÿÿ8Œç¥‡ô0
+l
+java:S3655@"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Úî–98˜ç¥‡ô0
+m
+java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8—ç¥‡ô0
+m
+java:S3655u"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8—ç¥‡ô0
+m
+java:S36550"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8—ç¥‡ô0
+m
+java:S3655="PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8—ç¥‡ô0
+u
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“‘ğÿÿÿÿÿ8˜ç¥‡ô0
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(°ïä®8ç¥‡ô0
+R
+java:S2209)"5Change this instance-reference to a static reference.(èàß8Ÿç¥‡ô0
+Z	java:S1062"9Replace this use of System.out or System.err by a logger.(ÉëÔÕúÿÿÿÿ8 ç¥‡ô0
+R
+java:S22095"5Change this instance-reference to a static reference.(èàß8¡ç¥‡ô0
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(ÉâˆŒ8¡ç¥‡ô0
+Z
+java:S1854="=Remove this useless assignment to local variable "librarian".(Š÷Ç8¢ç¥‡ô0
+K
+java:S1481=".Remove this unused "librarian" local variable.(Š÷Ç8¢ç¥‡ô0
+U	java:S106?"9Replace this use of System.out or System.err by a logger.(ı«‹½8¢ç¥‡ô0
+U	java:S106A"9Replace this use of System.out or System.err by a logger.(Îñë8¢ç¥‡ô0
+W
+java:S2209X"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8£ç¥‡ô0
+Z	java:S106_"9Replace this use of System.out or System.err by a logger.(è¢‘Œûÿÿÿÿ8¤ç¥‡ô0
+Z	java:S106f"9Replace this use of System.out or System.err by a logger.(ÚÊşÿÿÿÿ8¤ç¥‡ô0
+U	java:S106m"9Replace this use of System.out or System.err by a logger.(ú¬Ëö8¤ç¥‡ô0
+Z	java:S106v"9Replace this use of System.out or System.err by a logger.(ñ¡›õşÿÿÿÿ8¥ç¥‡ô0
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(Îñë8¥ç¥‡ô0
+X
+java:S2209Š"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8¦ç¥‡ô0
+V	java:S106‘"9Replace this use of System.out or System.err by a logger.(Îñë8¦ç¥‡ô0
+X
+java:S2209±"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8¦ç¥‡ô0
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8§ç¥‡ô0
+N
+java:S1068"1Remove this unused "authorService" private field.(îú¸Ê8§ç¥‡ô0
+W
+java:S1068"5Remove this unused "connectionService" private field.(Æ×şÿÿÿÿ8§ç¥‡ô0

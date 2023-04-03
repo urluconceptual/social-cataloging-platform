@@ -1,0 +1,43 @@
+
+r
+java:S3655<"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8ëÖØ…ô0
+r
+java:S3655/"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8ëÖØ…ô0
+r
+java:S3655p"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÉãŞÿüÿÿÿÿ8ëÖØ…ô0
+r
+java:S3655I"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8ëÖØ…ô0
+m
+java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(—ƒ†·8ëÖØ…ô0
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë½°8ìÖØ…ô0
+}
+java:S1450"[Remove the "shelfService" field and declare it as a local variable in the relevant methods.(£æù˜üÿÿÿÿ8ìÖØ…ô0
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ÅÊ½†úÿÿÿÿ8øÖØ…ô0
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ºÇ‚ıÿÿÿÿ8øÖØ…ô0
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(úĞ£›8øÖØ…ô0
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(Òùı›şÿÿÿÿ8øÖØ…ô0
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(ÉëÔÕúÿÿÿÿ8úÖØ…ô0
+R
+java:S2209A"5Change this instance-reference to a static reference.(èàß8úÖØ…ô0
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(½ÿ…ßşÿÿÿÿ8úÖØ…ô0
+\
+java:S1854I":Remove this useless assignment to local variable "author".(¸•Íúÿÿÿÿ8úÖØ…ô0
+M
+java:S1481I"+Remove this unused "author" local variable.(¸•Íúÿÿÿÿ8ûÖØ…ô0
+U	java:S106K"9Replace this use of System.out or System.err by a logger.(ƒŒ¡§8ûÖØ…ô0
+U	java:S106N"9Replace this use of System.out or System.err by a logger.(Îñë8ûÖØ…ô0
+W
+java:S2209e"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8ûÖØ…ô0
+Z	java:S106l"9Replace this use of System.out or System.err by a logger.(è¢‘Œûÿÿÿÿ8üÖØ…ô0
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(Îñë8üÖØ…ô0
+X
+java:S2209”"5Change this instance-reference to a static reference.(á›¥üÿÿÿÿ8ıÖØ…ô0
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8ıÖØ…ô0
+V
+java:S1068"4Remove this unused "librarianService" private field.(Öã‰Ùşÿÿÿÿ8ıÖØ…ô0
+W
+java:S1068"5Remove this unused "connectionService" private field.(Æ×şÿÿÿÿ8ıÖØ…ô0
+R
+java:S1068"0Remove this unused "shelfService" private field.(£æù˜üÿÿÿÿ8ıÖØ…ô0

@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.exceptions.PasswordException;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
@@ -13,6 +14,8 @@ import ro.project.service.impl.AuthorServiceImpl;
 import ro.project.service.impl.LibrarianServiceImpl;
 import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
+
+import ro.project.exceptions.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -63,23 +66,27 @@ public class GeneralMenu {
         UserType type;
 
         do {
-            System.out.println("Choose option: ");
-            inputType = scanner.next();
-            type = UserType.getEnumByFieldString(inputType);
-            if (UserType.NONE.equals(type)) {
-                invalidMessage("Invalid option.");
-            } else {
+            try {
+                System.out.println("Choose option: ");
+                inputType = scanner.next();
+                type = UserType.getEnumByFieldString(inputType);
+                if (UserType.NONE.equals(type))
+                    throw new OptionException();
                 break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
 
         do {
-            System.out.println("username: ");
-            username = scanner.next();
-            if (userService.getByUsername(username).isPresent()) {
-                invalidMessage("Username already in use.");
-            } else {
+            try {
+                System.out.println("username: ");
+                username = scanner.next();
+                if (userService.getByUsername(username).isPresent())
+                    throw new UsernameInUseException();
                 break;
+            } catch (UsernameException e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
 
@@ -145,8 +152,6 @@ public class GeneralMenu {
                                           .build());
                 readerService.init((Reader) userService.getByUsername(username).get());
             }
-            default -> {
-            }
         }
 
         userService.setCurrentUser(username);
@@ -159,53 +164,65 @@ public class GeneralMenu {
     }
 
     private static void login() {
-        System.out.println("""
-                                   ---- LOGIN ---------------------------------------------------
-                                   Please enter your username and password to login.
-                                   """);
-        String username;
-        String password;
-        do {
-            System.out.println("username: ");
-            username = scanner.next();
-            if (userService.getByUsername(username).isEmpty()) {
-                invalidMessage("Invalid username.");
-            } else {
-                break;
-            }
-        } while (true);
+        try {
+            System.out.println("""
+                                       ---- LOGIN ---------------------------------------------------
+                                       Please enter your username and password to login.
+                                       """);
+            String username;
+            String password;
+            do {
+                System.out.println("username: ");
+                username = scanner.next();
+                if (userService.getByUsername(username).isEmpty()) {
+                    throw new UsernameNotRegistered();
+                } else {
+                    break;
+                }
+            } while (true);
 
-        do {
-            System.out.println("password: ");
-            password = scanner.next();
-            if (!password.equals(userService.getByUsername(username).get().getPassword())) {
-                invalidMessage("Invalid password.");
-            } else {
-                break;
-            }
-        } while (true);
 
-        userService.setCurrentUser(username);
+            do {
+                System.out.println("password: ");
+                password = scanner.next();
+                if (!password.equals(userService.getByUsername(username).get().getPassword())) {
+                    throw new PasswordException();
+                } else {
+                    break;
+                }
+            } while (true);
+
+            userService.setCurrentUser(username);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            login();
+        }
 
         System.out.println("Successfully logged in!");
     }
 
     private static void intro() {
-        System.out.println("""
-                                   1 -> Register
-                                   2 -> Login
-                                   3 -> Exit
-                                                                      
-                                   Choose option:""");
-        String option = scanner.next();
-        switch (option) {
-            case "1" -> register();
-            case "2" -> login();
-            case "3" -> System.exit(0);
-            default -> {
-                invalidMessage("Invalid option.");
-                intro();
+        try {
+            System.out.println("""
+                                       
+                                       0 -> Exit
+                                       1 -> Register
+                                       2 -> Login
+                                                                          
+                                       Choose option:""");
+            String option = scanner.next();
+            switch (option) {
+                case "0" -> System.exit(0);
+                case "1" -> register();
+                case "2" -> login();
+                default -> {
+                    throw new OptionException();
+                }
             }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            intro();
         }
     }
 

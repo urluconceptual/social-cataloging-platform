@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameInUseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameNotRegistered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/OptionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/OptionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/PasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/PasswordException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +52,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/facultate/Anul 2, sem II/PAO/mini-class-register",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/facultate/Anul 2, sem II/PAO/proiect/social-cataloging-platform&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ro.project.service" />
@@ -90,6 +100,9 @@
       <workItem from="1680425138149" duration="21000" />
       <workItem from="1680430706481" duration="2960000" />
       <workItem from="1680594933095" duration="59000" />
+      <workItem from="1680622642017" duration="2482000" />
+      <workItem from="1681148689150" duration="2646000" />
+      <workItem from="1681154622484" duration="492000" />
     </task>
     <servers />
   </component>

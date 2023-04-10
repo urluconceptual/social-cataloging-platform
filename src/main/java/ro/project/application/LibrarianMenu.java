@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.exceptions.OptionException;
 import ro.project.model.Book;
 import ro.project.model.BookClub;
 import ro.project.model.Librarian;
@@ -122,7 +123,7 @@ public class LibrarianMenu {
                                    0 -> Go back
                                    1 -> Add new message
                                                                       
-                                   Choose option: """);
+                                   Choose option:""");
         String options;
         boolean flag = true;
         do {
@@ -154,29 +155,22 @@ public class LibrarianMenu {
                                                                       
                                    Choose option:""");
         String options;
-
-        boolean flag = true;
-        do {
+        try {
             options = scanner.next();
             switch (options) {
                 case "0" -> {
                     return;
                 }
-                case "1" -> {
-                    myBooks();
-                    flag = false;
-                }
-                case "2" -> {
-                    myFollowers();
-                    flag = false;
-                }
-                case "3" -> {
-                    myBookClub();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                case "1" -> myBooks();
+                case "2" -> myFollowers();
+                case "3" -> myBookClub();
+                default -> throw new OptionException();
             }
-        } while (flag);
-        start();
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            start();
+        }
     }
 }

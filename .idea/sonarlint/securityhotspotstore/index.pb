@@ -71,8 +71,6 @@ a
 1src/main/java/ro/project/service/UserService.java,d\8\d8798a4eb83d9afe504aa1bf08390ae3ee936490
 d
 4src/main/java/ro/project/application/ReaderMenu.java,f\7\f75f82748785637deaa9c90575c2c5b26edbdf1d
-g
-7src/main/java/ro/project/application/LibrarianMenu.java,e\7\e7e1bbe722c2795904e525106b3b9623831f432c
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 h

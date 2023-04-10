@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.exceptions.OptionException;
 import ro.project.model.Author;
 import ro.project.model.Book;
 import ro.project.model.enums.BookGenre;
@@ -31,8 +32,9 @@ public class AuthorMenu {
     }
 
     private void addNewBook() {
-        System.out.println("book title(please use this-format-for-your-title): ");
-        String title = scanner.next();
+        System.out.println("book title: ");
+        scanner.nextLine();
+        String title = scanner.nextLine();
         System.out.println("genre: ");
         for (BookGenre bookGenre : BookGenre.values()) {
             System.out.println("    " + bookGenre.getName());
@@ -60,13 +62,18 @@ public class AuthorMenu {
         Author author = (Author) userService.getCurrentUser().get();
         List<UUID> bookList = authorService.getWrittenBooks(author);
         System.out.println("Enter index of book you want to remove: ");
-        int input = scanner.nextInt();
-        while (input > bookList.size()) {
-            generalMenu.invalidMessage("Book index does not exist.");
-            input = scanner.nextInt();
+        try {
+            int input = scanner.nextInt();
+            if (input > bookList.size()) {
+                throw new OptionException();
+            }
+            bookService.removeBookById(bookList.get(input - 1));
+            System.out.println("Successfully removed book!");
         }
-        bookService.removeBookById(bookList.get(input - 1));
-        System.out.println("Successfully removed book!");
+        catch (OptionException e) {
+            System.out.println(e.getMessage());
+            removeBook();
+        }
     }
 
     private void myBooks() {
@@ -83,25 +90,22 @@ public class AuthorMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
-        do {
+        try {
             option = scanner.next();
             switch (option) {
                 case "0" -> {
                     return;
                 }
-                case "1" -> {
-                    addNewBook();
-                    flag = false;
-                }
-                case "2" -> {
-                    removeBook();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                case "1" -> addNewBook();
+                case "2" -> removeBook();
+                default -> throw new OptionException();
             }
-        } while (flag);
-
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            myBooks();
+        }
     }
 
     private void myFollowers() {
@@ -113,7 +117,6 @@ public class AuthorMenu {
     }
 
     public void start() {
-        shelfService = new ShelfServiceImpl();
         System.out.println("""
                                     
                                    0 -> Log out                                  
@@ -125,29 +128,22 @@ public class AuthorMenu {
                                                                       
                                    Choose option:""");
         String options;
-
-        boolean flag = true;
-        do {
+        try {
             options = scanner.next();
             switch (options) {
                 case "0" -> {
                     return;
                 }
-                case "1" -> {
-                    myBooks();
-                    flag = false;
-                }
-                case "2" -> {
-                    myFollowers();
-                    flag = false;
-                }
-                case "3" -> {
-                    myAverageRating();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                case "1" -> myBooks();
+                case "2" -> myFollowers();
+                case "3" -> myAverageRating();
+                default -> throw new OptionException();
             }
-        } while (flag);
-        start();
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            start();
+        }
     }
 }

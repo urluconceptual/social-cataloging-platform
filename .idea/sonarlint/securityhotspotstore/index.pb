@@ -35,8 +35,6 @@ Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 c
 3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa
-b
-2src/main/java/ro/project/service/ShelfService.java,5\7\5787f06c5a57db1a33f2998d699d6907a7e96587
 c
 3src/main/java/ro/project/service/ReviewService.java,f\4\f42d10117cdb5dc0a0b7fcb32e90ae0d7b291ee5
 c
@@ -47,8 +45,6 @@ l
 <src/main/java/ro/project/service/impl/ReaderServiceImpl.java,1\1\11084d3ad15d52acd16aff9f23b313631290bad2
 l
 <src/main/java/ro/project/service/impl/AuthorServiceImpl.java,6\3\63591edac4249f0ea42411492f8dcf3bd7d1afa7
-k
-;src/main/java/ro/project/service/impl/ShelfServiceImpl.java,6\f\6f05126881c42a97eaf0aab84755a51f3e8d652e
 a
 1src/main/java/ro/project/service/BookService.java,f\4\f44042e5f7aab5204d26bbaf831b49f9daa8a9d7
 j
@@ -75,8 +71,6 @@ a
 1src/main/java/ro/project/service/UserService.java,d\8\d8798a4eb83d9afe504aa1bf08390ae3ee936490
 d
 4src/main/java/ro/project/application/ReaderMenu.java,f\7\f75f82748785637deaa9c90575c2c5b26edbdf1d
-d
-4src/main/java/ro/project/application/AuthorMenu.java,2\f\2f806b84cb9a12a49dfa4e2e58e71a33ac969cba
 g
 7src/main/java/ro/project/application/LibrarianMenu.java,e\7\e7e1bbe722c2795904e525106b3b9623831f432c
 7

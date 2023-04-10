@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameInUseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameNotRegistered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/InvalidDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/GeneralMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/OptionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/OptionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/PasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/PasswordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/exceptions/UsernameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,7 @@
       <workItem from="1680594933095" duration="59000" />
       <workItem from="1680622642017" duration="2482000" />
       <workItem from="1681148689150" duration="2646000" />
-      <workItem from="1681154622484" duration="492000" />
+      <workItem from="1681154622484" duration="946000" />
     </task>
     <servers />
   </component>

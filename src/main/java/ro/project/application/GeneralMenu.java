@@ -102,14 +102,17 @@ public class GeneralMenu {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         String inputBirthDate;
         do {
-            System.out.println("date of birth(yyyy/mm/dd): ");
-            inputBirthDate = scanner.next();
-            if (!inputBirthDate.matches("[1-2][0-9][0-9][0-9]/[0-1][0-9]/[0-9][0-9]")) {
-                invalidMessage("Invalid date.");
-            } else {
+            try {
+                System.out.println("date of birth(yyyy/mm/dd): ");
+                inputBirthDate = scanner.next();
+                if (!inputBirthDate.matches("[1-2][0-9][0-9][0-9]/[0-1][0-9]/[0-9][0-9]"))
+                    throw new InvalidDate();
                 break;
+            } catch (InvalidDate e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
+
         LocalDate birthDate = LocalDate.parse(inputBirthDate, format);
 
         System.out.println("bio: ");

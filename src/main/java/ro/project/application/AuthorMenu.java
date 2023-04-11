@@ -7,10 +7,7 @@ import ro.project.model.enums.BookGenre;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.UUID;
+import java.util.*;
 
 public class AuthorMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -44,7 +41,17 @@ public class AuthorMenu {
         BookGenre genre = BookGenre.getEnumByFieldString(inputType);
 
         System.out.println("number of pages: ");
-        int n = scanner.nextInt();
+        String input;
+        int n;
+        do {
+            try {
+                input = scanner.next();
+                n = Integer.parseInt(input);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            }
+        } while (true);
 
         Author author = (Author) userService.getCurrentUser().get();
 
@@ -62,16 +69,23 @@ public class AuthorMenu {
         Author author = (Author) userService.getCurrentUser().get();
         List<UUID> bookList = authorService.getWrittenBooks(author);
         System.out.println("Enter index of book you want to remove: ");
+        String input;
+        int n;
         try {
-            int input = scanner.nextInt();
-            if (input > bookList.size()) {
+            input = scanner.next();
+            n = Integer.parseInt(input);
+            if (n > bookList.size()) {
                 throw new OptionException();
             }
-            bookService.removeBookById(bookList.get(input - 1));
+            bookService.removeBookById(bookList.get(n - 1));
             System.out.println("Successfully removed book!");
         }
         catch (OptionException e) {
             System.out.println(e.getMessage());
+            removeBook();
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Please enter an integer.");
             removeBook();
         }
     }

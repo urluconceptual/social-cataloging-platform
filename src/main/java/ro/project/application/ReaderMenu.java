@@ -1,5 +1,7 @@
 package ro.project.application;
 
+import ro.project.exceptions.OptionException;
+import ro.project.exceptions.UsernameNotRegistered;
 import ro.project.model.*;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.ShelfType;
@@ -38,8 +40,7 @@ public class ReaderMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
-        do {
+        try {
             option = scanner.next();
             switch (option) {
                 case "0" -> {
@@ -49,23 +50,23 @@ public class ReaderMenu {
                     System.out.println("You follow:");
                     userService.getFollowing()
                                .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
-                    flag = false;
                 }
                 case "2" -> {
                     System.out.println("Followers:");
                     userService.getFollowed()
                                .forEach(user -> System.out.println(user.getUsername() + " (" + user.getType().getType() + " user)"));
-                    flag = false;
                 }
                 case "3" -> {
                     List<User> friends = readerService.getFriends().stream().toList();
                     System.out.println("Friends:");
                     friends.forEach(friend -> System.out.println(friend.getUsername()));
-                    flag = false;
                 }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                default -> throw new OptionException();
             }
-        } while (flag);
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+            myConnections();
+        }
     }
 
     private static void viewProfile() {
@@ -73,13 +74,16 @@ public class ReaderMenu {
         String username;
         Optional<User> user;
         do {
-            username = scanner.next();
-            user = userService.getByUsername(username);
-            if (user.isEmpty()) {
-                generalMenu.invalidMessage("Invalid username.");
-            } else {
+            try {
+                username = scanner.next();
+                user = userService.getByUsername(username);
+                if (user.isEmpty()) {
+                    throw new UsernameNotRegistered();
+                }
                 userService.printUserData(user.get().getId());
                 break;
+            } catch (UsernameNotRegistered e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
 
@@ -100,25 +104,28 @@ public class ReaderMenu {
 
         String option;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "0" -> {
-                    return;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> {
+                        connectionService.addConnection(user.get().getId());
+                        System.out.println("You follow this user!");
+                        return;
+                    }
+                    case "2" -> {
+                        connectionService.unfollowConnection(user.get().getId());
+                        System.out.println("You don't follow this user!");
+                        return;
+                    }
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    connectionService.addConnection(user.get().getId());
-                    System.out.println("You follow this user!");
-                    return;
-                }
-                case "2" -> {
-                    connectionService.unfollowConnection(user.get().getId());
-                    System.out.println("You don't follow this user!");
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
         } while (true);
-
     }
 
     private static void showUsers(UserType type) {
@@ -138,20 +145,21 @@ public class ReaderMenu {
                                    Choose option:""");
 
         String option;
-        boolean flag = true;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "0" -> {
-                    return;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> viewProfile();
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    viewProfile();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
     }
 
     private void addPersonalShelf(String shelfName) {
@@ -201,34 +209,38 @@ public class ReaderMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "1" -> {
-                    addPersonalShelf(shelfName);
-                    flag = false;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "1" -> addPersonalShelf(shelfName);
+                    case "2" -> addSharedShelf(shelfName);
+                    default -> throw new OptionException();
                 }
-                case "2" -> {
-                    addSharedShelf(shelfName);
-                    return;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
         System.out.println("Successfully added shelf!");
     }
 
     private void removeShelf() {
         List<UUID> shelves = ((Reader) userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to remove:");
-        int i = scanner.nextInt();
-        while (i > shelves.size()) {
-            generalMenu.invalidMessage("Shelf does not exist.");
-            i = scanner.nextInt();
+        try {
+            int i = scanner.nextInt();
+            if (i > shelves.size())
+                throw new OptionException();
+            readerService.removeShelf(shelves.get(i - 1));
+            System.out.println("Successfully removed shelf!");
+        } catch (InputMismatchException e) {
+            System.out.println("Please enter a number.");
+            removeShelf();
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+            removeShelf();
         }
-        readerService.removeShelf(shelves.get(i - 1));
-        System.out.println("Successfully removed shelf!");
     }
 
     private void addReview(UUID bookId) {
@@ -236,73 +248,117 @@ public class ReaderMenu {
         System.out.println("review: ");
         String text = scanner.nextLine();
         System.out.println("rating(1-10): ");
-        int rating = scanner.nextInt();
-        while (rating > 10 || rating < 1) {
-            generalMenu.invalidMessage("Please enter a number from specified range.");
-            rating = scanner.nextInt();
-        }
-        Review review = Review.builder()
-                              .bookId(bookId)
-                              .readerId(userService.getIdOfCurrentUser())
-                              .reviewMessage(text)
-                              .rating(rating)
-                              .build();
-        reviewService.addReview(bookId, review);
+        do {
+            try {
+                String input = scanner.next();
+                int rating = Integer.parseInt(input);
+                if (rating > 10 || rating < 1)
+                    throw new OptionException();
+                Review review = Review.builder()
+                                      .bookId(bookId)
+                                      .readerId(userService.getIdOfCurrentUser())
+                                      .reviewMessage(text)
+                                      .rating(rating)
+                                      .build();
+                reviewService.addReview(bookId, review);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (true);
     }
 
     private void addToShelf(UUID shelfId) {
         List<Book> bookList = bookService.getListOfAllBooks();
         showAllBooks();
         System.out.println("Enter index of book you want to add:");
-        int input = scanner.nextInt();
-        while (input > bookList.size()) {
-            generalMenu.invalidMessage("Book index does not exist.");
-            input = scanner.nextInt();
-        }
-        shelfService.addBookToShelf(shelfId, bookList.get(input - 1).getId());
+        String input;
+        int n;
+        do {
+            try {
+                input = scanner.next();
+                n = Integer.parseInt(input);
+                if (n > bookList.size())
+                    throw new OptionException();
+                shelfService.addBookToShelf(shelfId, bookList.get(n - 1).getId());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (true);
+
+        System.out.println("Successfully added book to shelf!");
+
         if (shelfService.getById(shelfId).get().getName().equals("read")) {
             System.out.println("""
                                                                               
                                        0 -> Go back
                                        1 -> Add review""");
             String option;
-            boolean flag = true;
+
             do {
-                option = scanner.next();
-                switch (option) {
-                    case "0" -> {
-                        return;
+                try {
+                    option = scanner.next();
+                    switch (option) {
+                        case "0" -> {
+                            return;
+                        }
+                        case "1" -> addReview(bookList.get(n - 1).getId());
+                        default -> throw new OptionException();
                     }
-                    case "1" -> {
-                        addReview(bookList.get(input - 1).getId());
-                        flag = false;
-                    }
-                    default -> generalMenu.invalidMessage("Invalid option.");
+                    break;
+                } catch (OptionException e) {
+                    System.out.println(e.getMessage());
                 }
-            } while (flag);
+            } while (true);
         }
     }
 
     void removeFromShelf(UUID shelfId) {
         List<UUID> bookList = shelfService.getShelfBooks(shelfId);
         System.out.println("Enter index of book you want to remove:");
-        int input = scanner.nextInt();
-        while (input > bookList.size()) {
-            generalMenu.invalidMessage("Book index does not exist.");
-            input = scanner.nextInt();
-        }
-        shelfService.removeBookFromShelf(shelfId, bookList.get(input - 1));
-        System.out.println("Successfully removed book from shelf!");
+        String input;
+        int n;
+        do {
+            try {
+                input = scanner.next();
+                n = Integer.parseInt(input);
+                if (n > bookList.size())
+                    throw new OptionException();
+                shelfService.removeBookFromShelf(shelfId, bookList.get(n - 1));
+                System.out.println("Successfully removed book from shelf!");
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (true);
     }
 
     private void seeShelf() {
         List<UUID> shelves = ((Reader) userService.getCurrentUser().get()).getShelves();
         System.out.println("Enter index of shelf you want to see:");
-        int i = scanner.nextInt();
-        while (i > shelves.size()) {
-            generalMenu.invalidMessage("Shelf does not exist.");
-            i = scanner.nextInt();
-        }
+        String input;
+        int i;
+        do {
+            try {
+                input = scanner.next();
+                i = Integer.parseInt(input);
+                if (i > shelves.size())
+                    throw new OptionException();
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (true);
+
         System.out.println("Books on your shelf: ");
         shelfService.printShelfData(shelves.get(i - 1));
 
@@ -315,24 +371,22 @@ public class ReaderMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "0" -> {
-                    return;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> addToShelf(shelves.get(i - 1));
+                    case "2" -> removeFromShelf(shelves.get(i - 1));
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    addToShelf(shelves.get(i - 1));
-                    flag = false;
-                }
-                case "2" -> {
-                    removeFromShelf(shelves.get(i - 1));
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
     }
 
     private void myShelves() {
@@ -350,28 +404,23 @@ public class ReaderMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "0" -> {
-                    return;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> addShelf();
+                    case "2" -> removeShelf();
+                    case "3" -> seeShelf();
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    addShelf();
-                    flag = false;
-                }
-                case "2" -> {
-                    removeShelf();
-                    flag = false;
-                }
-                case "3" -> {
-                    seeShelf();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
 
     }
 
@@ -391,21 +440,21 @@ public class ReaderMenu {
                                    Choose option: """);
 
         String options;
-
-        boolean flag = true;
         do {
-            options = scanner.next();
-            switch (options) {
-                case "0" -> {
-                    return;
+            try {
+                options = scanner.next();
+                switch (options) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> setReadingChallenge();
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    setReadingChallenge();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
 
         System.out.println("Successfully began new reading challenge!");
         readingChallengeService.printStatus();
@@ -462,48 +511,27 @@ public class ReaderMenu {
                                    Choose option:""");
         String options;
 
-        boolean flag = true;
-        do {
+        try {
             options = scanner.next();
             switch (options) {
                 case "0" -> {
                     return;
                 }
-                case "1" -> {
-                    myShelves();
-                    flag = false;
-                }
-                case "2" -> {
-                    myConnections();
-                    flag = false;
-                }
-                case "3" -> {
-                    showUsers(UserType.READER);
-                    flag = false;
-                }
-                case "4" -> {
-                    showUsers(UserType.AUTHOR);
-                    flag = false;
-                }
-                case "5" -> {
-                    showUsers(UserType.LIBRARIAN);
-                    flag = false;
-                }
-                case "6" -> {
-                    myReadingChallenge();
-                    flag = false;
-                }
-                case "7" -> {
-                    showAllBooks();
-                    flag = false;
-                }
-                case "8" -> {
-                    myTopBooks();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                case "1" -> myShelves();
+                case "2" -> myConnections();
+                case "3" -> showUsers(UserType.READER);
+                case "4" ->showUsers(UserType.AUTHOR);
+                case "5" -> showUsers(UserType.LIBRARIAN);
+                case "6" -> myReadingChallenge();
+                case "7" -> showAllBooks();
+                case "8" -> myTopBooks();
+                default -> throw new OptionException();
             }
-        } while (flag);
-        start();
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            start();
+        }
     }
 }

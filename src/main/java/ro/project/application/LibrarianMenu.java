@@ -36,26 +36,45 @@ public class LibrarianMenu {
         Librarian librarian = (Librarian) userService.getCurrentUser().get();
         List<Book> bookList = bookService.getListOfAllBooks();
         showAllBooks();
-        System.out.println("Enter index of book you want to recommend:");
-        int input = scanner.nextInt();
-        while (input > bookList.size()) {
-            generalMenu.invalidMessage("Book index does not exist.");
-            input = scanner.nextInt();
+        String input;
+        int n;
+        try {
+            System.out.println("Enter index of book you want to recommend:");
+            input = scanner.next();
+            n = Integer.parseInt(input);
+            if (n > bookList.size())
+                throw new OptionException();
+            shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(n- 1).getId());
+        } catch (OptionException e) {
+            System.out.println(e.getMessage());
+            addNewBook();
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter an integer.");
+            addNewBook();
         }
-        shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(input - 1).getId());
     }
 
     private void removeBook() {
         Librarian librarian = (Librarian) userService.getCurrentUser().get();
         List<UUID> bookList = librarianService.getRecommendedBooks(librarian);
         System.out.println("Enter index of book you want to remove: ");
-        int input = scanner.nextInt();
-        while (input > bookList.size()) {
-            generalMenu.invalidMessage("Book index does not exist.");
-            input = scanner.nextInt();
-        }
-        shelfService.removeBookFromShelf(librarian.getRecommendationsList(), bookList.get(input - 1));
-        System.out.println("Successfully removed book from shelf!");
+        String input;
+        int n;
+        do {
+            try {
+                input = scanner.next();
+                n = Integer.parseInt(input);
+                if (n > bookList.size())
+                    throw new OptionException();
+                shelfService.removeBookFromShelf(librarian.getRecommendationsList(), bookList.get(n - 1));
+                System.out.println("Successfully removed book from shelf!");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter an integer.");
+            }
+        } while (true);
     }
 
     private void myBooks() {
@@ -71,24 +90,23 @@ public class LibrarianMenu {
                                                                       
                                    Choose option:""");
         String option;
-        boolean flag = true;
         do {
-            option = scanner.next();
-            switch (option) {
-                case "0" -> {
-                    return;
+            try {
+                option = scanner.next();
+                switch (option) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> addNewBook();
+                    case "2" -> removeBook();
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    addNewBook();
-                    flag = false;
-                }
-                case "2" -> {
-                    removeBook();
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
+                myBooks();
             }
-        } while (flag);
+        } while (true);
 
     }
 
@@ -125,20 +143,21 @@ public class LibrarianMenu {
                                                                       
                                    Choose option:""");
         String options;
-        boolean flag = true;
         do {
-            options = scanner.next();
-            switch (options) {
-                case "0" -> {
-                    return;
+            try {
+                options = scanner.next();
+                switch (options) {
+                    case "0" -> {
+                        return;
+                    }
+                    case "1" -> addMessage(librarian.getBookClub());
+                    default -> throw new OptionException();
                 }
-                case "1" -> {
-                    addMessage(librarian.getBookClub());
-                    flag = false;
-                }
-                default -> generalMenu.invalidMessage("Invalid option.");
+                break;
+            } catch (OptionException e) {
+                System.out.println(e.getMessage());
             }
-        } while (flag);
+        } while (true);
     }
 
     public void start() {

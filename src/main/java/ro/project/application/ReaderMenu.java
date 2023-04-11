@@ -230,8 +230,9 @@ public class ReaderMenu {
         System.out.println("Enter index of shelf you want to remove:");
         try {
             int i = scanner.nextInt();
-            if (i > shelves.size())
+            if (i > shelves.size()) {
                 throw new OptionException();
+            }
             readerService.removeShelf(shelves.get(i - 1));
             System.out.println("Successfully removed shelf!");
         } catch (InputMismatchException e) {
@@ -252,8 +253,9 @@ public class ReaderMenu {
             try {
                 String input = scanner.next();
                 int rating = Integer.parseInt(input);
-                if (rating > 10 || rating < 1)
+                if (rating > 10 || rating < 1) {
                     throw new OptionException();
+                }
                 Review review = Review.builder()
                                       .bookId(bookId)
                                       .readerId(userService.getIdOfCurrentUser())
@@ -280,8 +282,9 @@ public class ReaderMenu {
             try {
                 input = scanner.next();
                 n = Integer.parseInt(input);
-                if (n > bookList.size())
+                if (n > bookList.size()) {
                     throw new OptionException();
+                }
                 shelfService.addBookToShelf(shelfId, bookList.get(n - 1).getId());
                 break;
             } catch (NumberFormatException e) {
@@ -327,8 +330,9 @@ public class ReaderMenu {
             try {
                 input = scanner.next();
                 n = Integer.parseInt(input);
-                if (n > bookList.size())
+                if (n > bookList.size()) {
                     throw new OptionException();
+                }
                 shelfService.removeBookFromShelf(shelfId, bookList.get(n - 1));
                 System.out.println("Successfully removed book from shelf!");
                 break;
@@ -349,8 +353,9 @@ public class ReaderMenu {
             try {
                 input = scanner.next();
                 i = Integer.parseInt(input);
-                if (i > shelves.size())
+                if (i > shelves.size()) {
                     throw new OptionException();
+                }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Please enter an integer.");
@@ -520,7 +525,7 @@ public class ReaderMenu {
                 case "1" -> myShelves();
                 case "2" -> myConnections();
                 case "3" -> showUsers(UserType.READER);
-                case "4" ->showUsers(UserType.AUTHOR);
+                case "4" -> showUsers(UserType.AUTHOR);
                 case "5" -> showUsers(UserType.LIBRARIAN);
                 case "6" -> myReadingChallenge();
                 case "7" -> showAllBooks();
@@ -529,8 +534,7 @@ public class ReaderMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             start();
         }
     }

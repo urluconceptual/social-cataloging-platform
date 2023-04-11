@@ -1,6 +1,6 @@
 package ro.project.exceptions;
 
-public class UsernameException extends RuntimeException {
+public sealed class UsernameException extends UserDataException permits UsernameInUseException, UsernameNotRegistered {
     public UsernameException(String message) {
         super(message);
     }

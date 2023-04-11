@@ -42,9 +42,10 @@ public class LibrarianMenu {
             System.out.println("Enter index of book you want to recommend:");
             input = scanner.next();
             n = Integer.parseInt(input);
-            if (n > bookList.size())
+            if (n > bookList.size()) {
                 throw new OptionException();
-            shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(n- 1).getId());
+            }
+            shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(n - 1).getId());
         } catch (OptionException e) {
             System.out.println(e.getMessage());
             addNewBook();
@@ -64,8 +65,9 @@ public class LibrarianMenu {
             try {
                 input = scanner.next();
                 n = Integer.parseInt(input);
-                if (n > bookList.size())
+                if (n > bookList.size()) {
                     throw new OptionException();
+                }
                 shelfService.removeBookFromShelf(librarian.getRecommendationsList(), bookList.get(n - 1));
                 System.out.println("Successfully removed book from shelf!");
                 break;
@@ -187,8 +189,7 @@ public class LibrarianMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             start();
         }
     }

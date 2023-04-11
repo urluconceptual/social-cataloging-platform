@@ -1,6 +1,6 @@
 package ro.project.application;
 
-import ro.project.exceptions.PasswordException;
+import ro.project.exceptions.*;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
@@ -14,8 +14,6 @@ import ro.project.service.impl.AuthorServiceImpl;
 import ro.project.service.impl.LibrarianServiceImpl;
 import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
-
-import ro.project.exceptions.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -70,8 +68,9 @@ public class GeneralMenu {
                 System.out.println("Choose option: ");
                 inputType = scanner.next();
                 type = UserType.getEnumByFieldString(inputType);
-                if (UserType.NONE.equals(type))
+                if (UserType.NONE.equals(type)) {
                     throw new OptionException();
+                }
                 break;
             } catch (OptionException e) {
                 System.out.println(e.getMessage());
@@ -82,8 +81,9 @@ public class GeneralMenu {
             try {
                 System.out.println("username: ");
                 username = scanner.next();
-                if (userService.getByUsername(username).isPresent())
+                if (userService.getByUsername(username).isPresent()) {
                     throw new UsernameInUseException();
+                }
                 break;
             } catch (UsernameException e) {
                 System.out.println(e.getMessage());
@@ -105,8 +105,9 @@ public class GeneralMenu {
             try {
                 System.out.println("date of birth(yyyy/mm/dd): ");
                 inputBirthDate = scanner.next();
-                if (!inputBirthDate.matches("[1-2][0-9][0-9][0-9]/[0-1][0-9]/[0-9][0-9]"))
+                if (!inputBirthDate.matches("[1-2][0-9][0-9][0-9]/[0-1][0-9]/[0-9][0-9]")) {
                     throw new InvalidDate();
+                }
                 break;
             } catch (InvalidDate e) {
                 System.out.println(e.getMessage());
@@ -196,8 +197,7 @@ public class GeneralMenu {
             } while (true);
 
             userService.setCurrentUser(username);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             login();
         }
@@ -208,7 +208,7 @@ public class GeneralMenu {
     private static void intro() {
         try {
             System.out.println("""
-                                       
+                                                                              
                                        0 -> Exit
                                        1 -> Register
                                        2 -> Login

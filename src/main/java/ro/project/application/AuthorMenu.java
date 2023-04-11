@@ -7,7 +7,10 @@ import ro.project.model.enums.BookGenre;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.UUID;
 
 public class AuthorMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -79,12 +82,10 @@ public class AuthorMenu {
             }
             bookService.removeBookById(bookList.get(n - 1));
             System.out.println("Successfully removed book!");
-        }
-        catch (OptionException e) {
+        } catch (OptionException e) {
             System.out.println(e.getMessage());
             removeBook();
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Please enter an integer.");
             removeBook();
         }
@@ -116,8 +117,7 @@ public class AuthorMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             myBooks();
         }
     }
@@ -155,8 +155,7 @@ public class AuthorMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             start();
         }
     }

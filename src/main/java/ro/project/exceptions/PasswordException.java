@@ -1,6 +1,6 @@
 package ro.project.exceptions;
 
-public class PasswordException extends RuntimeException{
+public non-sealed class PasswordException extends UserDataException{
     public PasswordException() {
         super("Wrong password!");
     }

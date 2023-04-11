@@ -1,0 +1,49 @@
+
+m
+java:S3655$"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8¾áĞ÷0
+l
+java:S3655T"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Úî–98¾áĞ÷0
+m
+java:S3655:"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8¾áĞ÷0
+n
+java:S3655ˆ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8¾áĞ÷0
+m
+java:S3655Q"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š÷Ç8¾áĞ÷0
+u
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“‘ğÿÿÿÿÿ8¿áĞ÷0
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(°ïä®8ÈáĞ÷0
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ÈáĞ÷0
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(ÖÍˆıøÿÿÿÿ8ÉáĞ÷0
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ÉëÔÕúÿÿÿÿ8ÊáĞ÷0
+U	java:S106F"9Replace this use of System.out or System.err by a logger.(ÉâˆŒ8ËáĞ÷0
+Z	java:S106I"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ËáĞ÷0
+Z	java:S106K"9Replace this use of System.out or System.err by a logger.(ÖÍˆıøÿÿÿÿ8ËáĞ÷0
+Z
+java:S1854Q"=Remove this useless assignment to local variable "librarian".(Š÷Ç8ÌáĞ÷0
+8
+java:S3626b"Remove this redundant jump.(ûÁİ…8ÑáĞ÷0
+K
+java:S1481Q".Remove this unused "librarian" local variable.(Š÷Ç8ÌáĞ÷0
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(ı«‹½8ÌáĞ÷0
+U	java:S106U"9Replace this use of System.out or System.err by a logger.(Îñë8ÍáĞ÷0
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ÎáĞ÷0
+Z	java:S106r"9Replace this use of System.out or System.err by a logger.(è¢‘Œûÿÿÿÿ8ÏáĞ÷0
+Z	java:S106y"9Replace this use of System.out or System.err by a logger.(ÚÊşÿÿÿÿ8ÏáĞ÷0
+V	java:S106€"9Replace this use of System.out or System.err by a logger.(ú¬Ëö8ĞáĞ÷0
+9
+java:S3626—"Remove this redundant jump.(ûÁİ…8ÓáĞ÷0
+[	java:S106‰"9Replace this use of System.out or System.err by a logger.(ñ¡›õşÿÿÿÿ8ÑáĞ÷0
+V	java:S106‹"9Replace this use of System.out or System.err by a logger.(Îñë8ÒáĞ÷0
+[	java:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ÓáĞ÷0
+9
+java:S3626µ"Remove this redundant jump.(ûÁİ…8º€Ñ÷0
+V	java:S106¥"9Replace this use of System.out or System.err by a logger.(Îñë8ÔáĞ÷0
+[	java:S106½"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ÕáĞ÷0
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8ÕáĞ÷0
+N
+java:S1068"1Remove this unused "authorService" private field.(îú¸Ê8ÕáĞ÷0
+W
+java:S1068"5Remove this unused "connectionService" private field.(Æ×şÿÿÿÿ8ÖáĞ÷0
+L
+java:S1068"/Remove this unused "generalMenu" private field.(ÖÍªÖ8ÖáĞ÷0

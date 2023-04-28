@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="" />
+    <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/gateways/Requests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f09dfbf02d0282028546d09791e7f90636454246" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f09dfbf02d0282028546d09791e7f90636454246" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-cataloging-platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/social-cataloging-platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/PasswordException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/PasswordException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameInUseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameInUseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameNotRegistered.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameNotRegistered.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +128,11 @@
       <workItem from="1681148689150" duration="2646000" />
       <workItem from="1681154622484" duration="3455000" />
       <workItem from="1681213890207" duration="1922000" />
+      <workItem from="1682170721120" duration="59000" />
+      <workItem from="1682431074166" duration="1193000" />
+      <workItem from="1682530836245" duration="609000" />
+      <workItem from="1682694051254" duration="736000" />
+      <workItem from="1682705615968" duration="4271000" />
     </task>
     <servers />
   </component>
@@ -147,7 +183,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

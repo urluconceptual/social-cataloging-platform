@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.gateways.Requests;
 import ro.project.model.*;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
@@ -12,7 +13,6 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class PopulateScript {
-    private static final Scanner scanner = new Scanner(System.in);
     private static PopulateScript INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
@@ -21,6 +21,8 @@ public class PopulateScript {
     private static BookService bookService = new BookServiceImpl();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static LibrarianService librarianService = new LibrarianServiceImpl();
+
+    private static Requests requests = new Requests();
 
     private PopulateScript() {
     }
@@ -223,6 +225,7 @@ public class PopulateScript {
                     .genre(BookGenre.ROMANCE)
                     .numberOfPages(300)
                     .build()));
+        requests.saveRequestInfo();
         bookService.init();
     }
 }

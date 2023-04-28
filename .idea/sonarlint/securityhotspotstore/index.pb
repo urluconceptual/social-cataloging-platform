@@ -9,10 +9,6 @@ g
 7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c
 p
 @src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
-l
-<src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
-b
-2src/main/java/ro/project/model/abstracts/User.java,f\0\f09dfbf02d0282028546d09791e7f90636454246
 _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
 c
@@ -29,8 +25,6 @@ m
 =src/main/java/ro/project/service/ReadingChallengeService.java,9\e\9e8d00535a7c595c32af0cacf6bbdaf312303722
 v
 Fsrc/main/java/ro/project/service/impl/ReadingChallengeServiceImpl.java,5\1\51102c98deb432aa0f8383c530ce5dce1aad2ce3
-X
-(src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 c
@@ -69,8 +63,6 @@ j
 :src/main/java/ro/project/service/impl/UserServiceImpl.java,b\3\b3ef98ba54c37b2236e3e3785eabb43bacea2d8d
 a
 1src/main/java/ro/project/service/UserService.java,d\8\d8798a4eb83d9afe504aa1bf08390ae3ee936490
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 c
 3src/main/java/ro/project/model/records/Message.java,d\6\d6ce7304e800950beb29adb0e0729cb6808965f5
 9
@@ -83,3 +75,5 @@ b
 2src/main/java/ro/project/service/ShelfService.java,5\7\5787f06c5a57db1a33f2998d699d6907a7e96587
 k
 ;src/main/java/ro/project/service/impl/ShelfServiceImpl.java,6\f\6f05126881c42a97eaf0aab84755a51f3e8d652e
+e
+5src/main/java/ro/project/application/GeneralMenu.java,1\2\12572cf7a9f96c549d294d9f1e3c60dec2985430

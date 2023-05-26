@@ -130,14 +130,14 @@ public class LibrarianMenu extends TemplateMenu{
         System.out.println("Type message(one line): ");
         scanner.nextLine();
         String text = scanner.nextLine();
-        Message message = new Message(text);
+        Message message = new Message(bookClub.getId(), text);
         bookClubService.addMessage(bookClub, message);
     }
 
     private void myBookClub() {
         Librarian librarian = (Librarian) userService.getCurrentUser().get();
         System.out.println("My posts: ");
-        bookClubService.printMessages(librarian.getBookClub());
+        bookClubService.printMessages(librarian.getBookClub().getId());
         System.out.println("""
                                                                       
                                    0 -> Go back

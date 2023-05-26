@@ -105,7 +105,10 @@ public class ShelfServiceImpl implements ShelfService {
 
     @Override
     public void removeBookFromAllShelves(UUID bookId) {
-        for (Shelf shelf : shelfRepository.getAll()) {
+        List<Shelf> shelves = shelfRepository.getAll();
+        Iterator<Shelf> shelfIterator = shelves.iterator();
+        while (shelfIterator.hasNext()) {
+            Shelf shelf = shelfIterator.next();
             removeBookFromShelf(shelf.getId(), bookId);
         }
     }

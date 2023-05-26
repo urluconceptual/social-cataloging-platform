@@ -29,8 +29,8 @@ public class BookClubMapper {
                         BookClub.builder()
                                 .id(UUID.fromString(resultSet.getString(1)))
                                 .creationDate(resultSet.getTimestamp(2).toLocalDateTime())
-                                .updateDate(resultSet.getTimestamp(3).toLocalDateTime())
-                                .deleteDate(resultSet.getTimestamp(4).toLocalDateTime())
+                                .updateDate(resultSet.getTimestamp(3) == null ? null : resultSet.getTimestamp(3).toLocalDateTime())
+                                .deleteDate(resultSet.getTimestamp(4) == null ? null : resultSet.getTimestamp(4).toLocalDateTime())
                                 .build()
                                   );
         } else {

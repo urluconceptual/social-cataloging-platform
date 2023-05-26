@@ -5,12 +5,11 @@ import ro.project.model.BookClub;
 import ro.project.model.records.Message;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface BookClubService {
 
-    void printMessages(BookClub bookClub);
-
-    List<Book> getListOfAllBooksClubs();
+    void printMessages(UUID bookClubId);
 
     void addMessage(BookClub bookClub, Message message);
 }

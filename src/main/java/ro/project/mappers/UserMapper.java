@@ -1,10 +1,10 @@
 package ro.project.mappers;
 
-import ro.project.model.Author;
-import ro.project.model.Librarian;
-import ro.project.model.Reader;
+import ro.project.model.*;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
+import ro.project.repository.BookClubRepository;
+import ro.project.repository.impl.BookClubRepositoryImpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +14,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class UserMapper {
+    private static BookClubRepository bookClubRepository = new BookClubRepositoryImpl();
     private static UserMapper INSTANCE;
 
     private UserMapper() {
@@ -62,6 +63,7 @@ public class UserMapper {
                                   );
             }
             else {
+                BookClub bookClub = bookClubRepository.getById(UUID.fromString(resultSet.getString(19))).get();
                 return Optional.of(
                         Librarian.builder()
                                  .id(UUID.fromString(resultSet.getString(1)))
@@ -75,6 +77,7 @@ public class UserMapper {
                                  .birthDate(resultSet.getDate(10).toLocalDate())
                                  .bio(resultSet.getString(11))
                                  .type(UserType.getEnumByFieldString(resultSet.getString(12)))
+                                .bookClub(bookClub)
                                  .build()
                                   );
             }

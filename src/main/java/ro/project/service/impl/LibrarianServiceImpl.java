@@ -42,6 +42,6 @@ public class LibrarianServiceImpl implements LibrarianService {
         System.out.println("---- recommended books:");
         printBooks(librarian);
         System.out.println("---- book club posts:");
-        bookClubService.printMessages(librarian.getBookClub());
+        bookClubService.printMessages(librarian.getBookClub().getId());
     }
 }

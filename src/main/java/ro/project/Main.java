@@ -14,9 +14,7 @@ public class Main {
 
         PopulateScript.getInstance();
 
-        PopulateScript.populate();
-
-        //PopulateScript.populateDatabase();
+        //PopulateScript.populate();
 
         do {
             GeneralMenu.start();

@@ -31,7 +31,7 @@ public class UserRepositoryImpl implements UserRepository {
                 "LEFT JOIN Reader ON AppUser.id = Reader.id " +
                 "LEFT JOIN Author ON AppUser.id = Author.id " +
                 "LEFT JOIN Librarian ON AppUser.id = Librarian.id " +
-                "WHERE id=?";
+                "WHERE Entity.id=?";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
             preparedStatement.setString(1, id.toString());
@@ -49,10 +49,10 @@ public class UserRepositoryImpl implements UserRepository {
     public Optional<User> getByUsername(String username) {
         String selectSql = "SELECT * " +
                 "FROM Entity " +
-                "FULL OUTER JOIN AppUser ON Entity.id = AppUser.id " +
-                "FULL OUTER JOIN Reader ON AppUser.id = Reader.id " +
-                "FULL OUTER JOIN Author ON AppUser.id = Author.id " +
-                "FULL OUTER JOIN Librarian ON AppUser.id = Librarian.id " +
+                "INNER JOIN AppUser ON Entity.id = AppUser.id " +
+                "LEFT JOIN Reader ON AppUser.id = Reader.id " +
+                "LEFT JOIN Author ON AppUser.id = Author.id " +
+                "LEFT JOIN Librarian ON AppUser.id = Librarian.id " +
                 "WHERE username=?";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
@@ -71,11 +71,11 @@ public class UserRepositoryImpl implements UserRepository {
     public Set<User> getByType(UserType type) {
         String selectSql = "SELECT * " +
                 "FROM Entity " +
-                "FULL OUTER JOIN AppUser ON Entity.id = AppUser.id " +
-                "FULL OUTER JOIN Reader ON AppUser.id = Reader.id " +
-                "FULL OUTER JOIN Author ON AppUser.id = Author.id " +
-                "FULL OUTER JOIN Librarian ON AppUser.id = Librarian.id " +
-                "WHERE type=?";
+                "INNER JOIN AppUser ON Entity.id = AppUser.id " +
+                "LEFT JOIN Reader ON AppUser.id = Reader.id " +
+                "LEFT JOIN Author ON AppUser.id = Author.id " +
+                "LEFT JOIN Librarian ON AppUser.id = Librarian.id " +
+                "WHERE usertype=?";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
             preparedStatement.setString(1, type.getType());
@@ -93,10 +93,10 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> getAll() {
         String selectSql = "SELECT * " +
                 "FROM Entity " +
-                "FULL OUTER JOIN AppUser ON Entity.id = AppUser.id " +
-                "FULL OUTER JOIN Reader ON AppUser.id = Reader.id " +
-                "FULL OUTER JOIN Author ON AppUser.id = Author.id " +
-                "FULL OUTER JOIN Librarian ON AppUser.id = Librarian.id ";
+                "INNER JOIN AppUser ON Entity.id = AppUser.id " +
+                "LEFT JOIN Reader ON AppUser.id = Reader.id " +
+                "LEFT JOIN Author ON AppUser.id = Author.id " +
+                "LEFT JOIN Librarian ON AppUser.id = Librarian.id ";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
             ResultSet resultSet = preparedStatement.executeQuery();

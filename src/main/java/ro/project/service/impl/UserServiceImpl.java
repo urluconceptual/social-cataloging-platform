@@ -4,13 +4,15 @@ import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
+import ro.project.repository.UserRepository;
+import ro.project.repository.impl.UserRepositoryImpl;
 import ro.project.service.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
-    private static final Set<User> users = new HashSet<>();
+    private static final UserRepository userRepository = new UserRepositoryImpl();
     private static Optional<User> currentUser = Optional.empty();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
@@ -19,52 +21,45 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getById(UUID id) {
-        return users.stream()
-                    .filter(user -> user.getId().equals(id))
-                    .findFirst();
+        return userRepository.getById(id);
     }
 
     @Override
     public Optional<User> getByUsername(String username) {
-        return users.stream()
-                    .filter(user -> user.getUsername().equals(username))
-                    .findFirst();
+        return userRepository.getByUsername(username);
     }
 
     @Override
     public Set<User> getByType(UserType type) {
-        return users.stream()
-                    .filter(user -> user.getType().equals(type))
-                    .collect(Collectors.toSet());
+        return userRepository.getByType(type);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return new ArrayList<>(users);
+        return userRepository.getAll();
     }
 
     @Override
     public void addUser(User user) {
-        users.add(user);
+        userRepository.add(user);
     }
 
     @Override
     public void addUsers(List<User> userList) {
-        users.addAll(userList);
+        userRepository.addAll(userList);
     }
 
     @Override
     public void editUserById(UUID id, User newUser) {
         if (getById(id).isPresent()) {
-            users.remove(getById(id));
-            users.add(newUser);
+            userRepository.updateById(id, newUser);
         }
     }
 
     @Override
     public void removeUserById(UUID id) {
         if (getById(id).isPresent()) {
-            users.remove(getById(id));
+            userRepository.deleteById(id);
         }
     }
 

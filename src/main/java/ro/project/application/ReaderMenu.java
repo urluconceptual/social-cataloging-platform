@@ -534,8 +534,8 @@ public class ReaderMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+
+        start();
     }
 }

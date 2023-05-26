@@ -1,8 +1,6 @@
 
 c
 3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
-b
-2src/main/java/ro/project/model/enums/UserType.java,1\5\15572043502caba0c295566d1386c43d342abd75
 c
 3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
 p
@@ -60,27 +58,19 @@ j
 _
 /src/main/java/ro/project/gateways/Requests.java,a\0\a020dc3531151f3e1754e3b56a5ad89855e2a467
 d
-4src/main/java/ro/project/application/ReaderMenu.java,f\7\f75f82748785637deaa9c90575c2c5b26edbdf1d
-d
 4src/main/java/ro/project/application/AuthorMenu.java,2\f\2f806b84cb9a12a49dfa4e2e58e71a33ac969cba
 c
 3src/main/java/ro/project/service/AuthorService.java,4\1\41549f764963694d0338f8c2066ec3a97ce72baa
 l
 <src/main/java/ro/project/service/impl/AuthorServiceImpl.java,6\3\63591edac4249f0ea42411492f8dcf3bd7d1afa7
-a
-1src/main/java/ro/project/service/UserService.java,d\8\d8798a4eb83d9afe504aa1bf08390ae3ee936490
 c
 3src/main/java/ro/project/model/records/Message.java,d\6\d6ce7304e800950beb29adb0e0729cb6808965f5
 d
 4src/main/java/ro/project/model/ReadingChallenge.java,2\0\208da94237a1dc26c5d59d8e89d9208636a3eab3
 k
 ;src/main/java/ro/project/service/impl/ShelfServiceImpl.java,6\f\6f05126881c42a97eaf0aab84755a51f3e8d652e
-a
-1src/main/java/ro/project/model/PersonalShelf.java,6\9\694fd3fbf39f629a7bd718013694e2160e6c1ceb
 _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
-c
-3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
 X
 (src/main/java/ro/project/model/Book.java,b\d\bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a
 Z
@@ -95,8 +85,6 @@ Z
 -src/main/java/ro/project/model/Librarian.java,7\1\71eed1a642ff162bc884326cad6861f515f3ee4b
 `
 0src/main/java/ro/project/mappers/BookMapper.java,a\b\abdbc2a8489122aa404f90756cc9b3e8253d4ea0
-j
-:src/main/java/ro/project/service/impl/UserServiceImpl.java,b\3\b3ef98ba54c37b2236e3e3785eabb43bacea2d8d
 `
 0src/main/java/ro/project/generics/Creatable.java,b\6\b677e3a1a24d38650418608bd16a6dff30ce4c81
 `

@@ -1,5 +1,7 @@
 package ro.project.mappers;
 
+import ro.project.model.Author;
+import ro.project.model.Librarian;
 import ro.project.model.Reader;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
@@ -23,57 +25,57 @@ public class UserMapper {
 
     public static Optional<User> mapToUser(ResultSet resultSet) throws SQLException {
         if (resultSet.next()) {
-            if (resultSet.getString(8).equals(UserType.READER.getType())) {
+            if (resultSet.getString(12).equals(UserType.READER.getType())) {
                 return Optional.of(
                         Reader.builder()
                                 .id(UUID.fromString(resultSet.getString(1)))
                                 .creationDate(resultSet.getTimestamp(2).toLocalDateTime())
-                                .updateDate(resultSet.getTimestamp(3).toLocalDateTime())
-                                .deleteDate(resultSet.getTimestamp(4).toLocalDateTime())
-                                .username(resultSet.getString(5))
-                                .password(resultSet.getString(6))
-                                .firstName(resultSet.getString(7))
-                                .lastName(resultSet.getString(8))
-                                .birthDate(resultSet.getDate(9).toLocalDate())
-                                .bio(resultSet.getString(10))
-                                .type(UserType.valueOf(resultSet.getString(11)))
-                                .averageRating(resultSet.getDouble(12))
+                                .updateDate(resultSet.getTimestamp(3) == null ? null : resultSet.getTimestamp(3).toLocalDateTime())
+                                .deleteDate(resultSet.getTimestamp(4) == null ? null : resultSet.getTimestamp(4).toLocalDateTime())
+                                .username(resultSet.getString(6))
+                                .password(resultSet.getString(7))
+                                .firstName(resultSet.getString(8))
+                                .lastName(resultSet.getString(9))
+                                .birthDate(resultSet.getDate(10).toLocalDate())
+                                .bio(resultSet.getString(11))
+                                .type(UserType.getEnumByFieldString(resultSet.getString(12)))
+                                .averageRating(resultSet.getDouble(14))
                                 .build()
                                   );
             }
-            else if(resultSet.getString(8).equals(UserType.AUTHOR.getType())) {
+            else if(resultSet.getString(12).equals(UserType.AUTHOR.getType())) {
                 return Optional.of(
-                        Reader.builder()
+                        Author.builder()
                               .id(UUID.fromString(resultSet.getString(1)))
                               .creationDate(resultSet.getTimestamp(2).toLocalDateTime())
-                              .updateDate(resultSet.getTimestamp(3).toLocalDateTime())
-                              .deleteDate(resultSet.getTimestamp(4).toLocalDateTime())
-                              .username(resultSet.getString(5))
-                              .password(resultSet.getString(6))
-                              .firstName(resultSet.getString(7))
-                              .lastName(resultSet.getString(8))
-                              .birthDate(resultSet.getDate(9).toLocalDate())
-                              .bio(resultSet.getString(10))
-                              .type(UserType.valueOf(resultSet.getString(11)))
-                              .averageRating(resultSet.getDouble(12))
+                              .updateDate(resultSet.getTimestamp(3) == null ? null : resultSet.getTimestamp(3).toLocalDateTime())
+                              .deleteDate(resultSet.getTimestamp(4) == null ? null : resultSet.getTimestamp(4).toLocalDateTime())
+                              .username(resultSet.getString(6))
+                              .password(resultSet.getString(7))
+                              .firstName(resultSet.getString(8))
+                              .lastName(resultSet.getString(9))
+                              .birthDate(resultSet.getDate(10).toLocalDate())
+                              .bio(resultSet.getString(11))
+                              .type(UserType.getEnumByFieldString(resultSet.getString(12)))
+                              .averageRating(resultSet.getDouble(17))
                               .build()
                                   );
             }
             else {
                 return Optional.of(
-                        Reader.builder()
-                              .id(UUID.fromString(resultSet.getString(1)))
-                              .creationDate(resultSet.getTimestamp(2).toLocalDateTime())
-                              .updateDate(resultSet.getTimestamp(3).toLocalDateTime())
-                              .deleteDate(resultSet.getTimestamp(4).toLocalDateTime())
-                              .username(resultSet.getString(5))
-                              .password(resultSet.getString(6))
-                              .firstName(resultSet.getString(7))
-                              .lastName(resultSet.getString(8))
-                              .birthDate(resultSet.getDate(9).toLocalDate())
-                              .bio(resultSet.getString(10))
-                              .type(UserType.valueOf(resultSet.getString(11)))
-                              .build()
+                        Librarian.builder()
+                                 .id(UUID.fromString(resultSet.getString(1)))
+                                 .creationDate(resultSet.getTimestamp(2).toLocalDateTime())
+                                 .updateDate(resultSet.getTimestamp(3) == null ? null : resultSet.getTimestamp(3).toLocalDateTime())
+                                 .deleteDate(resultSet.getTimestamp(4) == null ? null : resultSet.getTimestamp(4).toLocalDateTime())
+                                 .username(resultSet.getString(6))
+                                 .password(resultSet.getString(7))
+                                 .firstName(resultSet.getString(8))
+                                 .lastName(resultSet.getString(9))
+                                 .birthDate(resultSet.getDate(10).toLocalDate())
+                                 .bio(resultSet.getString(11))
+                                 .type(UserType.getEnumByFieldString(resultSet.getString(12)))
+                                 .build()
                                   );
             }
         } else {
@@ -83,10 +85,12 @@ public class UserMapper {
 
     public static List<User> mapToUserList(ResultSet resultSet) throws SQLException {
         List<User> users = new ArrayList<>();
-        while(resultSet.next()) {
-            resultSet.previous();
-            users.add(mapToUser(resultSet).get());
+        Optional<User> user = mapToUser(resultSet);
+        while (user.isPresent()) {
+            users.add(user.get());
+            user = mapToUser(resultSet);
         }
+
         return users;
     }
 }

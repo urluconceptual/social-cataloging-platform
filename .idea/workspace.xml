@@ -5,36 +5,197 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/gateways/Requests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f09dfbf02d0282028546d09791e7f90636454246" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f2cdaa20ea1b7802ce07627e6a112cbc152abe3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f67a7e2d736079fe4fb71336a9e6607212e1ed6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d4679343897ec2b19a24475c7bf6ad038f32136" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7da1a26563165a0f7b6f3fd79fa81122e38b9a04" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87852ca3e115a825a6fea79e0751f62dca1cf40d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/914aa9b80bf775327a2425c42c8756968f2355f4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96b5d1f63e9b829e185f402d89524d79c051d02e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a020dc3531151f3e1754e3b56a5ad89855e2a467" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abdbc2a8489122aa404f90756cc9b3e8253d4ea0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afe4bcbe16ac4bb2a2bae0473b408ed17d3f2d4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b677e3a1a24d38650418608bd16a6dff30ce4c81" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de173e7cd21ea341a0a314f5d66710141d34ff78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f09dfbf02d0282028546d09791e7f90636454246" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f75f82748785637deaa9c90575c2c5b26edbdf1d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/d/0d9c90994ee96a4e61be0dc25bfae19bbf38c3c7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/d/0df9fa36b6ef0fd12c36931ea935faa2f0930c0c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0f2cdaa20ea1b7802ce07627e6a112cbc152abe3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/f/3f67a7e2d736079fe4fb71336a9e6607212e1ed6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/d/7d4679343897ec2b19a24475c7bf6ad038f32136" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/d/7da1a26563165a0f7b6f3fd79fa81122e38b9a04" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/7/87852ca3e115a825a6fea79e0751f62dca1cf40d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/914aa9b80bf775327a2425c42c8756968f2355f4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/6/96b5d1f63e9b829e185f402d89524d79c051d02e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/0/a020dc3531151f3e1754e3b56a5ad89855e2a467" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/b/abdbc2a8489122aa404f90756cc9b3e8253d4ea0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/f/afe4bcbe16ac4bb2a2bae0473b408ed17d3f2d4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b677e3a1a24d38650418608bd16a6dff30ce4c81" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/e/de173e7cd21ea341a0a314f5d66710141d34ff78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f09dfbf02d0282028546d09791e7f90636454246" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/7/f75f82748785637deaa9c90575c2c5b26edbdf1d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database-creation-statements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/config/DatabaseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/generics/Creatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/generics/Deletable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/generics/Readable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/generics/Updatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookClubMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/BookClubRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/EntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/BookClubRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/EntityRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/config/DatabaseConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/generics/Creatable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/generics/Deletable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/generics/Readable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/generics/Updatable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookClubMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/BookClubRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/EntityRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/BookClubRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/EntityRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f806b84cb9a12a49dfa4e2e58e71a33ac969cba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f806b84cb9a12a49dfa4e2e58e71a33ac969cba" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dba5289b82b7523b6f049a319864c34fa231462" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f05126881c42a97eaf0aab84755a51f3e8d652e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f05126881c42a97eaf0aab84755a51f3e8d652e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71eed1a642ff162bc884326cad6861f515f3ee4b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71eed1a642ff162bc884326cad6861f515f3ee4b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3ef98ba54c37b2236e3e3785eabb43bacea2d8d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3ef98ba54c37b2236e3e3785eabb43bacea2d8d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6af499c46f6fa18a9a4ddd2a5935f18b239b440" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6af499c46f6fa18a9a4ddd2a5935f18b239b440" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4ba448e368fbd6f21a10fe912cb8828086be7438" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/d/bd2a4d0b88fc5ba05ddc064868a2f7c43fc2e22a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f09dfbf02d0282028546d09791e7f90636454246" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/12572cf7a9f96c549d294d9f1e3c60dec2985430" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d9c90994ee96a4e61be0dc25bfae19bbf38c3c7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/d/4dba5289b82b7523b6f049a319864c34fa231462" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0df9fa36b6ef0fd12c36931ea935faa2f0930c0c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-cataloging-platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/social-cataloging-platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Librarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/PersonalShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/PersonalShelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/abstracts/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/PopulateScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/PopulateScript.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/InvalidDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/InvalidDate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/OptionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/OptionException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/PasswordException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/PasswordException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UserDataException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UserDataException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameInUseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameInUseException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameNotRegistered.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/exceptions/UsernameNotRegistered.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/gateways/Requests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/gateways/Requests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author$AuthorBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Book$BookBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Book$BookBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Book$BookBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub$BookClubBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub$BookClubBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub$BookClubBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub$BookClubBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/BookClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Connection$ConnectionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Connection$ConnectionBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Connection$ConnectionBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Connection$ConnectionBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Connection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian$LibrarianBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Librarian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf$PersonalShelfBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/PersonalShelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader$ReaderBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge$ReadingChallengeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge$ReadingChallengeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge$ReadingChallengeBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge$ReadingChallengeBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/ReadingChallenge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Review$ReviewBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Review$ReviewBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Review$ReviewBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Review$ReviewBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf$SharedShelfBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/SharedShelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity$AbstractEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity$AbstractEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/AbstractEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf$ShelfBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/Shelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/abstracts/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/BookGenre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/enums/BookGenre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/EditionFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/enums/EditionFormat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/ShelfType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/enums/ShelfType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/enums/UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/records/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/records/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/AuthorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/AuthorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/BookClubService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/BookClubService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ConnectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ConnectionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/LibrarianService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/LibrarianService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ReaderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ReaderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ReadingChallengeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ReadingChallengeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/ShelfService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/ShelfService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/AuthorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/AuthorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookClubServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookClubServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/LibrarianServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/LibrarianServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReadingChallengeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReadingChallengeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReviewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,27 +237,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/facultate/Anul 2, sem II/PAO/proiect/social-cataloging-platform&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "stage2",
+    "last_opened_file_path": "E:/facultate/Anul 2, sem II/PAO/pao-template-latest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ro.project.service" />
     </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.postgres_db: Compose Deployment">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ro.project.Main" />
+      <module name="pao-template" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres_db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres_db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.postgres_db: Compose Deployment" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -132,7 +339,18 @@
       <workItem from="1682431074166" duration="1193000" />
       <workItem from="1682530836245" duration="609000" />
       <workItem from="1682694051254" duration="736000" />
-      <workItem from="1682705615968" duration="4271000" />
+      <workItem from="1682705615968" duration="4797000" />
+      <workItem from="1682973543318" duration="195000" />
+      <workItem from="1684400271969" duration="6623000" />
+      <workItem from="1684411208635" duration="317000" />
+      <workItem from="1684424976392" duration="1479000" />
+      <workItem from="1684752564333" duration="682000" />
+      <workItem from="1684773309485" duration="90000" />
+      <workItem from="1684773485871" duration="171000" />
+      <workItem from="1684778787575" duration="4512000" />
+      <workItem from="1684825922847" duration="3708000" />
+      <workItem from="1685015567880" duration="8917000" />
+      <workItem from="1685086713584" duration="7289000" />
     </task>
     <servers />
   </component>
@@ -140,15 +358,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="User">
@@ -160,6 +369,15 @@
                 </option>
               </RecentGroup>
             </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
           </value>
         </entry>
       </map>

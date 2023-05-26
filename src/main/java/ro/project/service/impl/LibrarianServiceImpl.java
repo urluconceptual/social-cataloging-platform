@@ -27,12 +27,12 @@ public class LibrarianServiceImpl implements LibrarianService {
 
     @Override
     public void printBooks(Librarian librarian) {
-        shelfService.printShelfData(librarian.getRecommendationsList());
+        shelfService.printShelfData(librarian.getRecommendationsListId());
     }
 
     @Override
     public List<UUID> getRecommendedBooks(Librarian librarian) {
-        return shelfService.getShelfBooks(librarian.getRecommendationsList());
+        return shelfService.getShelfBooks(librarian.getRecommendationsListId());
     }
 
     @Override

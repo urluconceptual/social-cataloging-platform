@@ -19,22 +19,22 @@ P
 java:S1444"3Make this "public static reviewService" field final(ğ÷ßÃ8®ÏŞ„ô0
 _
 java:S1444"=Make this "public static readingChallengeService" field final(ïÖ»¦øÿÿÿÿ8®ÏŞ„ô0
-m
-java:S3655`"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(£õ“ç8¸ÏŞ„ô0
 r
 java:S3655P"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(û¾À÷øÿÿÿÿ8¸ÏŞ„ô0
 r
-java:S3655 "PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(À÷Ó²ÿÿÿÿÿ8¸ÏŞ„ô0
+java:S3655r"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(½½§ÿıÿÿÿÿ8¸ÏŞ„ô0
 m
 java:S3655G"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¾Â8¸ÏŞ„ô0
 r
-java:S3655r"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(½½§ÿıÿÿÿÿ8¸ÏŞ„ô0
-r
-java:S3655x"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÆ¡Ëşÿÿÿÿ8¸ÏŞ„ô0
-r
 java:S3655j"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÆ¡Ëşÿÿÿÿ8¸ÏŞ„ô0
+r
+java:S3655 "PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(À÷Ó²ÿÿÿÿÿ8¸ÏŞ„ô0
+m
+java:S3655`"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(£õ“ç8¸ÏŞ„ô0
 s
 java:S3655‰"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÆ¡Ëşÿÿÿÿ8¸ÏŞ„ô0
+r
+java:S3655x"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÄÆ¡Ëşÿÿÿÿ8¸ÏŞ„ô0
 9
 java:S2386"Make this member "protected".(×ñA8¹ÏŞ„ô0
 Z	java:S106J"9Replace this use of System.out or System.err by a logger.(ÚÊşÿÿÿÿ8ÃÏŞ„ô0

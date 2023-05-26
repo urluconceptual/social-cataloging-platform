@@ -4,6 +4,8 @@ import ro.project.gateways.Requests;
 import ro.project.model.*;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
+import ro.project.repository.UserRepository;
+import ro.project.repository.impl.UserRepositoryImpl;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
@@ -23,6 +25,8 @@ public class PopulateScript {
     private static LibrarianService librarianService = new LibrarianServiceImpl();
 
     private static Requests requests = new Requests();
+
+    private static UserRepository userRepository = new UserRepositoryImpl();
 
     private PopulateScript() {
     }
@@ -227,5 +231,9 @@ public class PopulateScript {
                     .build()));
         requests.saveRequestInfo();
         bookService.init();
+    }
+
+    public static void populateDatabase() {
+        userRepository.addAll(userService.getAllUsers());
     }
 }

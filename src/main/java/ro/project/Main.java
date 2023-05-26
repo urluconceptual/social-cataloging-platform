@@ -16,6 +16,8 @@ public class Main {
 
         PopulateScript.populate();
 
+        //PopulateScript.populateDatabase();
+
         do {
             GeneralMenu.start();
         } while (!"exit".equals(scanner.next()));

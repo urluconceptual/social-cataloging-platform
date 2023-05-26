@@ -259,7 +259,7 @@ public class ReaderMenu {
                 Review review = Review.builder()
                                       .bookId(bookId)
                                       .readerId(userService.getIdOfCurrentUser())
-                                      .reviewMessage(text)
+                                      .text(text)
                                       .rating(rating)
                                       .build();
                 reviewService.addReview(bookId, review);

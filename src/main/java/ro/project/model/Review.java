@@ -15,6 +15,6 @@ public class Review extends AbstractEntity {
     private UUID bookId;
     private UUID readerId;
     @Builder.Default
-    private String reviewMessage = "";
+    private String text = "";
     private Integer rating;
 }

@@ -16,7 +16,6 @@ import java.util.UUID;
 @EqualsAndHashCode
 public class PersonalShelf extends Shelf {
     private UUID owner;
-    private String name;
     @Builder.Default
     private Set<UUID> bookList = new HashSet<>();
 }

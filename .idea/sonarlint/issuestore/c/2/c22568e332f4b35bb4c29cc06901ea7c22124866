@@ -1,0 +1,93 @@
+
+k
+java:S11924"NDefine a constant instead of duplicating this literal "i am a reader" 3 times.(ÃÉË8åßÄÁ…1
+l
+java:S1192O"ODefine a constant instead of duplicating this literal "i am an author" 4 times.(™£äû8æßÄÁ…1
+h
+java:S1192n"KDefine a constant instead of duplicating this literal "librarian1" 4 times.(°§­ß8æßÄÁ…1
+m
+java:S1192w"KDefine a constant instead of duplicating this literal "librarian2" 4 times.(çşÎùüÿÿÿÿ8æßÄÁ…1
+j
+java:S11928"HDefine a constant instead of duplicating this literal "reader2" 7 times.(ÛÔÕŸúÿÿÿÿ8æßÄÁ…1
+e
+java:S1192/"HDefine a constant instead of duplicating this literal "reader1" 6 times.(Ò™Îø8æßÄÁ…1
+j
+java:S1192S"HDefine a constant instead of duplicating this literal "author2" 6 times.(âˆ¬²ÿÿÿÿÿ8æßÄÁ…1
+j
+java:S1192J"HDefine a constant instead of duplicating this literal "author1" 7 times.(úİÑãÿÿÿÿÿ8æßÄÁ…1
+e
+java:S1192A"HDefine a constant instead of duplicating this literal "reader3" 7 times.(ºÉ“İ8æßÄÁ…1
+e
+java:S1192e"HDefine a constant instead of duplicating this literal "author4" 4 times.(ìÓÚÒ8æßÄÁ…1
+d
+java:S1192\"HDefine a constant instead of duplicating this literal "author3" 6 times.(·Ø¿E8æßÄÁ…1
+m
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ç³ğm8ŠàÄÁ…1
+n
+java:S3655–"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ì×É­8ŠàÄÁ…1
+s
+java:S3655š"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŒÍøûıÿÿÿÿ8ŠàÄÁ…1
+n
+java:S3655…"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸ö»²8ŠàÄÁ…1
+s
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¬ß«ıÿÿÿÿ8ŠàÄÁ…1
+m
+java:S3655‘"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8ŠàÄÁ…1
+s
+java:S3655™"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÖËèæùÿÿÿÿ8ŠàÄÁ…1
+m
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8ŠàÄÁ…1
+n
+java:S3655©"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8ŠàÄÁ…1
+s
+java:S3655ã"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ıÄ‚Şúÿÿÿÿ8ŠàÄÁ…1
+s
+java:S3655‚"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Êöµÿÿÿÿÿ8ŠàÄÁ…1
+s
+java:S3655’"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚšçÇüÿÿÿÿ8ŠàÄÁ…1
+n
+java:S3655ƒ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(óİû‘8ŠàÄÁ…1
+r
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ñãçğúÿÿÿÿ8ŠàÄÁ…1
+s
+java:S3655‡"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ê÷ãşÿÿÿÿ8ŠàÄÁ…1
+n
+java:S3655¡"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8ŠàÄÁ…1
+n
+java:S3655À"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(°‹„¼8ŠàÄÁ…1
+n
+java:S3655¥"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ºé8ŠàÄÁ…1
+s
+java:S3655†"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(„¤¡èüÿÿÿÿ8ŠàÄÁ…1
+s
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŒÍøûıÿÿÿÿ8ŠàÄÁ…1
+n
+java:S3655¢"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÚ†8ŠàÄÁ…1
+m
+java:S3655¹"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(âÜP8ŠàÄÁ…1
+n
+java:S3655ª"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(èÉ“õ8ŠàÄÁ…1
+s
+java:S3655Ç"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ıÄ‚Şúÿÿÿÿ8ŠàÄÁ…1
+m
+java:S3655•"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ÿ¾8ŠàÄÁ…1
+s
+java:S3655„"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(×ğ¢¹øÿÿÿÿ8ŠàÄÁ…1
+s
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÖËèæùÿÿÿÿ8ŠàÄÁ…1
+m
+java:S3655²"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(âÜP8ŠàÄÁ…1
+n
+java:S3655¦"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥óêë8ŠàÄÁ…1
+s
+java:S3655Î"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ıÄ‚Şúÿÿÿÿ8ŠàÄÁ…1
+n
+java:S3655€"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ûÃ¨¯8‰àÄÁ…1
+n
+java:S3655Õ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(°‹„¼8‰àÄÁ…1
+s
+java:S3655Ü"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Š Åÿÿÿÿÿ8ŠàÄÁ…1
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¼äå8‹àÄÁ…1
+P
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8¯àÄÁ…1

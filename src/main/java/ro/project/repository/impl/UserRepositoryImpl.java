@@ -5,10 +5,13 @@ import ro.project.mappers.UserMapper;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
 import ro.project.model.Reader;
+import ro.project.model.abstracts.AbstractEntity;
+import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
 import ro.project.repository.BookClubRepository;
 import ro.project.repository.EntityRepository;
+import ro.project.repository.ShelfRepository;
 import ro.project.repository.UserRepository;
 
 import java.sql.Connection;
@@ -22,6 +25,23 @@ public class UserRepositoryImpl implements UserRepository {
     private static EntityRepository entityRepository = new EntityRepositoryImpl();
 
     private static BookClubRepository bookClubRepository = new BookClubRepositoryImpl();
+
+    private static ShelfRepository shelfRepository = new ShelfRepositoryImpl();
+
+    private void addShelves(User user) {
+        UUID id = user.getId();
+        if(user instanceof Reader) {
+            ((Reader) user).getShelves().addAll(shelfRepository.getAllByUserId(id).stream().map(AbstractEntity::getId).toList());
+        }
+        else if (user instanceof Author) {
+            List<UUID> shelves = shelfRepository.getAllByUserId(id).stream().map(AbstractEntity::getId).toList();
+            ((Author) user).setBookIdList(shelves.isEmpty() ? null : shelves.get(0));
+        }
+        else if (user instanceof Librarian) {
+            List<UUID> shelves = shelfRepository.getAllByUserId(id).stream().map(AbstractEntity::getId).toList();
+            ((Librarian) user).setRecommendationsListId(shelves.isEmpty() ? null : shelves.get(0));
+        }
+    }
 
     @Override
     public Optional<User> getById(UUID id) {
@@ -37,7 +57,12 @@ public class UserRepositoryImpl implements UserRepository {
             preparedStatement.setString(1, id.toString());
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            return UserMapper.mapToUser(resultSet);
+            User user = UserMapper.mapToUser(resultSet).get();
+
+            addShelves(user);
+
+            return Optional.of(user);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -59,7 +84,12 @@ public class UserRepositoryImpl implements UserRepository {
             preparedStatement.setString(1, username);
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            return UserMapper.mapToUser(resultSet);
+
+            User user = UserMapper.mapToUser(resultSet).get();
+
+            addShelves(user);
+
+            return Optional.of(user);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -81,7 +111,9 @@ public class UserRepositoryImpl implements UserRepository {
             preparedStatement.setString(1, type.getType());
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            return new HashSet<>(UserMapper.mapToUserList(resultSet));
+            List<User> users = UserMapper.mapToUserList(resultSet);
+            users.forEach(this::addShelves);
+            return new HashSet<>(users);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -100,7 +132,9 @@ public class UserRepositoryImpl implements UserRepository {
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
-            return UserMapper.mapToUserList(resultSet);
+            List<User> users = UserMapper.mapToUserList(resultSet);
+            users.forEach(this::addShelves);
+            return users;
         } catch (SQLException e) {
             e.printStackTrace();
         }

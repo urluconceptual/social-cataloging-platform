@@ -2,6 +2,7 @@ package ro.project.service.impl;
 
 import ro.project.model.Author;
 import ro.project.model.PersonalShelf;
+import ro.project.model.enums.ShelfType;
 import ro.project.service.AuthorService;
 import ro.project.service.ShelfService;
 import ro.project.service.UserService;
@@ -18,6 +19,7 @@ public class AuthorServiceImpl implements AuthorService {
     public Author init(Author author) {
         shelfService.addShelf(
                 PersonalShelf.builder()
+                        .type(ShelfType.PERSONAL)
                              .owner(author.getId())
                              .name("written-books")
                              .bookList(new HashSet<>())

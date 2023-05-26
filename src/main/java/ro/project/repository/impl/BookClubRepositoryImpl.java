@@ -46,7 +46,7 @@ public class BookClubRepositoryImpl implements BookClubRepository {
         String selectSql = "SELECT * " +
                 "FROM Entity " +
                 "INNER JOIN BookClub ON Entity.id = BookClub.id " +
-                "WHERE id=?";
+                "WHERE Entity.id=?";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectSql)) {
             preparedStatement.setString(1, id.toString());

@@ -1,0 +1,11 @@
+
+i
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÙô²
+O
+java:S1128"2Remove this unused import 'ro.project.model.Book'.(ˆÞçÂ8‘‰«Á…1
+Q
+java:S1128"4Remove this unused import 'ro.project.model.Reader'.(Ë­®½8‘‰«Á…1
+^
+java:S1128"<Remove this unused import 'ro.project.model.abstracts.User'.(Å¨óüÿÿÿÿ8‘‰«Á…1
+Y
+java:S1128"<Remove this unused import 'ro.project.model.enums.UserType'.(½Ü›8‘‰«Á…1

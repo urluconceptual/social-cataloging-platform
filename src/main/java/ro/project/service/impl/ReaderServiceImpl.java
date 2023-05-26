@@ -4,6 +4,7 @@ import ro.project.model.PersonalShelf;
 import ro.project.model.Reader;
 import ro.project.model.Review;
 import ro.project.model.abstracts.User;
+import ro.project.model.enums.ShelfType;
 import ro.project.service.*;
 
 import java.util.HashSet;
@@ -21,16 +22,19 @@ public class ReaderServiceImpl implements ReaderService {
     public Reader init(Reader reader) {
         shelfService.addShelves(List.of(
                 PersonalShelf.builder()
+                             .type(ShelfType.PERSONAL)
                              .owner(reader.getId())
                              .name("want-to-read")
                              .bookList(new HashSet<>())
                              .build(),
                 PersonalShelf.builder()
+                             .type(ShelfType.PERSONAL)
                              .owner(reader.getId())
                              .name("currently-reading")
                              .bookList(new HashSet<>())
                              .build(),
                 PersonalShelf.builder()
+                             .type(ShelfType.PERSONAL)
                              .owner(reader.getId())
                              .name("read")
                              .bookList(new HashSet<>())

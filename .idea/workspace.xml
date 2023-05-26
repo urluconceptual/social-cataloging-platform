@@ -4,7 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="" />
+    <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/ShelfMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/ShelfRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/UserShelfRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/ShelfRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/UserShelfRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11084d3ad15d52acd16aff9f23b313631290bad2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11084d3ad15d52acd16aff9f23b313631290bad2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f05126881c42a97eaf0aab84755a51f3e8d652e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f05126881c42a97eaf0aab84755a51f3e8d652e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8852b7c989535e4b03779a9ceaa651396f1bdc1c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8852b7c989535e4b03779a9ceaa651396f1bdc1c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c85cf786e43faa82dbdb2272d88688518d0190ae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c85cf786e43faa82dbdb2272d88688518d0190ae" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookClubMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookClubMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/model/enums/ShelfType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/BookClubRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/BookClubRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/AuthorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/AuthorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/LibrarianServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ReaderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/service/impl/ShelfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookClubMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookClubMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/model/enums/ShelfType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/model/enums/ShelfType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/BookClubRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/BookClubRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/AuthorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/AuthorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/LibrarianServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/LibrarianServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ReaderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ShelfServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,29 +78,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "stage2",
-    "last_opened_file_path": "E:/facultate/Anul 2, sem II/PAO/pao-template-latest",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;stage2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/facultate/Anul 2, sem II/PAO/pao-template-latest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ro.project.service" />
@@ -159,6 +192,7 @@
       <workItem from="1684825922847" duration="3708000" />
       <workItem from="1685015567880" duration="8917000" />
       <workItem from="1685086713584" duration="7289000" />
+      <workItem from="1685115364020" duration="366000" />
     </task>
     <servers />
   </component>
@@ -211,6 +245,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java</url>
           <line>60</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/AuthorServiceImpl.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/repository/impl/ShelfRepositoryImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

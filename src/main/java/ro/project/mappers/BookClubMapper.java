@@ -40,10 +40,12 @@ public class BookClubMapper {
 
     public static List<BookClub> mapToBookClubList(ResultSet resultSet) throws SQLException {
         List<BookClub> bookClubs = new ArrayList<>();
-        while(resultSet.next()) {
-            resultSet.previous();
-            bookClubs.add(mapToBookClub(resultSet).get());
+        Optional<BookClub> bookClub = mapToBookClub(resultSet);
+        while (bookClub.isPresent()) {
+            bookClubs.add(bookClub.get());
+            bookClub = mapToBookClub(resultSet);
         }
+
         return bookClubs;
     }
 }

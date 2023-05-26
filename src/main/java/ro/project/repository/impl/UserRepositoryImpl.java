@@ -9,10 +9,7 @@ import ro.project.model.abstracts.AbstractEntity;
 import ro.project.model.abstracts.Shelf;
 import ro.project.model.abstracts.User;
 import ro.project.model.enums.UserType;
-import ro.project.repository.BookClubRepository;
-import ro.project.repository.EntityRepository;
-import ro.project.repository.ShelfRepository;
-import ro.project.repository.UserRepository;
+import ro.project.repository.*;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -28,6 +25,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     private static ShelfRepository shelfRepository = new ShelfRepositoryImpl();
 
+    private static ConnectionRepository connectionRepository = new ConnectionRepositoryImpl();
+
     private void addShelves(User user) {
         UUID id = user.getId();
         if(user instanceof Reader) {
@@ -41,6 +40,11 @@ public class UserRepositoryImpl implements UserRepository {
             List<UUID> shelves = shelfRepository.getAllByUserId(id).stream().map(AbstractEntity::getId).toList();
             ((Librarian) user).setRecommendationsListId(shelves.isEmpty() ? null : shelves.get(0));
         }
+    }
+
+    private void addConnections(User user) {
+        UUID id = user.getId();
+        user.getConnectionIdList().addAll(connectionRepository.getAllByUserId(id).stream().map(AbstractEntity::getId).toList());
     }
 
     @Override
@@ -60,6 +64,7 @@ public class UserRepositoryImpl implements UserRepository {
             User user = UserMapper.mapToUser(resultSet).get();
 
             addShelves(user);
+            addConnections(user);
 
             return Optional.of(user);
 
@@ -88,6 +93,7 @@ public class UserRepositoryImpl implements UserRepository {
             User user = UserMapper.mapToUser(resultSet).get();
 
             addShelves(user);
+            addConnections(user);
 
             return Optional.of(user);
         } catch (SQLException e) {
@@ -113,6 +119,7 @@ public class UserRepositoryImpl implements UserRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             List<User> users = UserMapper.mapToUserList(resultSet);
             users.forEach(this::addShelves);
+            users.forEach(this::addConnections);
             return new HashSet<>(users);
         } catch (SQLException e) {
             e.printStackTrace();

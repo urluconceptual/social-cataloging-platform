@@ -1,10 +1,6 @@
 
 c
 3src/main/java/ro/project/model/enums/BookGenre.java,1\6\16c8760a8d56b29daaa9bc438dff1af16e01a9cb
-p
-@src/main/java/ro/project/service/impl/ConnectionServiceImpl.java,8\9\895f61ebb4fe9c2675daf2d7514dbd1e61bdaa4c
-g
-7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c
 g
 7src/main/java/ro/project/model/enums/EditionFormat.java,d\a\dab5ae9f8b7e6c86799f63ad7ec83d108e72f080
 m
@@ -75,8 +71,6 @@ l
 <src/main/java/ro/project/model/abstracts/AbstractEntity.java,4\b\4ba448e368fbd6f21a10fe912cb8828086be7438
 d
 4src/main/java/ro/project/mappers/BookClubMapper.java,f\4\f459e0d91f3d69a33a67106b63584931021c6bd3
-t
-Dsrc/main/java/ro/project/repository/impl/BookClubRepositoryImpl.java,0\9\091fb61a41fac63c196c500a1685b115d78e979d
 _
 /src/main/java/ro/project/model/SharedShelf.java,5\0\5004f2e2fa82807fde44e8c7efdc9f5e222ddbd4
 c
@@ -91,8 +85,6 @@ o
 ?src/main/java/ro/project/service/impl/LibrarianServiceImpl.java,6\e\6e18ba0efdc2ad2ba9bcd1b4df3ea1f56b36bb16
 c
 3src/main/java/ro/project/model/enums/ShelfType.java,c\8\c85cf786e43faa82dbdb2272d88688518d0190ae
-P
- database-creation-statements.txt,1\7\17648b244ba389391af0e38a1fc4cb5d5852fa44
 l
 <src/main/java/ro/project/repository/UserShelfRepository.java,d\3\d33aeaaca6aaafe39936077585d502a6e631df5e
 Z
@@ -121,9 +113,5 @@ h
 8src/main/java/ro/project/repository/ShelfRepository.java,a\0\a02781abd258f68c1a72edfb8f8e8cab77eaef2c
 q
 Asrc/main/java/ro/project/repository/impl/ShelfRepositoryImpl.java,9\8\9818aeb5e833422695a73433b41dcebac662cf92
-a
-1src/main/java/ro/project/mappers/ShelfMapper.java,5\f\5f3942d6f112d5095fadac8c5451d9b043393cf9
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
-^
-.src/main/java/ro/project/model/Connection.java,7\9\79d3300371f7ea850f3eb2b935414752335a39c4

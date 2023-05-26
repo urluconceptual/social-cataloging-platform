@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
     private static final UserRepository userRepository = new UserRepositoryImpl();
-    private static Optional<User> currentUser = Optional.empty();
+    private static Optional<UUID> currentUser = Optional.empty();
     private static ConnectionService connectionService = new ConnectionServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
     private static AuthorService authorService = new AuthorServiceImpl();
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void setCurrentUser(String username) {
         if (!username.isEmpty()) {
-            currentUser = getByUsername(username);
+            currentUser = Optional.of(getByUsername(username).get().getId());
         } else {
             currentUser = Optional.empty();
         }
@@ -74,7 +74,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getCurrentUser() {
-        return currentUser;
+        return userRepository.getById(currentUser.get());
     }
 
     @Override
@@ -106,12 +106,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void removeConnectionId(UUID user, UUID connection) {
         getById(user).get().getConnectionIdList().remove(connection);
-        currentUser.get().getConnectionIdList().remove(connection);
+        getCurrentUser().get().getConnectionIdList().remove(connection);
     }
 
     @Override
     public Set<User> getFollowing() {
-        return connectionService.getFollowing(currentUser.get().getConnectionIdList())
+        return connectionService.getFollowing(getCurrentUser().get().getConnectionIdList())
                                 .stream()
                                 .map(id -> getById(id).get())
                                 .collect(Collectors.toSet());
@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Set<User> getFollowed() {
-        return connectionService.getFollowed(currentUser.get().getConnectionIdList())
+        return connectionService.getFollowed(getCurrentUser().get().getConnectionIdList())
                                 .stream()
                                 .map(id -> getById(id).get())
                                 .collect(Collectors.toSet());

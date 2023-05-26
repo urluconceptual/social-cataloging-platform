@@ -87,6 +87,7 @@ CREATE TABLE IF NOT EXISTS Review (
 );
 
 CREATE TABLE IF NOT EXISTS Connection (
+                                          id varchar(36) references Entity(id) ON DELETE CASCADE,
                                           follower varchar(36) references AppUser(id) ON DELETE CASCADE,
                                           followed varchar(36) references AppUser(id) ON DELETE CASCADE,
                                           PRIMARY KEY (followed, follower)

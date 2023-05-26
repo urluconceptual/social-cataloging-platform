@@ -11,7 +11,7 @@ import ro.project.service.impl.*;
 
 import java.util.*;
 
-public class ReaderMenu {
+public class ReaderMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     public static ReviewService reviewService = new ReviewServiceImpl();
     private static ReaderMenu INSTANCE;
@@ -480,8 +480,11 @@ public class ReaderMenu {
         readerService.printTopReviews();
     }
 
-    public void start() {
-        shelfService = new ShelfServiceImpl();
+    @Override
+    protected void welcomeMessage() {}
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                                                       
                                    0 -> Log out
@@ -514,6 +517,10 @@ public class ReaderMenu {
                                    8 -> My top books
                                                     
                                    Choose option:""");
+    }
+
+    @Override
+    protected void getOption() {
         String options;
 
         try {
@@ -535,7 +542,10 @@ public class ReaderMenu {
         } catch (OptionException e) {
             System.out.println(e.getMessage());
         }
+    }
 
-        start();
+    @Override
+    public void redirect() {
+        menu();
     }
 }

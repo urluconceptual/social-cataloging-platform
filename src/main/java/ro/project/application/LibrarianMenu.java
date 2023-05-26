@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class LibrarianMenu {
+public class LibrarianMenu extends TemplateMenu{
     private static final Scanner scanner = new Scanner(System.in);
     private static LibrarianMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -162,8 +162,11 @@ public class LibrarianMenu {
         } while (true);
     }
 
-    public void start() {
-        shelfService = new ShelfServiceImpl();
+    @Override
+    protected void welcomeMessage() {}
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                      
                                    0 -> Log out                                 
@@ -175,6 +178,10 @@ public class LibrarianMenu {
                                         -> Add new message
                                                                       
                                    Choose option:""");
+    }
+
+    @Override
+    protected void getOption() {
         String options;
         try {
             options = scanner.next();
@@ -189,8 +196,11 @@ public class LibrarianMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+    }
+
+    @Override
+    public void redirect() {
+        menu();
     }
 }

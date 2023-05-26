@@ -2,6 +2,7 @@ package ro.project;
 
 import ro.project.application.GeneralMenu;
 import ro.project.application.PopulateScript;
+import ro.project.application.TemplateMenu;
 
 import java.util.Scanner;
 
@@ -17,7 +18,8 @@ public class Main {
         //PopulateScript.populate();
 
         do {
-            GeneralMenu.start();
+            TemplateMenu menu = GeneralMenu.getInstance();
+            menu.menu();
         } while (!"exit".equals(scanner.next()));
     }
 }

@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class GeneralMenu {
+public class GeneralMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -206,7 +206,8 @@ public class GeneralMenu {
         System.out.println("Successfully logged in!");
     }
 
-    private static void intro() {
+    @Override
+    protected void showOptions() {
         try {
             System.out.println("""
                                                                               
@@ -226,7 +227,7 @@ public class GeneralMenu {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            intro();
+            showOptions();
         }
     }
 
@@ -247,23 +248,31 @@ public class GeneralMenu {
         System.out.println();
     }
 
-
-    public static void start() {
+    @Override
+    protected void welcomeMessage() {
         System.out.println("""
                                    ---- SOCIAL CATALOGING PLATFORM ------------------------------
                                    Welcome! To use the platform, you have to register or to log
                                    into your account.
                                    """);
         statistics();
+    }
 
-        intro();
+    @Override
+    protected void getOption() {
+        TemplateMenu menu = null;
 
         switch (userService.getCurrentUser().get().getType()) {
-            case AUTHOR -> authorMenu.start();
-            case LIBRARIAN -> librarianMenu.start();
-            case READER -> readerMenu.start();
+            case AUTHOR -> menu = AuthorMenu.getInstance();
+            case LIBRARIAN -> menu = LibrarianMenu.getInstance();
+            case READER -> menu = ReaderMenu.getInstance();
         }
 
+        menu.menu();
+    }
+
+    @Override
+    protected void redirect() {
         logout();
     }
 }

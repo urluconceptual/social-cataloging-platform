@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class AuthorMenu {
+public class AuthorMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static AuthorMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -130,7 +130,11 @@ public class AuthorMenu {
         ((Author) userService.getCurrentUser().get()).getAverageRating();
     }
 
-    public void start() {
+    @Override
+    protected void welcomeMessage() {}
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                     
                                    0 -> Log out                                  
@@ -141,6 +145,10 @@ public class AuthorMenu {
                                    3 -> My average rating
                                                                       
                                    Choose option:""");
+    }
+
+    @Override
+    protected void getOption() {
         String options;
         try {
             options = scanner.next();
@@ -155,8 +163,11 @@ public class AuthorMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+    }
+
+    @Override
+    protected void redirect() {
+        menu();
     }
 }

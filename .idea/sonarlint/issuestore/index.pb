@@ -41,8 +41,6 @@ j
 :src/main/java/ro/project/config/DatabaseConfiguration.java,d\e\de173e7cd21ea341a0a314f5d66710141d34ff78
 _
 /src/main/java/ro/project/gateways/Requests.java,a\0\a020dc3531151f3e1754e3b56a5ad89855e2a467
-d
-4src/main/java/ro/project/application/AuthorMenu.java,2\f\2f806b84cb9a12a49dfa4e2e58e71a33ac969cba
 c
 3src/main/java/ro/project/model/records/Message.java,d\6\d6ce7304e800950beb29adb0e0729cb6808965f5
 d
@@ -105,8 +103,6 @@ l
 <src/main/java/ro/project/service/impl/AuthorServiceImpl.java,6\3\63591edac4249f0ea42411492f8dcf3bd7d1afa7
 b
 2src/main/java/ro/project/service/ShelfService.java,5\7\5787f06c5a57db1a33f2998d699d6907a7e96587
-k
-;src/main/java/ro/project/service/impl/ShelfServiceImpl.java,6\f\6f05126881c42a97eaf0aab84755a51f3e8d652e
 _
 /src/main/java/ro/project/generics/Readable.java,7\d\7da1a26563165a0f7b6f3fd79fa81122e38b9a04
 h

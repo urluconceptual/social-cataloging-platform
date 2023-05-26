@@ -117,7 +117,8 @@ public class GeneralMenu {
         LocalDate birthDate = LocalDate.parse(inputBirthDate, format);
 
         System.out.println("bio: ");
-        String bio = scanner.next();
+        scanner.nextLine();
+        String bio = scanner.nextLine();
 
         switch (type) {
             case AUTHOR -> {

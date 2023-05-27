@@ -20,7 +20,10 @@ public class BookClubMapper {
     }
 
     public static BookClubMapper getInstance() {
-        return (INSTANCE == null ? new BookClubMapper() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new BookClubMapper();
+        }
+        return INSTANCE;
     }
 
     public static Optional<BookClub> mapToBookClub(ResultSet resultSet) throws SQLException {

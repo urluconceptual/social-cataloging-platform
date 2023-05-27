@@ -17,7 +17,10 @@ public class ConnectionMapper {
     }
 
     public static ConnectionMapper getInstance() {
-        return (INSTANCE == null ? new ConnectionMapper() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new ConnectionMapper();
+        }
+        return INSTANCE;
     }
 
     public static Optional<Connection> mapToConnection(ResultSet resultSet) throws SQLException {

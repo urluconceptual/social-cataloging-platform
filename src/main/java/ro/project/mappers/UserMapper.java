@@ -21,7 +21,10 @@ public class UserMapper {
     }
 
     public static UserMapper getInstance() {
-        return (INSTANCE == null ? new UserMapper() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new UserMapper();
+        }
+        return INSTANCE;
     }
 
     public static Optional<User> mapToUser(ResultSet resultSet) throws SQLException {

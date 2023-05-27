@@ -15,7 +15,6 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class PopulateScript {
-    private static PopulateScript INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
 
@@ -29,10 +28,6 @@ public class PopulateScript {
     private static UserRepository userRepository = new UserRepositoryImpl();
 
     private PopulateScript() {
-    }
-
-    public static PopulateScript getInstance() {
-        return (INSTANCE == null ? new PopulateScript() : INSTANCE);
     }
 
     public static void populate() {

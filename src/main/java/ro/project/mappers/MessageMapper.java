@@ -17,7 +17,10 @@ public class MessageMapper {
     }
 
     public static MessageMapper getInstance() {
-        return (INSTANCE == null ? new MessageMapper() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new MessageMapper();
+        }
+        return INSTANCE;
     }
 
     public static Optional<Message> mapToMessage(ResultSet resultSet) throws SQLException {

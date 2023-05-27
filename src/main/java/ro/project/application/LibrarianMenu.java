@@ -29,7 +29,10 @@ public class LibrarianMenu extends TemplateMenu{
     }
 
     public static LibrarianMenu getInstance() {
-        return (INSTANCE == null ? new LibrarianMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new LibrarianMenu();
+        }
+        return INSTANCE;
     }
 
     private void addNewBook() {

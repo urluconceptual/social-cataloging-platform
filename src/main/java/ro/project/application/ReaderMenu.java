@@ -27,7 +27,10 @@ public class ReaderMenu extends TemplateMenu {
     }
 
     public static ReaderMenu getInstance() {
-        return (INSTANCE == null ? new ReaderMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new ReaderMenu();
+        }
+        return INSTANCE;
     }
 
     private static void myConnections() {

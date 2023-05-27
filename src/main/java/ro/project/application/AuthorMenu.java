@@ -28,7 +28,10 @@ public class AuthorMenu extends TemplateMenu {
     }
 
     public static AuthorMenu getInstance() {
-        return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new AuthorMenu();
+        }
+        return INSTANCE;
     }
 
     private void addNewBook() {

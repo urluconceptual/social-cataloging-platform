@@ -21,7 +21,10 @@ public class ShelfMapper {
     }
 
     public static ShelfMapper getInstance() {
-        return (INSTANCE == null ? new ShelfMapper() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new ShelfMapper();
+        }
+        return INSTANCE;
     }
 
     public static Optional<Shelf> mapToShelf(ResultSet resultSet) throws SQLException {

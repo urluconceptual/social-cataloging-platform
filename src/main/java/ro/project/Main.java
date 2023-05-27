@@ -13,10 +13,6 @@ public class Main {
 
         GeneralMenu.getInstance();
 
-        PopulateScript.getInstance();
-
-        //PopulateScript.populate();
-
         do {
             TemplateMenu menu = GeneralMenu.getInstance();
             menu.menu();

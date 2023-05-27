@@ -36,7 +36,10 @@ public class GeneralMenu extends TemplateMenu {
     }
 
     public static GeneralMenu getInstance() {
-        return (INSTANCE == null ? new GeneralMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new GeneralMenu();
+        }
+        return INSTANCE;
     }
 
     protected static void invalidMessage(String invalidItem) {

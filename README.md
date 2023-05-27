@@ -6,10 +6,11 @@ Goodreads: a place for people to review books and connect with other readers and
 ## Table of Contents :bookmark_tabs:
 
 * [Stage 1](#Stage-one)
-* Stage 2
+* [Stage 2](#Stage-two)
 * [Class Hierarchy](#Class-Hierarchy-bar_chart)
 * [Functionality](#Functionality)
-* [Screenshots](#Screenshots-camera)
+* [Screenshots](#Screenshots-camera)  
+
 
 ## Stage :one:
 
@@ -89,6 +90,21 @@ As a _librarian_, you can:
 * Use the platform to recommend books;
 * Check your current followers;
 * Add posts on your personal book club, to share your book knowledge with the readers.
+
+## Stage :two:
+
+### Extending the System :book:
+
+The application now features:
+
+* A template for the menus, using the template method pattern;
+
+* A database connection, using JDBC;
+* CRUD operations on the database, using the repository pattern;
+* Singleton generics for these operations;
+
+* A listener functionality, to store the actions performed in a log file;
+* A logger functionality, that notifies the user that their actions have been logged;
 
 ## Screenshots :camera:
 

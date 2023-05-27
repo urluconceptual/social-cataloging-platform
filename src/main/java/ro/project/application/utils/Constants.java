@@ -1,5 +1,5 @@
 package ro.project.application.utils;
 
 public interface Constants {
-    String CSV_PATH_WRITE = "csv/listener.csv";
+    String CSV_PATH_WRITE = "src/main/resources/csv/listener.csv";
 }

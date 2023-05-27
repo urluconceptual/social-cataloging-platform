@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.application.csv.CsvWriter;
 import ro.project.exceptions.*;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
@@ -16,9 +17,12 @@ import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class GeneralMenu extends TemplateMenu {
@@ -248,6 +252,11 @@ public class GeneralMenu extends TemplateMenu {
     protected void getOption() {
         TemplateMenu menu = null;
 
+        lastOption = "1";
+
+        getInfo();
+        listener();
+
         switch (userService.getCurrentUser().get().getType()) {
             case AUTHOR -> menu = AuthorMenu.getInstance();
             case LIBRARIAN -> menu = LibrarianMenu.getInstance();
@@ -255,6 +264,17 @@ public class GeneralMenu extends TemplateMenu {
         }
 
         menu.menu();
+
+        lastOption = "0";
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "User " + userService.getCurrentUser().get().getUsername();
+        switch(lastOption) {
+            case "1" -> info += " logged in.";
+            case "0" -> info += " logged out.";
+        }
     }
 
     @Override

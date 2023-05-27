@@ -153,10 +153,11 @@ public class AuthorMenu extends TemplateMenu {
 
     @Override
     protected void getOption() {
-        String options;
+        String option;
         try {
-            options = scanner.next();
-            switch (options) {
+            option = scanner.next();
+            lastOption = option;
+            switch (option) {
                 case "0" -> {
                     return;
                 }
@@ -167,6 +168,18 @@ public class AuthorMenu extends TemplateMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "Author " + userService.getCurrentUser().get().getUsername();
+
+        switch (lastOption) {
+            case "0" -> info += " logged out.";
+            case "1" -> info += " accessed their books.";
+            case "2" -> info += " accessed their followers.";
+            case "3" -> info += " accessed their average rating.";
         }
     }
 

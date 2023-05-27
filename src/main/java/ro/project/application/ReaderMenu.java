@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.application.csv.CsvWriter;
 import ro.project.exceptions.OptionException;
 import ro.project.exceptions.UsernameNotRegistered;
 import ro.project.model.*;
@@ -9,7 +10,9 @@ import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
+import java.time.LocalDateTime;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class ReaderMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
@@ -22,6 +25,8 @@ public class ReaderMenu extends TemplateMenu {
     private static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
+
+
 
     private ReaderMenu() {
     }
@@ -525,11 +530,12 @@ public class ReaderMenu extends TemplateMenu {
 
     @Override
     protected void getOption() {
-        String options;
+        String option;
 
         try {
-            options = scanner.next();
-            switch (options) {
+            option = scanner.next();
+            lastOption = option;
+            switch (option) {
                 case "0" -> {
                     return;
                 }
@@ -546,6 +552,24 @@ public class ReaderMenu extends TemplateMenu {
         } catch (OptionException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "Reader " + userService.getCurrentUser().get().getUsername();
+
+        switch (lastOption) {
+            case "0" -> info += " logged out.";
+            case "1" -> info += " accessed their shelves.";
+            case "2" -> info += " accessed their connections.";
+            case "3" -> info += " accessed the list of readers.";
+            case "4" -> info += " accessed the list of authors.";
+            case "5" -> info += " accessed the list of librarians.";
+            case "6" -> info += " accessed their reading challenge.";
+            case "7" -> info += " accessed the list of all books.";
+            case "8" -> info += " accessed their top books.";
+        }
+
     }
 
     @Override

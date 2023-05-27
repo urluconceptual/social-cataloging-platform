@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6614e946-6447-4a3e-b5ad-85d1f535b2de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/csv/CsvWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f8b1fd2-4afd-4d00-af07-5e1b2ed05790/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/796edb0e017a291b5b605754c75fe28fb1806084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8852b7c989535e4b03779a9ceaa651396f1bdc1c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a020dc3531151f3e1754e3b56a5ad89855e2a467" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abdbc2a8489122aa404f90756cc9b3e8253d4ea0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c22568e332f4b35bb4c29cc06901ea7c22124866" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/csv/listener.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/846923680cc810af6bbba1ab21117b5a65fce6cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/9818aeb5e833422695a73433b41dcebac662cf92" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/9/796edb0e017a291b5b605754c75fe28fb1806084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/8852b7c989535e4b03779a9ceaa651396f1bdc1c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/0/a020dc3531151f3e1754e3b56a5ad89855e2a467" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/b/abdbc2a8489122aa404f90756cc9b3e8253d4ea0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/2/c22568e332f4b35bb4c29cc06901ea7c22124866" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/3/63591edac4249f0ea42411492f8dcf3bd7d1afa7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/4/846923680cc810af6bbba1ab21117b5a65fce6cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/9818aeb5e833422695a73433b41dcebac662cf92" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -30,11 +24,36 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/LibrarianMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/PopulateScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookClubMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/BookClubMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/ConnectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/ConnectionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/MessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/MessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/ShelfMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/ShelfMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/mappers/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/TemplateMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/TemplateMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/csv/CsvWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/csv/CsvWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/project/application/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/project/application/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/AuthorMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/GeneralMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/LibrarianMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/PopulateScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/PopulateScript.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/ReaderMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/TemplateMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/TemplateMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/csv/CsvWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/csv/CsvWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/application/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/application/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/gateways/Requests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/gateways/Requests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookClubMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookClubMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/BookMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/ConnectionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/ConnectionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/MessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/MessageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/ShelfMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/ShelfMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/mappers/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/mappers/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/BookClubRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/BookClubRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/ConnectionRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/ConnectionRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/EntityRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/EntityRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/MessageRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/MessageRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/ShelfRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/ShelfRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserShelfRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/repository/impl/UserShelfRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookClubServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/BookClubServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/ConnectionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/project/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +210,7 @@
       <workItem from="1685015567880" duration="8917000" />
       <workItem from="1685086713584" duration="7289000" />
       <workItem from="1685115364020" duration="10037000" />
-      <workItem from="1685166087864" duration="535000" />
+      <workItem from="1685166087864" duration="7742000" />
     </task>
     <servers />
   </component>
@@ -232,7 +251,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/ConnectionServiceImpl.java</url>
-          <line>32</line>
+          <line>35</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -241,24 +260,24 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/project/service/impl/AuthorServiceImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/project/repository/impl/ShelfRepositoryImpl.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/ReaderMenu.java</url>
-          <line>53</line>
+          <line>58</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/project/mappers/UserMapper.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/csv/CsvWriter.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/TemplateMenu.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ro/project/application/TemplateMenu.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -267,5 +286,10 @@
         <PinnedItemInfo parentTag="ro.project.model.Reader" memberName="shelves" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="ClassLoader.getSystemResource(CSV_PATH_WRITE).toURI()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

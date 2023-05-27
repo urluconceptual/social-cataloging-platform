@@ -27,8 +27,6 @@ j
 :src/main/java/ro/project/exceptions/UserDataException.java,8\7\87852ca3e115a825a6fea79e0751f62dca1cf40d
 j
 :src/main/java/ro/project/exceptions/PasswordException.java,a\f\afe4bcbe16ac4bb2a2bae0473b408ed17d3f2d4e
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 d
 4src/main/java/ro/project/model/ReadingChallenge.java,2\0\208da94237a1dc26c5d59d8e89d9208636a3eab3
 X
@@ -71,8 +69,6 @@ c
 3src/main/java/ro/project/model/abstracts/Shelf.java,0\b\0b4f2dc45c2b75fc4b9a6d03bf866f2853f516a4
 h
 8src/main/java/ro/project/repository/ShelfRepository.java,a\0\a02781abd258f68c1a72edfb8f8e8cab77eaef2c
-q
-Asrc/main/java/ro/project/repository/impl/ShelfRepositoryImpl.java,9\8\9818aeb5e833422695a73433b41dcebac662cf92
 Z
 *src/main/java/ro/project/model/Author.java,f\8\f85e2dd64cb4fcc5b4fa93defcbd875b1772cb81
 g
@@ -91,8 +87,6 @@ g
 7src/main/java/ro/project/service/ConnectionService.java,5\9\59b303a75950e557759426c75da422b6603c059c
 b
 2src/main/java/ro/project/service/ShelfService.java,5\7\5787f06c5a57db1a33f2998d699d6907a7e96587
-l
-<src/main/java/ro/project/service/impl/AuthorServiceImpl.java,6\3\63591edac4249f0ea42411492f8dcf3bd7d1afa7
 k
 ;src/main/java/ro/project/service/impl/ShelfServiceImpl.java,6\f\6f05126881c42a97eaf0aab84755a51f3e8d652e
 k
@@ -125,5 +119,3 @@ p
 @src/main/java/ro/project/repository/impl/UserRepositoryImpl.java,6\3\6316889accd236b2520f866595873aae671ece29
 n
 >src/main/java/ro/project/service/impl/BookClubServiceImpl.java,8\2\82dbe95b14171c310806a5815efe82933701f8a5
-g
-7src/main/java/ro/project/application/csv/CsvWriter.java,8\4\846923680cc810af6bbba1ab21117b5a65fce6cd

@@ -30,8 +30,8 @@ public class PopulateScript {
     }
 
     public static void populate() {
-        addSomeUsers();
-        addSomeConnections();
+        //addSomeUsers();
+        //addSomeConnections();
         addSomeBooks();
     }
 
@@ -225,9 +225,5 @@ public class PopulateScript {
                     .build()));
         requests.saveRequestInfo();
         bookService.init();
-    }
-
-    public static void populateDatabase() {
-        userRepository.addAll(userService.getAllUsers());
     }
 }

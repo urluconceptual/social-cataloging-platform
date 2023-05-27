@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.application.csv.CsvWriter;
 import ro.project.exceptions.*;
 import ro.project.model.Author;
 import ro.project.model.Librarian;
@@ -16,12 +17,15 @@ import ro.project.service.impl.ReaderServiceImpl;
 import ro.project.service.impl.UserServiceImpl;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-public class GeneralMenu {
+public class GeneralMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static GeneralMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -36,7 +40,10 @@ public class GeneralMenu {
     }
 
     public static GeneralMenu getInstance() {
-        return (INSTANCE == null ? new GeneralMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new GeneralMenu();
+        }
+        return INSTANCE;
     }
 
     protected static void invalidMessage(String invalidItem) {
@@ -117,7 +124,8 @@ public class GeneralMenu {
         LocalDate birthDate = LocalDate.parse(inputBirthDate, format);
 
         System.out.println("bio: ");
-        String bio = scanner.next();
+        scanner.nextLine();
+        String bio = scanner.nextLine();
 
         switch (type) {
             case AUTHOR -> {
@@ -205,7 +213,18 @@ public class GeneralMenu {
         System.out.println("Successfully logged in!");
     }
 
-    private static void intro() {
+    @Override
+    protected void welcomeMessage() {
+        System.out.println("""
+                                   ---- SOCIAL CATALOGING PLATFORM ------------------------------
+                                   Welcome! To use the platform, you have to register or to log
+                                   into your account.
+                                   """);
+        statistics();
+    }
+
+    @Override
+    protected void showOptions() {
         try {
             System.out.println("""
                                                                               
@@ -225,8 +244,42 @@ public class GeneralMenu {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            intro();
+            showOptions();
         }
+    }
+
+    @Override
+    protected void getOption() {
+        TemplateMenu menu = null;
+
+        lastOption = "1";
+
+        getInfo();
+        listener();
+
+        switch (userService.getCurrentUser().get().getType()) {
+            case AUTHOR -> menu = AuthorMenu.getInstance();
+            case LIBRARIAN -> menu = LibrarianMenu.getInstance();
+            case READER -> menu = ReaderMenu.getInstance();
+        }
+
+        menu.menu();
+
+        lastOption = "0";
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "User " + userService.getCurrentUser().get().getUsername();
+        switch(lastOption) {
+            case "1" -> info += " logged in.";
+            case "0" -> info += " logged out.";
+        }
+    }
+
+    @Override
+    protected void redirect() {
+        logout();
     }
 
     private static void logout() {
@@ -244,25 +297,5 @@ public class GeneralMenu {
         System.out.println("We currently have " + userService.getAllUsers().size() + " registered users: ");
         groupByType.entrySet().forEach(entry -> System.out.println(entry.getValue() + " " + entry.getKey().getType() + "s"));
         System.out.println();
-    }
-
-
-    public static void start() {
-        System.out.println("""
-                                   ---- SOCIAL CATALOGING PLATFORM ------------------------------
-                                   Welcome! To use the platform, you have to register or to log
-                                   into your account.
-                                   """);
-        statistics();
-
-        intro();
-
-        switch (userService.getCurrentUser().get().getType()) {
-            case AUTHOR -> authorMenu.start();
-            case LIBRARIAN -> librarianMenu.start();
-            case READER -> readerMenu.start();
-        }
-
-        logout();
     }
 }

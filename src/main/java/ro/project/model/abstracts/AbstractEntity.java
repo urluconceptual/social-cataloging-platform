@@ -3,7 +3,7 @@ package ro.project.model.abstracts;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -17,7 +17,7 @@ public abstract class AbstractEntity {
     @Builder.Default
     private UUID id = UUID.randomUUID();
     @Builder.Default
-    private LocalDate creationDate = LocalDate.now();
-    private LocalDate updateDate;
-    private LocalDate deleteDate;
+    private LocalDateTime creationDate = LocalDateTime.now();
+    private LocalDateTime updateDate;
+    private LocalDateTime deleteDate;
 }

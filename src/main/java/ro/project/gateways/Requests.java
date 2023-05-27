@@ -24,7 +24,8 @@ public class Requests {
 
     public void saveRequestInfo() {
         try {
-            URI uri = new URI("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=mGR3Y6AZ1399xB6G19ZHIAV18AdXpi60");
+            URI uri = new URI("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction" +
+                                      ".json?api-key=mGR3Y6AZ1399xB6G19ZHIAV18AdXpi60");
             HttpRequest httpRequest = HttpRequest.newBuilder()
                                                  .uri(uri)
                                                  .GET()

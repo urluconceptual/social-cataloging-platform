@@ -69,7 +69,7 @@ public class BookServiceImpl implements BookService {
         reviewList.forEach(review -> System.out.println("    reader: " +
                                                                 userService.getById(review.getReaderId()).get().getUsername() +
                                                                 "    rating: " + review.getRating() +
-                                                                "    review: " + review.getReviewMessage() +
+                                                                "    review: " + review.getText() +
                                                                 "\n"));
     }
 

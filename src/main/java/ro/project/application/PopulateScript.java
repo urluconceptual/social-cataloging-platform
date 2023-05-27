@@ -4,16 +4,16 @@ import ro.project.gateways.Requests;
 import ro.project.model.*;
 import ro.project.model.enums.BookGenre;
 import ro.project.model.enums.UserType;
+import ro.project.repository.UserRepository;
+import ro.project.repository.impl.UserRepositoryImpl;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 
 public class PopulateScript {
-    private static PopulateScript INSTANCE;
     private static UserService userService = new UserServiceImpl();
     private static ReaderService readerService = new ReaderServiceImpl();
 
@@ -24,16 +24,14 @@ public class PopulateScript {
 
     private static Requests requests = new Requests();
 
+    private static UserRepository userRepository = new UserRepositoryImpl();
+
     private PopulateScript() {
     }
 
-    public static PopulateScript getInstance() {
-        return (INSTANCE == null ? new PopulateScript() : INSTANCE);
-    }
-
     public static void populate() {
-        addSomeUsers();
-        addSomeConnections();
+        //addSomeUsers();
+        //addSomeConnections();
         addSomeBooks();
     }
 

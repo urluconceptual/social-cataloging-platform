@@ -2,6 +2,7 @@ package ro.project;
 
 import ro.project.application.GeneralMenu;
 import ro.project.application.PopulateScript;
+import ro.project.application.TemplateMenu;
 
 import java.util.Scanner;
 
@@ -12,12 +13,12 @@ public class Main {
 
         GeneralMenu.getInstance();
 
-        PopulateScript.getInstance();
-
         PopulateScript.populate();
 
         do {
-            GeneralMenu.start();
+            TemplateMenu menu = GeneralMenu.getInstance();
+            menu.menu();
+            System.out.println("Write exit to exit the program, or anything else to restart it.");
         } while (!"exit".equals(scanner.next()));
     }
 }

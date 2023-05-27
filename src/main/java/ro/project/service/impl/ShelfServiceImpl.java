@@ -1,49 +1,32 @@
 package ro.project.service.impl;
 
-import ro.project.model.*;
+import ro.project.model.PersonalShelf;
+import ro.project.model.SharedShelf;
 import ro.project.model.abstracts.Shelf;
-import ro.project.model.abstracts.User;
+import ro.project.repository.ShelfRepository;
+import ro.project.repository.impl.ShelfRepositoryImpl;
 import ro.project.service.*;
 
 import java.util.*;
 
 public class ShelfServiceImpl implements ShelfService {
-    public static Map<UUID, Shelf> shelfMap = new HashMap<>();
-    public static UserService userService = new UserServiceImpl();
+    private static ShelfRepository shelfRepository = new ShelfRepositoryImpl();
 
-    public static BookService bookService = new BookServiceImpl();
+    private static UserService userService = new UserServiceImpl();
 
-    public static ReviewService reviewService = new ReviewServiceImpl();
-    public static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
+    private static BookService bookService = new BookServiceImpl();
+
+    private static ReviewService reviewService = new ReviewServiceImpl();
+    private static ReadingChallengeService readingChallengeService = new ReadingChallengeServiceImpl();
 
     @Override
     public Optional<Shelf> getById(UUID id) {
-        if (shelfMap.containsKey(id)) {
-            return Optional.of(shelfMap.get(id));
-        } else {
-            return Optional.empty();
-        }
+        return shelfRepository.getById(id);
     }
 
     @Override
     public void addShelf(Shelf shelf) {
-        shelfMap.put(shelf.getId(), shelf);
-        if (shelf instanceof PersonalShelf personalShelf) {
-            User owner = userService.getById(personalShelf.getOwner()).get();
-            if (owner instanceof Reader reader) {
-                reader.getShelves().add(shelf.getId());
-            } else if (owner instanceof Author author) {
-                author.setBookIdList(shelf.getId());
-            } else if (owner instanceof Librarian librarian) {
-                librarian.setRecommendationsList(shelf.getId());
-            }
-        }
-        if (shelf instanceof SharedShelf sharedShelf) {
-            sharedShelf.getOwnerIdList()
-                       .forEach(user -> ((Reader) userService.getById(user)
-                                                             .get())
-                               .getShelves().add(shelf.getId()));
-        }
+        shelfRepository.add(shelf);
     }
 
     @Override
@@ -53,17 +36,12 @@ public class ShelfServiceImpl implements ShelfService {
 
     @Override
     public void editShelfById(UUID id, Shelf newShelf) {
-        if (getById(id).isPresent()) {
-            shelfMap.remove(id);
-            shelfMap.put(id, newShelf);
-        }
+        shelfRepository.updateById(id, newShelf);
     }
 
     @Override
     public void removeShelfById(UUID id) {
-        if (getById(id).isPresent()) {
-            shelfMap.remove(id);
-        }
+        shelfRepository.deleteById(id);
     }
 
     @Override
@@ -127,7 +105,10 @@ public class ShelfServiceImpl implements ShelfService {
 
     @Override
     public void removeBookFromAllShelves(UUID bookId) {
-        for (Shelf shelf : shelfMap.values()) {
+        List<Shelf> shelves = shelfRepository.getAll();
+        Iterator<Shelf> shelfIterator = shelves.iterator();
+        while (shelfIterator.hasNext()) {
+            Shelf shelf = shelfIterator.next();
             removeBookFromShelf(shelf.getId(), bookId);
         }
     }

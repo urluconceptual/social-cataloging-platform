@@ -2,6 +2,7 @@ package ro.project.service.impl;
 
 import ro.project.model.Librarian;
 import ro.project.model.PersonalShelf;
+import ro.project.model.enums.ShelfType;
 import ro.project.service.BookClubService;
 import ro.project.service.LibrarianService;
 import ro.project.service.ShelfService;
@@ -18,6 +19,7 @@ public class LibrarianServiceImpl implements LibrarianService {
     public Librarian init(Librarian librarian) {
         shelfService.addShelf(
                 PersonalShelf.builder()
+                             .type(ShelfType.PERSONAL)
                              .owner(librarian.getId())
                              .name("written-books")
                              .bookList(new HashSet<>())
@@ -27,12 +29,12 @@ public class LibrarianServiceImpl implements LibrarianService {
 
     @Override
     public void printBooks(Librarian librarian) {
-        shelfService.printShelfData(librarian.getRecommendationsList());
+        shelfService.printShelfData(librarian.getRecommendationsListId());
     }
 
     @Override
     public List<UUID> getRecommendedBooks(Librarian librarian) {
-        return shelfService.getShelfBooks(librarian.getRecommendationsList());
+        return shelfService.getShelfBooks(librarian.getRecommendationsListId());
     }
 
     @Override
@@ -40,6 +42,6 @@ public class LibrarianServiceImpl implements LibrarianService {
         System.out.println("---- recommended books:");
         printBooks(librarian);
         System.out.println("---- book club posts:");
-        bookClubService.printMessages(librarian.getBookClub());
+        bookClubService.printMessages(librarian.getBookClub().getId());
     }
 }

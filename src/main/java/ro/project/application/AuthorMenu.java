@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class AuthorMenu {
+public class AuthorMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static AuthorMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -28,7 +28,10 @@ public class AuthorMenu {
     }
 
     public static AuthorMenu getInstance() {
-        return (INSTANCE == null ? new AuthorMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new AuthorMenu();
+        }
+        return INSTANCE;
     }
 
     private void addNewBook() {
@@ -130,7 +133,12 @@ public class AuthorMenu {
         ((Author) userService.getCurrentUser().get()).getAverageRating();
     }
 
-    public void start() {
+    @Override
+    protected void welcomeMessage() {
+    }
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                     
                                    0 -> Log out                                  
@@ -141,10 +149,15 @@ public class AuthorMenu {
                                    3 -> My average rating
                                                                       
                                    Choose option:""");
-        String options;
+    }
+
+    @Override
+    protected void getOption() {
+        String option;
         try {
-            options = scanner.next();
-            switch (options) {
+            option = scanner.next();
+            lastOption = option;
+            switch (option) {
                 case "0" -> {
                     return;
                 }
@@ -155,8 +168,23 @@ public class AuthorMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "Author " + userService.getCurrentUser().get().getUsername();
+
+        switch (lastOption) {
+            case "0" -> info += " logged out.";
+            case "1" -> info += " accessed their books.";
+            case "2" -> info += " accessed their followers.";
+            case "3" -> info += " accessed their average rating.";
+        }
+    }
+
+    @Override
+    protected void redirect() {
+        menu();
     }
 }

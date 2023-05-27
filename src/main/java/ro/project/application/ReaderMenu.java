@@ -1,5 +1,6 @@
 package ro.project.application;
 
+import ro.project.application.csv.CsvWriter;
 import ro.project.exceptions.OptionException;
 import ro.project.exceptions.UsernameNotRegistered;
 import ro.project.model.*;
@@ -9,9 +10,11 @@ import ro.project.model.enums.UserType;
 import ro.project.service.*;
 import ro.project.service.impl.*;
 
+import java.time.LocalDateTime;
 import java.util.*;
+import java.util.logging.Logger;
 
-public class ReaderMenu {
+public class ReaderMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     public static ReviewService reviewService = new ReviewServiceImpl();
     private static ReaderMenu INSTANCE;
@@ -23,11 +26,16 @@ public class ReaderMenu {
     private static GeneralMenu generalMenu = GeneralMenu.getInstance();
     private ShelfService shelfService = new ShelfServiceImpl();
 
+
+
     private ReaderMenu() {
     }
 
     public static ReaderMenu getInstance() {
-        return (INSTANCE == null ? new ReaderMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new ReaderMenu();
+        }
+        return INSTANCE;
     }
 
     private static void myConnections() {
@@ -259,7 +267,7 @@ public class ReaderMenu {
                 Review review = Review.builder()
                                       .bookId(bookId)
                                       .readerId(userService.getIdOfCurrentUser())
-                                      .reviewMessage(text)
+                                      .text(text)
                                       .rating(rating)
                                       .build();
                 reviewService.addReview(bookId, review);
@@ -480,8 +488,12 @@ public class ReaderMenu {
         readerService.printTopReviews();
     }
 
-    public void start() {
-        shelfService = new ShelfServiceImpl();
+    @Override
+    protected void welcomeMessage() {
+    }
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                                                       
                                    0 -> Log out
@@ -514,11 +526,16 @@ public class ReaderMenu {
                                    8 -> My top books
                                                     
                                    Choose option:""");
-        String options;
+    }
+
+    @Override
+    protected void getOption() {
+        String option;
 
         try {
-            options = scanner.next();
-            switch (options) {
+            option = scanner.next();
+            lastOption = option;
+            switch (option) {
                 case "0" -> {
                     return;
                 }
@@ -534,8 +551,29 @@ public class ReaderMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "Reader " + userService.getCurrentUser().get().getUsername();
+
+        switch (lastOption) {
+            case "0" -> info += " logged out.";
+            case "1" -> info += " accessed their shelves.";
+            case "2" -> info += " accessed their connections.";
+            case "3" -> info += " accessed the list of readers.";
+            case "4" -> info += " accessed the list of authors.";
+            case "5" -> info += " accessed the list of librarians.";
+            case "6" -> info += " accessed their reading challenge.";
+            case "7" -> info += " accessed the list of all books.";
+            case "8" -> info += " accessed their top books.";
+        }
+
+    }
+
+    @Override
+    public void redirect() {
+        menu();
     }
 }

@@ -1,0 +1,94 @@
+CREATE TABLE IF NOT EXISTS Entity (
+                                      id varchar(36) PRIMARY KEY,
+                                      creationDate timestamp NOT NULL,
+                                      updateDate timestamp,
+                                      deleteDate timestamp
+);
+
+CREATE TABLE IF NOT EXISTS AppUser (
+                                       id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE,
+                                       username varchar(255) NOT NULL,
+                                       password varchar(255) NOT NULL,
+                                       firstName varchar(255) NOT NULL,
+                                       lastName varchar(255) NOT NULL,
+                                       birthDate date NOT NULL,
+                                       bio varchar(255) NOT NULL,
+                                       userType varchar(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Shelf (
+                                     id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE,
+                                     name varchar(255) NOT NULL,
+                                     type varchar(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS BookClub (
+    id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Message (
+                                       date timestamp,
+                                       bookClubId varchar(36) references BookClub(id) ON DELETE CASCADE,
+                                       text varchar(255) NOT NULL,
+                                       PRIMARY KEY (date, bookClubId)
+);
+
+CREATE TABLE IF NOT EXISTS Author (
+                                      id varchar(36) PRIMARY KEY references AppUser(id) ON DELETE CASCADE,
+                                      averageRating float NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Librarian (
+                                         id varchar(36) PRIMARY KEY references AppUser(id) ON DELETE CASCADE,
+                                         bookClubId varchar(36) references BookClub(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS ReadingChallenge(
+                                               id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE,
+                                               goal int NOT NULL,
+                                               done int NOT NULL,
+                                               donePercent float NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Reader (
+                                      id varchar(36) PRIMARY KEY references AppUser(id) ON DELETE CASCADE,
+                                      averageRating float NOT NULL,
+                                      readingChallengeId varchar(36) references ReadingChallenge(id)
+);
+
+CREATE TABLE IF NOT EXISTS UserShelf (
+                                         userId varchar(36) references AppUser(id) ON DELETE CASCADE,
+                                         shelfId varchar(36) references Shelf(id) ON DELETE CASCADE,
+                                         PRIMARY KEY (userId, shelfId)
+);
+
+CREATE TABLE IF NOT EXISTS Book (
+                                    id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE,
+                                    author varchar(255) NOT NULL,
+                                    authorId varchar(36) references Author(id),
+                                    title varchar(255) NOT NULL,
+                                    genre varchar(255) NOT NULL,
+                                    numberOfPages int NOT NULL,
+                                    rating float NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS BookShelf (
+                                         bookId varchar(36) references Book(id) ON DELETE CASCADE,
+                                         shelfId varchar(36) references Shelf(id) ON DELETE CASCADE,
+                                         PRIMARY KEY (bookId, shelfId)
+);
+
+CREATE TABLE IF NOT EXISTS Review (
+                                      id varchar(36) PRIMARY KEY references Entity(id) ON DELETE CASCADE,
+                                      bookId varchar(36) NOT NULL references Book(id) ON DELETE CASCADE,
+                                      userId varchar(36) NOT NULL references Reader(id) ON DELETE CASCADE,
+                                      text varchar(255),
+                                      rating int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Connection (
+                                          id varchar(36) references Entity(id) ON DELETE CASCADE,
+                                          follower varchar(36) references AppUser(id) ON DELETE CASCADE,
+                                          followed varchar(36) references AppUser(id) ON DELETE CASCADE,
+                                          PRIMARY KEY (followed, follower)
+);

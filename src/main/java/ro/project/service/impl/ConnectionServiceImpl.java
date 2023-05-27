@@ -1,27 +1,31 @@
 package ro.project.service.impl;
 
 import ro.project.model.Connection;
+import ro.project.repository.ConnectionRepository;
+import ro.project.repository.impl.ConnectionRepositoryImpl;
 import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class ConnectionServiceImpl implements ConnectionService {
-    private static final List<Connection> connections = new ArrayList<>();
+    private static ConnectionRepository connectionRepository = new ConnectionRepositoryImpl();
 
     private static UserService userService = new UserServiceImpl();
 
 
     @Override
     public Optional<Connection> getById(UUID id) {
-        return connections.stream()
-                          .filter(connection -> connection.getId().equals(id))
-                          .findFirst();
+        return connectionRepository.getById(id);
     }
 
     @Override
     public Optional<Connection> getByUsers(UUID user1, UUID user2) {
+        List<Connection> connections = connectionRepository.getAll();
         return connections.stream()
                           .filter(connection -> connection.getFollower().equals(user1) && connection.getFollowed().equals(user2))
                           .findFirst();
@@ -35,7 +39,7 @@ public class ConnectionServiceImpl implements ConnectionService {
                                                  .follower(userService.getCurrentUser().get().getId())
                                                  .followed(user)
                                                  .build();
-            connections.add(newConnection);
+            connectionRepository.add(newConnection);
             userService.addConnectionId(userService.getCurrentUser().get(), newConnection.getId());
             userService.addConnectionId(userService.getById(user).get(), newConnection.getId());
         }
@@ -44,7 +48,7 @@ public class ConnectionServiceImpl implements ConnectionService {
     @Override
     public void addConnections(List<Connection> connectionList) {
         for (Connection connection : connectionList) {
-            connections.add(connection);
+            connectionRepository.add(connection);
             userService.addConnectionId(userService.getById(connection.getFollower()).get(), connection.getId());
             userService.addConnectionId(userService.getById(connection.getFollowed()).get(), connection.getId());
         }
@@ -53,15 +57,14 @@ public class ConnectionServiceImpl implements ConnectionService {
     @Override
     public void editById(UUID id, Connection newConnection) {
         if (getById(id).isPresent()) {
-            connections.remove(getById(id));
-            connections.add(newConnection);
+            connectionRepository.updateById(id, newConnection);
         }
     }
 
     @Override
     public void removeById(UUID id) {
         if (getById(id).isPresent()) {
-            connections.remove(getById(id));
+            connectionRepository.deleteById(id);
         }
     }
 

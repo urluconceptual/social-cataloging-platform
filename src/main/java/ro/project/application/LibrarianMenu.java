@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class LibrarianMenu {
+public class LibrarianMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static LibrarianMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -29,7 +29,10 @@ public class LibrarianMenu {
     }
 
     public static LibrarianMenu getInstance() {
-        return (INSTANCE == null ? new LibrarianMenu() : INSTANCE);
+        if (INSTANCE == null) {
+            INSTANCE = new LibrarianMenu();
+        }
+        return INSTANCE;
     }
 
     private void addNewBook() {
@@ -45,7 +48,7 @@ public class LibrarianMenu {
             if (n > bookList.size()) {
                 throw new OptionException();
             }
-            shelfService.addBookToShelf(librarian.getRecommendationsList(), bookList.get(n - 1).getId());
+            shelfService.addBookToShelf(librarian.getRecommendationsListId(), bookList.get(n - 1).getId());
         } catch (OptionException e) {
             System.out.println(e.getMessage());
             addNewBook();
@@ -68,7 +71,7 @@ public class LibrarianMenu {
                 if (n > bookList.size()) {
                     throw new OptionException();
                 }
-                shelfService.removeBookFromShelf(librarian.getRecommendationsList(), bookList.get(n - 1));
+                shelfService.removeBookFromShelf(librarian.getRecommendationsListId(), bookList.get(n - 1));
                 System.out.println("Successfully removed book from shelf!");
                 break;
             } catch (OptionException e) {
@@ -130,14 +133,14 @@ public class LibrarianMenu {
         System.out.println("Type message(one line): ");
         scanner.nextLine();
         String text = scanner.nextLine();
-        Message message = new Message(text);
+        Message message = new Message(bookClub.getId(), text);
         bookClubService.addMessage(bookClub, message);
     }
 
     private void myBookClub() {
         Librarian librarian = (Librarian) userService.getCurrentUser().get();
         System.out.println("My posts: ");
-        bookClubService.printMessages(librarian.getBookClub());
+        bookClubService.printMessages(librarian.getBookClub().getId());
         System.out.println("""
                                                                       
                                    0 -> Go back
@@ -162,8 +165,12 @@ public class LibrarianMenu {
         } while (true);
     }
 
-    public void start() {
-        shelfService = new ShelfServiceImpl();
+    @Override
+    protected void welcomeMessage() {
+    }
+
+    @Override
+    protected void showOptions() {
         System.out.println("""
                                      
                                    0 -> Log out                                 
@@ -175,10 +182,15 @@ public class LibrarianMenu {
                                         -> Add new message
                                                                       
                                    Choose option:""");
-        String options;
+    }
+
+    @Override
+    protected void getOption() {
+        String option;
         try {
-            options = scanner.next();
-            switch (options) {
+            option = scanner.next();
+            lastOption = option;
+            switch (option) {
                 case "0" -> {
                     return;
                 }
@@ -189,8 +201,23 @@ public class LibrarianMenu {
             }
         } catch (OptionException e) {
             System.out.println(e.getMessage());
-        } finally {
-            start();
         }
+    }
+
+    @Override
+    protected void getInfo() {
+        info = "Librarian " + userService.getCurrentUser().get().getUsername();
+
+        switch (lastOption) {
+            case "0" -> info += " logged out.";
+            case "1" -> info += " accessed their recommended books.";
+            case "2" -> info += " accessed their followers.";
+            case "3" -> info += " accessed their book club.";
+        }
+    }
+
+    @Override
+    public void redirect() {
+        menu();
     }
 }

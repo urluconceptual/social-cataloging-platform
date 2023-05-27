@@ -9,7 +9,10 @@ public abstract class TemplateMenu {
     }
 
     protected abstract void welcomeMessage();
+
     protected abstract void showOptions();
+
     protected abstract void getOption();
+
     protected abstract void redirect();
 }

@@ -1,7 +1,6 @@
 package ro.project.repository.impl;
 
 import ro.project.config.DatabaseConfiguration;
-import ro.project.mappers.BookClubMapper;
 import ro.project.mappers.ConnectionMapper;
 import ro.project.model.Connection;
 import ro.project.repository.ConnectionRepository;
@@ -16,32 +15,6 @@ import java.util.UUID;
 
 public class ConnectionRepositoryImpl implements ConnectionRepository {
     private static EntityRepositoryImpl entityRepository = new EntityRepositoryImpl();
-    @Override
-    public void add(Connection object) {
-        entityRepository.add(object);
-        String insertSql = "INSERT INTO connection (id, followed, follower) VALUES (?, ?, ?)";
-
-        try (java.sql.Connection connection = DatabaseConfiguration.getDatabaseConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
-            preparedStatement.setString(1, object.getId().toString());
-            preparedStatement.setString(2, object.getFollowed().toString());
-            preparedStatement.setString(3, object.getFollower().toString());
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void addAll(List<Connection> objectList) {
-        objectList.forEach(this::add);
-    }
-
-    @Override
-    public void deleteById(UUID id) {
-        entityRepository.deleteById(id);
-    }
 
     @Override
     public Optional<Connection> getById(UUID id) {
@@ -60,6 +33,21 @@ public class ConnectionRepositoryImpl implements ConnectionRepository {
         }
 
         return Optional.empty();
+    }    @Override
+    public void add(Connection object) {
+        entityRepository.add(object);
+        String insertSql = "INSERT INTO connection (id, followed, follower) VALUES (?, ?, ?)";
+
+        try (java.sql.Connection connection = DatabaseConfiguration.getDatabaseConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
+            preparedStatement.setString(1, object.getId().toString());
+            preparedStatement.setString(2, object.getFollowed().toString());
+            preparedStatement.setString(3, object.getFollower().toString());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -78,12 +66,20 @@ public class ConnectionRepositoryImpl implements ConnectionRepository {
         }
 
         return new ArrayList<>();
+    }    @Override
+    public void addAll(List<Connection> objectList) {
+        objectList.forEach(this::add);
     }
 
     @Override
     public void updateById(UUID id, Connection newObject) {
         deleteById(id);
         add(newObject);
+    }
+
+    @Override
+    public void deleteById(UUID id) {
+        entityRepository.deleteById(id);
     }
 
     @Override
@@ -105,4 +101,8 @@ public class ConnectionRepositoryImpl implements ConnectionRepository {
 
         return new ArrayList<>();
     }
+
+
+
+
 }

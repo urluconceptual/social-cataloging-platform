@@ -9,6 +9,7 @@ import ro.project.model.Connection;
 import java.util.List;
 import java.util.UUID;
 
-public interface ConnectionRepository extends Creatable<Connection>, Readable<Connection>, Updatable<Connection>, Deletable<Connection> {
+public interface ConnectionRepository extends Creatable<Connection>, Readable<Connection>, Updatable<Connection>,
+        Deletable<Connection> {
     public List<Connection> getAllByUserId(UUID userId);
 }

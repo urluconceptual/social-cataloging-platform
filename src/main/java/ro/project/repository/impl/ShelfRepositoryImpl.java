@@ -23,39 +23,6 @@ public class ShelfRepositoryImpl implements ShelfRepository {
     private static EntityRepository entityRepository = new EntityRepositoryImpl();
 
     private static UserShelfRepository userShelfRepository = new UserShelfRepositoryImpl();
-    @Override
-    public void add(Shelf object) {
-        entityRepository.add(object);
-        String insertSql = "INSERT INTO shelf (id, name, type) VALUES (?, ?, ?)";
-
-        try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
-            preparedStatement.setString(1, object.getId().toString());
-            preparedStatement.setString(2, object.getName());
-            preparedStatement.setString(3, object.getType().getType());
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        if(object.getType().equals(ShelfType.PERSONAL)) {
-            userShelfRepository.add(((PersonalShelf)object).getOwner().toString(), object.getId().toString());
-        }
-        else {
-            ((SharedShelf)object).getOwnerIdList().forEach(ownerId -> userShelfRepository.add(ownerId.toString(), object.getId().toString()));
-        }
-    }
-
-    @Override
-    public void addAll(List<Shelf> objectList) {
-        objectList.forEach(this::add);
-    }
-
-    @Override
-    public void deleteById(UUID id) {
-        entityRepository.deleteById(id);
-    }
 
     @Override
     public Optional<Shelf> getById(UUID id) {
@@ -74,6 +41,28 @@ public class ShelfRepositoryImpl implements ShelfRepository {
         }
 
         return Optional.empty();
+    }    @Override
+    public void add(Shelf object) {
+        entityRepository.add(object);
+        String insertSql = "INSERT INTO shelf (id, name, type) VALUES (?, ?, ?)";
+
+        try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
+            preparedStatement.setString(1, object.getId().toString());
+            preparedStatement.setString(2, object.getName());
+            preparedStatement.setString(3, object.getType().getType());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (object.getType().equals(ShelfType.PERSONAL)) {
+            userShelfRepository.add(((PersonalShelf) object).getOwner().toString(), object.getId().toString());
+        } else {
+            ((SharedShelf) object).getOwnerIdList().forEach(ownerId -> userShelfRepository.add(ownerId.toString(),
+                                                                                               object.getId().toString()));
+        }
     }
 
     @Override
@@ -91,12 +80,20 @@ public class ShelfRepositoryImpl implements ShelfRepository {
         }
 
         return new ArrayList<>();
+    }    @Override
+    public void addAll(List<Shelf> objectList) {
+        objectList.forEach(this::add);
     }
 
     @Override
     public void updateById(UUID id, Shelf newObject) {
         deleteById(id);
         add(newObject);
+    }
+
+    @Override
+    public void deleteById(UUID id) {
+        entityRepository.deleteById(id);
     }
 
     @Override
@@ -118,4 +115,8 @@ public class ShelfRepositoryImpl implements ShelfRepository {
 
         return new ArrayList<>();
     }
+
+
+
+
 }

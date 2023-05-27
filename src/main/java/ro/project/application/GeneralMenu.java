@@ -210,6 +210,16 @@ public class GeneralMenu extends TemplateMenu {
     }
 
     @Override
+    protected void welcomeMessage() {
+        System.out.println("""
+                                   ---- SOCIAL CATALOGING PLATFORM ------------------------------
+                                   Welcome! To use the platform, you have to register or to log
+                                   into your account.
+                                   """);
+        statistics();
+    }
+
+    @Override
     protected void showOptions() {
         try {
             System.out.println("""
@@ -234,33 +244,6 @@ public class GeneralMenu extends TemplateMenu {
         }
     }
 
-    private static void logout() {
-        userService.setCurrentUser("");
-        System.out.println("""
-                                   You logged out! Type anything to restart the application or
-                                   type "exit" if you want to close the application.""");
-    }
-
-    private static void statistics() {
-        Map<UserType, Long> groupByType = userService.getAllUsers()
-                                                     .stream()
-                                                     .collect(Collectors.groupingBy(User::getType,
-                                                                                    Collectors.counting()));
-        System.out.println("We currently have " + userService.getAllUsers().size() + " registered users: ");
-        groupByType.entrySet().forEach(entry -> System.out.println(entry.getValue() + " " + entry.getKey().getType() + "s"));
-        System.out.println();
-    }
-
-    @Override
-    protected void welcomeMessage() {
-        System.out.println("""
-                                   ---- SOCIAL CATALOGING PLATFORM ------------------------------
-                                   Welcome! To use the platform, you have to register or to log
-                                   into your account.
-                                   """);
-        statistics();
-    }
-
     @Override
     protected void getOption() {
         TemplateMenu menu = null;
@@ -277,5 +260,22 @@ public class GeneralMenu extends TemplateMenu {
     @Override
     protected void redirect() {
         logout();
+    }
+
+    private static void logout() {
+        userService.setCurrentUser("");
+        System.out.println("""
+                                   You logged out! Type anything to restart the application or
+                                   type "exit" if you want to close the application.""");
+    }
+
+    private static void statistics() {
+        Map<UserType, Long> groupByType = userService.getAllUsers()
+                                                     .stream()
+                                                     .collect(Collectors.groupingBy(User::getType,
+                                                                                    Collectors.counting()));
+        System.out.println("We currently have " + userService.getAllUsers().size() + " registered users: ");
+        groupByType.entrySet().forEach(entry -> System.out.println(entry.getValue() + " " + entry.getKey().getType() + "s"));
+        System.out.println();
     }
 }

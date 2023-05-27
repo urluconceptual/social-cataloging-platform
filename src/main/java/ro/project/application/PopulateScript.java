@@ -12,7 +12,6 @@ import ro.project.service.impl.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 
 public class PopulateScript {
     private static UserService userService = new UserServiceImpl();

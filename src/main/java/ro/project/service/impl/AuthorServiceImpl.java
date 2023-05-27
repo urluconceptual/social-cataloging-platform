@@ -19,7 +19,7 @@ public class AuthorServiceImpl implements AuthorService {
     public Author init(Author author) {
         shelfService.addShelf(
                 PersonalShelf.builder()
-                        .type(ShelfType.PERSONAL)
+                             .type(ShelfType.PERSONAL)
                              .owner(author.getId())
                              .name("written-books")
                              .bookList(new HashSet<>())

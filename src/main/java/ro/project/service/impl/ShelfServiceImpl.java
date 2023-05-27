@@ -1,8 +1,8 @@
 package ro.project.service.impl;
 
-import ro.project.model.*;
+import ro.project.model.PersonalShelf;
+import ro.project.model.SharedShelf;
 import ro.project.model.abstracts.Shelf;
-import ro.project.model.abstracts.User;
 import ro.project.repository.ShelfRepository;
 import ro.project.repository.impl.ShelfRepositoryImpl;
 import ro.project.service.*;

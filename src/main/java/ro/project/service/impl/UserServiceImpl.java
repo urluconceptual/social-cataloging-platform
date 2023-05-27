@@ -8,7 +8,10 @@ import ro.project.repository.UserRepository;
 import ro.project.repository.impl.UserRepositoryImpl;
 import ro.project.service.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {

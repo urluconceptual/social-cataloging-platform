@@ -1,6 +1,5 @@
 package ro.project.mappers;
 
-import ro.project.model.BookClub;
 import ro.project.model.records.Message;
 
 import java.sql.ResultSet;
@@ -23,19 +22,6 @@ public class MessageMapper {
         return INSTANCE;
     }
 
-    public static Optional<Message> mapToMessage(ResultSet resultSet) throws SQLException {
-        if (resultSet.next()) {
-            return Optional.of(
-                    new Message(
-                            UUID.fromString(resultSet.getString(2)),
-                            resultSet.getTimestamp(1).toLocalDateTime(),
-                            resultSet.getString(3)
-                           ));
-        } else {
-            return Optional.empty();
-        }
-    }
-
     public static List<Message> mapToMessageList(ResultSet resultSet) throws SQLException {
         List<Message> messages = new ArrayList<>();
         Optional<Message> message = mapToMessage(resultSet);
@@ -45,5 +31,18 @@ public class MessageMapper {
         }
 
         return messages;
+    }
+
+    public static Optional<Message> mapToMessage(ResultSet resultSet) throws SQLException {
+        if (resultSet.next()) {
+            return Optional.of(
+                    new Message(
+                            UUID.fromString(resultSet.getString(2)),
+                            resultSet.getTimestamp(1).toLocalDateTime(),
+                            resultSet.getString(3)
+                    ));
+        } else {
+            return Optional.empty();
+        }
     }
 }

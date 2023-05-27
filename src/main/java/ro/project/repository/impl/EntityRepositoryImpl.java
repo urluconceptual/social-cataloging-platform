@@ -4,33 +4,14 @@ import ro.project.config.DatabaseConfiguration;
 import ro.project.model.abstracts.AbstractEntity;
 import ro.project.repository.EntityRepository;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
 public class EntityRepositoryImpl implements EntityRepository {
-
-    @Override
-    public void add(AbstractEntity object) {
-        String insertSql = "INSERT INTO entity (id, creationdate, updatedate, deletedate) VALUES (?, ?, ?, ?)";
-
-        try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
-            preparedStatement.setString(1, object.getId().toString());
-            preparedStatement.setTimestamp(2, Timestamp.valueOf(object.getCreationDate()));
-            preparedStatement.setTimestamp(3, object.getUpdateDate() == null? null : Timestamp.valueOf(object.getUpdateDate()));
-            preparedStatement.setTimestamp(4, object.getDeleteDate() == null? null : Timestamp.valueOf(object.getDeleteDate()));
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void addAll(List<AbstractEntity> objectList) {
-        objectList.forEach(this::add);
-    }
 
     @Override
     public void deleteById(UUID id) {
@@ -39,6 +20,23 @@ public class EntityRepositoryImpl implements EntityRepository {
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(updateNameSql)) {
             preparedStatement.setString(1, id.toString());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }    @Override
+    public void add(AbstractEntity object) {
+        String insertSql = "INSERT INTO entity (id, creationdate, updatedate, deletedate) VALUES (?, ?, ?, ?)";
+
+        try (Connection connection = DatabaseConfiguration.getDatabaseConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
+            preparedStatement.setString(1, object.getId().toString());
+            preparedStatement.setTimestamp(2, Timestamp.valueOf(object.getCreationDate()));
+            preparedStatement.setTimestamp(3, object.getUpdateDate() == null ? null :
+                    Timestamp.valueOf(object.getUpdateDate()));
+            preparedStatement.setTimestamp(4, object.getDeleteDate() == null ? null :
+                    Timestamp.valueOf(object.getDeleteDate()));
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -59,5 +57,12 @@ public class EntityRepositoryImpl implements EntityRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }    @Override
+    public void addAll(List<AbstractEntity> objectList) {
+        objectList.forEach(this::add);
     }
+
+
+
+
 }

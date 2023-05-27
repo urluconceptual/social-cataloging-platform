@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class LibrarianMenu extends TemplateMenu{
+public class LibrarianMenu extends TemplateMenu {
     private static final Scanner scanner = new Scanner(System.in);
     private static LibrarianMenu INSTANCE;
     private static UserService userService = new UserServiceImpl();
@@ -166,7 +166,8 @@ public class LibrarianMenu extends TemplateMenu{
     }
 
     @Override
-    protected void welcomeMessage() {}
+    protected void welcomeMessage() {
+    }
 
     @Override
     protected void showOptions() {

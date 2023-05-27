@@ -19,7 +19,7 @@ public class LibrarianServiceImpl implements LibrarianService {
     public Librarian init(Librarian librarian) {
         shelfService.addShelf(
                 PersonalShelf.builder()
-                        .type(ShelfType.PERSONAL)
+                             .type(ShelfType.PERSONAL)
                              .owner(librarian.getId())
                              .name("written-books")
                              .bookList(new HashSet<>())

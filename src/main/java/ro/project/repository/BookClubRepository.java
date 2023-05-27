@@ -6,5 +6,6 @@ import ro.project.generics.Readable;
 import ro.project.generics.Updatable;
 import ro.project.model.BookClub;
 
-public interface BookClubRepository extends Creatable<BookClub>, Readable<BookClub>, Updatable<BookClub>, Deletable<BookClub> {
+public interface BookClubRepository extends Creatable<BookClub>, Readable<BookClub>, Updatable<BookClub>,
+        Deletable<BookClub> {
 }

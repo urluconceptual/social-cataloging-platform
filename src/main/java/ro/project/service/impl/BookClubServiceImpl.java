@@ -1,6 +1,5 @@
 package ro.project.service.impl;
 
-import ro.project.model.Book;
 import ro.project.model.BookClub;
 import ro.project.model.records.Message;
 import ro.project.repository.BookClubRepository;
@@ -9,7 +8,6 @@ import ro.project.repository.impl.BookClubRepositoryImpl;
 import ro.project.repository.impl.MessageRepositoryImpl;
 import ro.project.service.BookClubService;
 
-import java.util.List;
 import java.util.UUID;
 
 public class BookClubServiceImpl implements BookClubService {

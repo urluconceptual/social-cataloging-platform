@@ -1,7 +1,6 @@
 package ro.project;
 
 import ro.project.application.GeneralMenu;
-import ro.project.application.PopulateScript;
 import ro.project.application.TemplateMenu;
 
 import java.util.Scanner;

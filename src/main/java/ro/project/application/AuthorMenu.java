@@ -134,7 +134,8 @@ public class AuthorMenu extends TemplateMenu {
     }
 
     @Override
-    protected void welcomeMessage() {}
+    protected void welcomeMessage() {
+    }
 
     @Override
     protected void showOptions() {

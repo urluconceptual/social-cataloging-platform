@@ -6,7 +6,10 @@ import ro.project.repository.impl.ConnectionRepositoryImpl;
 import ro.project.service.ConnectionService;
 import ro.project.service.UserService;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class ConnectionServiceImpl implements ConnectionService {

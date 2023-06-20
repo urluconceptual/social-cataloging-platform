@@ -5,6 +5,7 @@ import ro.project.application.csv.CsvWriter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
 import java.util.logging.Logger;
 
 public abstract class TemplateMenu {
@@ -16,6 +17,7 @@ public abstract class TemplateMenu {
     private static final Logger logger = Logger.getGlobal();
 
     public final void menu() {
+        var executor = Executors.newSingleThreadExecutor();
         welcomeMessage();
         showOptions();
         getOption();

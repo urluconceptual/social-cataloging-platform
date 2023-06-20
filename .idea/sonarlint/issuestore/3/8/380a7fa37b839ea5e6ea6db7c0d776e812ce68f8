@@ -1,9 +1,0 @@
-
-~
-java:S2629/"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(ğËùıÿÿÿÿ8ÔĞä…1
-j
-java:S2095"MUse try-with-resources or close this "ExecutorService" in a "finally" clause.(Êõ¶Ä8ÿ»Ôä…1
-Y
-java:S1854"<Remove this useless assignment to local variable "executor".(Êõ¶Ä8ºÔĞä…1
-J
-java:S1481"-Remove this unused "executor" local variable.(Êõ¶Ä8¿ÔĞä…1

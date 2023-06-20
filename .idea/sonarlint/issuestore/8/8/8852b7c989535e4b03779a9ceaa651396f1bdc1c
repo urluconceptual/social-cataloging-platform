@@ -1,15 +1,0 @@
-
-r
-java:S3655V"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ûÎ¶øÿÿÿÿ8‚ÿ²„ô0
-r
-java:S3655;"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¾ï‹ïşÿÿÿÿ8±„ô0
-l
-java:S3655S"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¨Áâ8±„ô0
-r
-java:S3655U"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ê¡Ôíÿÿÿÿÿ8±„ô0
-m
-java:S3655Z"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŞÊ´ó8Ä­¤Å…1
-U	java:S106="9Replace this use of System.out or System.err by a logger.(ÆÀûı8•±„ô0
-Z	java:S106E"9Replace this use of System.out or System.err by a logger.(Ü®«üûÿÿÿÿ8–±„ô0
-`
-java:S1612U">Replace this lambda with method reference 'Review::getRating'.(Ê¡Ôíÿÿÿÿÿ8˜±„ô0

@@ -1,0 +1,65 @@
+
+r
+java:S3655>"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8î­£ß…1
+s
+java:S3655°"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ñİù±üÿÿÿÿ8î­£ß…1
+r
+java:S3655b"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8î­£ß…1
+s
+java:S3655…"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÉãŞÿüÿÿÿÿ8î­£ß…1
+r
+java:S3655K"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¸•Íúÿÿÿÿ8î­£ß…1
+m
+java:S3655f"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(—ƒ†·8î­£ß…1
+p
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë½°8ï­£ß…1
+Ÿ
+java:S1186‰"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜ìó˜8ï­£ß…1
+»
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(­ìÉãøÿÿÿÿ8ğ­£ß…1
+Z	java:S106&"9Replace this use of System.out or System.err by a logger.(¸ß¸«üÿÿÿÿ8ø­£ß…1
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(ºÇ‚ıÿÿÿÿ8ø­£ß…1
+U	java:S106+"9Replace this use of System.out or System.err by a logger.(úĞ£›8ù­£ß…1
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(Òùı›şÿÿÿÿ8ù­£ß…1
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(ÖÍˆıøÿÿÿÿ8ú­£ß…1
+Z	java:S106M"9Replace this use of System.out or System.err by a logger.(ÉëÔÕúÿÿÿÿ8ü­£ß…1
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(½ÿ…ßşÿÿÿÿ8ı­£ß…1
+Z	java:S106Y"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ı­£ß…1
+Z	java:S106\"9Replace this use of System.out or System.err by a logger.(ÖÍˆıøÿÿÿÿ8ı­£ß…1
+\
+java:S1854b":Remove this useless assignment to local variable "author".(¸•Íúÿÿÿÿ8ş­£ß…1
+8
+java:S3626s"Remove this redundant jump.(ûÁİ…8ş­£ß…1
+M
+java:S1481b"+Remove this unused "author" local variable.(¸•Íúÿÿÿÿ8ş­£ß…1
+U	java:S106d"9Replace this use of System.out or System.err by a logger.(ƒŒ¡§8ş­£ß…1
+U	java:S106g"9Replace this use of System.out or System.err by a logger.(Îñë8ş­£ß…1
+Z	java:S106z"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8€®£ß…1
+[	java:S106"9Replace this use of System.out or System.err by a logger.(è¢‘Œûÿÿÿÿ8€®£ß…1
+V	java:S106"9Replace this use of System.out or System.err by a logger.(Îñë8®£ß…1
+9
+java:S3626¢"Remove this redundant jump.(ûÁİ…8‡†ÿà…1
+T
+java:S2696Ÿ"6Make the enclosing method "static" or remove this set.(Â¦“ç8Âşà…1
+[	java:S106ª"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8‚®£ß…1
+Y
+java:S2696°"6Make the enclosing method "static" or remove this set.(ñİù±üÿÿÿÿ8‚Âşà…1
+?	java:S131²""Add a default case to this switch.(´øœÂ8‚Âşà…1
+T
+java:S2696³"6Make the enclosing method "static" or remove this set.(†×İ¸8‚Âşà…1
+Y
+java:S2696´"6Make the enclosing method "static" or remove this set.(ŞÃ¬ùÿÿÿÿ8‚Âşà…1
+Y
+java:S2696µ"6Make the enclosing method "static" or remove this set.(ÀØú€şÿÿÿÿ8‚Âşà…1
+Y
+java:S2696¶"6Make the enclosing method "static" or remove this set.(ã¨ò‚ûÿÿÿÿ8Òúƒá…1
+N
+java:S1068"1Remove this unused "readerService" private field.(ÃêöÅ8ƒ®£ß…1
+V
+java:S1068"4Remove this unused "librarianService" private field.(Öã‰Ùşÿÿÿÿ8ƒ®£ß…1
+W
+java:S1068"5Remove this unused "connectionService" private field.(Æ×şÿÿÿÿ8ƒ®£ß…1
+L
+java:S1068"/Remove this unused "generalMenu" private field.(ÖÍªÖ8ƒ®£ß…1
+R
+java:S1068"0Remove this unused "shelfService" private field.(£æù˜üÿÿÿÿ8ƒ®£ß…1

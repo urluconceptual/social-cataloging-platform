@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pao-template" />
+        <module name="social-cataloging-platform" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pao-template" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

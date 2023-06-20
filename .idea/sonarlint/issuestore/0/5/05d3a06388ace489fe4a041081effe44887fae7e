@@ -1,0 +1,7 @@
+
+l
+java:S3655U"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(èÆ/8øÄƒË…1
+u
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ûÙ¥ÿÿÿÿÿ8øÄƒË…1
+t
+java:S3776,"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Œôùÿÿÿÿ8üÄƒË…1

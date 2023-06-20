@@ -1,0 +1,7 @@
+
+g
+java:S1192"JDefine a constant instead of duplicating this literal "SELECT * " 3 times.(Ñ¼ñí8ö¼Æ…1
+o
+java:S1192"MDefine a constant instead of duplicating this literal "FROM Entity " 3 times.(ÕÍ–µÿÿÿÿÿ8ö¼Æ…1
+–
+java:S1192"tDefine a constant instead of duplicating this literal "INNER JOIN connection ON Entity.id = connection.id " 3 times.(ŠÄ×Öşÿÿÿÿ8ö¼Æ…1
